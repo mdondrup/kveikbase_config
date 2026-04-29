@@ -1,0 +1,170 @@
+uuid: debd9ec6-42bf-42b6-bbbf-e62c759631bb
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.tripal_entity.mrna.mrna_contact
+    - field.field.tripal_entity.mrna.mrna_dbxref
+    - field.field.tripal_entity.mrna.mrna_dbxref_ann
+    - field.field.tripal_entity.mrna.mrna_is_analysis
+    - field.field.tripal_entity.mrna.mrna_is_obsolete
+    - field.field.tripal_entity.mrna.mrna_name
+    - field.field.tripal_entity.mrna.mrna_organism
+    - field.field.tripal_entity.mrna.mrna_project
+    - field.field.tripal_entity.mrna.mrna_pub
+    - field.field.tripal_entity.mrna.mrna_relationship
+    - field.field.tripal_entity.mrna.mrna_sequence
+    - field.field.tripal_entity.mrna.mrna_sequence_length
+    - field.field.tripal_entity.mrna.mrna_sequence_md5_checksum
+    - field.field.tripal_entity.mrna.mrna_synonym
+    - field.field.tripal_entity.mrna.mrna_type
+    - field.field.tripal_entity.mrna.mrna_uniquename
+    - tripal.content_type.mrna
+  module:
+    - path
+    - tripal_chado
+id: tripal_entity.mrna.default
+targetEntityType: tripal_entity
+bundle: mrna
+mode: default
+content:
+  created:
+    type: datetime_timestamp
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  mrna_contact:
+    type: chado_contact_widget_default
+    weight: 80
+    region: content
+    settings:
+      widget_select_limit: null
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  mrna_dbxref:
+    type: chado_dbxref_widget_default
+    weight: 68
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  mrna_dbxref_ann:
+    type: chado_dbxref_widget_default
+    weight: 68
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  mrna_is_analysis:
+    type: chado_boolean_type_widget
+    weight: 90
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  mrna_is_obsolete:
+    type: chado_boolean_type_widget
+    weight: 90
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  mrna_name:
+    type: chado_string_type_widget
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  mrna_organism:
+    type: chado_organism_widget_default
+    weight: 10
+    region: content
+    settings:
+      widget_select_limit: null
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  mrna_project:
+    type: chado_project_widget_default
+    weight: 84
+    region: content
+    settings:
+      widget_select_limit: null
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  mrna_pub:
+    type: chado_pub_widget_default
+    weight: 82
+    region: content
+    settings:
+      widget_select_limit: null
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  mrna_relationship:
+    type: chado_relationship_widget_default
+    weight: 49
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  mrna_sequence:
+    type: chado_sequence_widget_default
+    weight: 20
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  mrna_sequence_length:
+    type: chado_sequence_length_widget_default
+    weight: 25
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  mrna_sequence_md5_checksum:
+    type: chado_sequence_checksum_widget_default
+    weight: 30
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  mrna_synonym:
+    type: chado_synonym_widget_default
+    weight: 66
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  mrna_type:
+    type: chado_additional_type_widget_default
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  mrna_uniquename:
+    type: chado_text_type_widget
+    weight: 15
+    region: content
+    settings:
+      filter_format: plain_text
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 100
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  uid:
+    type: entity_reference_autocomplete
+    weight: 5
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden: {  }

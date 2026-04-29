@@ -1,0 +1,25 @@
+uuid: 35a9fb2e-1c01-4ff5-9b5c-d5ef41c3d887
+langcode: en
+status: true
+dependencies:
+  module:
+    - tripal
+    - tripal_chado
+id: tripal_entity.ril_organism
+field_name: ril_organism
+entity_type: tripal_entity
+type: chado_organism_type_default
+settings:
+  termIdSpace: OBI
+  termAccession: '0100026'
+  storage_plugin_id: chado_storage
+  storage_plugin_settings:
+    base_table: stock
+    base_column: organism_id
+module: tripal_chado
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

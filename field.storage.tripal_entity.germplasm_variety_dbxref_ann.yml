@@ -1,0 +1,26 @@
+uuid: c633a41a-6aa8-4c5a-9446-77e0e18ada98
+langcode: en
+status: true
+dependencies:
+  module:
+    - tripal
+    - tripal_chado
+id: tripal_entity.germplasm_variety_dbxref_ann
+field_name: germplasm_variety_dbxref_ann
+entity_type: tripal_entity
+type: chado_dbxref_type_default
+settings:
+  termIdSpace: SBO
+  termAccession: '0000552'
+  storage_plugin_id: chado_storage
+  storage_plugin_settings:
+    base_table: stock
+    linker_table: stock_dbxref
+    linker_fkey_column: dbxref_id
+module: tripal_chado
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

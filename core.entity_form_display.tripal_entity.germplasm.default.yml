@@ -1,0 +1,371 @@
+uuid: 6f7dabd0-ddd3-416f-8383-c9b9cb465560
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.tripal_entity.germplasm.field_brewing_protocol
+    - field.field.tripal_entity.germplasm.field_contact
+    - field.field.tripal_entity.germplasm.field_culture_date
+    - field.field.tripal_entity.germplasm.field_delivered_kveikbank
+    - field.field.tripal_entity.germplasm.field_dna_extracted
+    - field.field.tripal_entity.germplasm.field_form
+    - field.field.tripal_entity.germplasm.field_last_used_in_brewing
+    - field.field.tripal_entity.germplasm.field_original_culture
+    - field.field.tripal_entity.germplasm.field_owner
+    - field.field.tripal_entity.germplasm.field_place
+    - field.field.tripal_entity.germplasm.field_sampling_date
+    - field.field.tripal_entity.germplasm.field_single_colony_codes
+    - field.field.tripal_entity.germplasm.field_single_culture
+    - field.field.tripal_entity.germplasm.field_strain_geolocation
+    - field.field.tripal_entity.germplasm.field_taxonomy
+    - field.field.tripal_entity.germplasm.germplasm_dbxref
+    - field.field.tripal_entity.germplasm.germplasm_dbxref_ann
+    - field.field.tripal_entity.germplasm.germplasm_description
+    - field.field.tripal_entity.germplasm.germplasm_is_obsolete
+    - field.field.tripal_entity.germplasm.germplasm_name
+    - field.field.tripal_entity.germplasm.germplasm_organism
+    - field.field.tripal_entity.germplasm.germplasm_pub
+    - field.field.tripal_entity.germplasm.germplasm_relationship
+    - field.field.tripal_entity.germplasm.germplasm_type
+    - field.field.tripal_entity.germplasm.germplasm_unique_name
+    - tripal.content_type.germplasm
+  module:
+    - datetime
+    - field_group
+    - geolocation
+    - path
+    - tripal_chado
+third_party_settings:
+  field_group:
+    group_basic_strain_info:
+      children:
+        - germplasm_name
+        - germplasm_unique_name
+        - germplasm_organism
+        - germplasm_description
+        - field_owner
+        - field_contact
+      label: 'Basic strain info'
+      region: content
+      parent_name: ''
+      weight: 2
+      format_type: tab
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        label_as_html: false
+        formatter: open
+        description: ''
+        required_fields: true
+        open: false
+        weight: 0
+    group_geolocation:
+      children:
+        - field_strain_geolocation
+        - field_place
+      label: Geolocation
+      region: content
+      parent_name: ''
+      weight: 4
+      format_type: tab
+      format_settings:
+        classes: ''
+        show_empty_fields: true
+        id: ''
+        label_as_html: false
+        formatter: closed
+        description: ''
+        required_fields: true
+        direction: horizontal
+        width_breakpoint: 640
+    group_references:
+      children:
+        - germplasm_relationship
+        - germplasm_dbxref_ann
+        - germplasm_pub
+        - germplasm_dbxref
+      label: References
+      region: content
+      parent_name: ''
+      weight: 3
+      format_type: tab
+      format_settings:
+        classes: ''
+        show_empty_fields: true
+        id: ''
+        label_as_html: false
+        formatter: closed
+        description: ''
+        required_fields: true
+        direction: horizontal
+        width_breakpoint: 640
+    group_other:
+      children:
+        - germplasm_type
+      label: Other
+      region: content
+      parent_name: ''
+      weight: 8
+      format_type: details_sidebar
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        label_as_html: false
+        open: false
+        description: ''
+        required_fields: true
+        weight: 0
+    group_kveikbank:
+      children:
+        - field_original_culture
+        - field_single_culture
+        - field_dna_extracted
+        - field_single_colony_codes
+        - field_culture_date
+        - field_delivered_kveikbank
+      label: KveikBank
+      region: content
+      parent_name: ''
+      weight: 9
+      format_type: details_sidebar
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        label_as_html: false
+        open: false
+        required_fields: true
+        weight: 0
+        direction: vertical
+        width_breakpoint: '640'
+    group_provenance:
+      children:
+        - field_last_used_in_brewing
+        - field_brewing_protocol
+        - field_form
+        - field_sampling_date
+      label: Provenance
+      region: content
+      parent_name: ''
+      weight: 5
+      format_type: tab
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        label_as_html: true
+        formatter: closed
+        description: ''
+        required_fields: true
+id: tripal_entity.germplasm.default
+targetEntityType: tripal_entity
+bundle: germplasm
+mode: default
+content:
+  created:
+    type: datetime_timestamp
+    weight: 1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_brewing_protocol:
+    type: string_textarea
+    weight: 7
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_contact:
+    type: email_default
+    weight: 8
+    region: content
+    settings:
+      placeholder: ''
+      size: 60
+    third_party_settings: {  }
+  field_culture_date:
+    type: datetime_default
+    weight: 18
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_delivered_kveikbank:
+    type: boolean_checkbox
+    weight: 19
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  field_dna_extracted:
+    type: boolean_checkbox
+    weight: 16
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  field_form:
+    type: options_select
+    weight: 8
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_last_used_in_brewing:
+    type: datetime_default
+    weight: 6
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_original_culture:
+    type: boolean_checkbox
+    weight: 14
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  field_owner:
+    type: string_textfield
+    weight: 7
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_place:
+    type: string_textfield
+    weight: 7
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_sampling_date:
+    type: datetime_default
+    weight: 9
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_single_colony_codes:
+    type: string_textfield
+    weight: 17
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_single_culture:
+    type: boolean_checkbox
+    weight: 15
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  field_strain_geolocation:
+    type: geolocation_latlng
+    weight: 6
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_taxonomy:
+    type: entity_reference_autocomplete
+    weight: 10
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  germplasm_dbxref:
+    type: chado_dbxref_widget_default
+    weight: 8
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  germplasm_dbxref_ann:
+    type: chado_dbxref_widget_default
+    weight: 6
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  germplasm_description:
+    type: chado_text_type_widget
+    weight: 6
+    region: content
+    settings:
+      filter_format: basic_html
+      num_rows: 5
+    third_party_settings: {  }
+  germplasm_is_obsolete:
+    type: chado_boolean_type_widget
+    weight: 6
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  germplasm_name:
+    type: chado_string_type_widget
+    weight: 3
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  germplasm_organism:
+    type: chado_organism_widget_default
+    weight: 5
+    region: content
+    settings:
+      widget_select_limit: null
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  germplasm_pub:
+    type: chado_pub_widget_default
+    weight: 7
+    region: content
+    settings:
+      widget_select_limit: null
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  germplasm_relationship:
+    type: chado_relationship_widget_default
+    weight: 5
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  germplasm_type:
+    type: chado_additional_type_widget_default
+    weight: 12
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  germplasm_unique_name:
+    type: chado_text_type_widget
+    weight: 4
+    region: content
+    settings:
+      filter_format: plain_text
+      num_rows: 5
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 7
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  uid:
+    type: entity_reference_autocomplete
+    weight: 0
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden: {  }

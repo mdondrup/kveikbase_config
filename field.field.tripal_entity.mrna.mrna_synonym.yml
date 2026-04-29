@@ -1,0 +1,24 @@
+uuid: d9b518b9-4ebf-45a1-84c4-4287a35603fe
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.tripal_entity.mrna_synonym
+    - tripal.content_type.mrna
+  module:
+    - tripal_chado
+id: tripal_entity.mrna.mrna_synonym
+field_name: mrna_synonym
+entity_type: tripal_entity
+bundle: mrna
+label: Synonyms
+description: 'Alternate names, aliases or synonyms for this record.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  termIdSpace: schema
+  termAccession: alternateName
+  debug: false
+field_type: chado_synonym_type_default

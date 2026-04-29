@@ -1,0 +1,24 @@
+uuid: f30ec0a3-f7af-489e-aaa5-2b82a8463220
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.tripal_entity.dna_library_name
+    - tripal.content_type.dna_library
+  module:
+    - tripal_chado
+id: tripal_entity.dna_library.dna_library_name
+field_name: dna_library_name
+entity_type: tripal_entity
+bundle: dna_library
+label: Name
+description: 'The name of the item.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  termIdSpace: schema
+  termAccession: name
+  debug: false
+field_type: chado_string_type_default

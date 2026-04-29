@@ -1,0 +1,24 @@
+uuid: 214d0321-0f97-442e-a3a7-b56ee4911dd1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.tripal_entity.protocol_dbxref
+    - tripal.content_type.protocol
+  module:
+    - tripal_chado
+id: tripal_entity.protocol.protocol_dbxref
+field_name: protocol_dbxref
+entity_type: tripal_entity
+bundle: protocol
+label: 'Primary Database Reference'
+description: 'The ID where this record may be available in an external online database.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  termIdSpace: SBO
+  termAccession: '0000554'
+  debug: false
+field_type: chado_dbxref_type_default

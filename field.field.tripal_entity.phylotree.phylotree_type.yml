@@ -1,0 +1,25 @@
+uuid: 0219fc86-10d0-47c6-8397-8e447cd58b89
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.tripal_entity.phylotree_type
+    - tripal.content_type.phylotree
+  module:
+    - tripal_chado
+id: tripal_entity.phylotree.phylotree_type
+field_name: phylotree_type
+entity_type: tripal_entity
+bundle: phylotree
+label: Type
+description: 'An additional type for the item, typically used for adding more specific types from external vocabularies in microdata syntax. This is a relationship between something and a class that the thing is in.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  termIdSpace: data
+  termAccession: '0872'
+  debug: false
+  fixed_value: 'data:0872'
+field_type: chado_additional_type_type_default

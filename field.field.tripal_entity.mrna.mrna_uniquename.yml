@@ -1,0 +1,24 @@
+uuid: e141db89-8e49-46a1-a9cf-49fc83821631
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.tripal_entity.mrna_uniquename
+    - tripal.content_type.mrna
+  module:
+    - tripal_chado
+id: tripal_entity.mrna.mrna_uniquename
+field_name: mrna_uniquename
+entity_type: tripal_entity
+bundle: mrna
+label: 'Unique Name'
+description: 'A name that uniquely identifies the mrna within the organism.'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  termIdSpace: data
+  termAccession: '0842'
+  debug: false
+field_type: chado_text_type_default

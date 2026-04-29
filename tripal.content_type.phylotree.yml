@@ -1,0 +1,19 @@
+uuid: a724b9b3-0fff-4047-8ddc-ae868b4a759c
+langcode: en
+status: true
+dependencies: {  }
+third_party_settings:
+  tripal:
+    chado_base_table: phylotree
+    bundle_type_table: phylotree
+    bundle_type_column: type_id
+id: phylotree
+label: 'Phylogenetic Tree'
+termIdSpace: data
+termAccession: '0872'
+help_text: 'Use the phylogenetic tree page for data or plotting of phylogenetic trees. Usually includes information such as topology, lengths (in time or in expected amounts of variance) and a confidence interval for each length.'
+category: Genomic
+title_format: '[phylotree_name]'
+url_format: 'phylotree/[TripalEntity__entity_id]'
+hide_empty_field: true
+ajax_field: true

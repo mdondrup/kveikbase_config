@@ -1,0 +1,25 @@
+uuid: fa1f4153-b63a-431e-9c03-508b24ca9773
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.tripal_entity.pub_publication_type
+    - tripal.content_type.pub
+  module:
+    - tripal_chado
+id: tripal_entity.pub.pub_publication_type
+field_name: pub_publication_type
+entity_type: tripal_entity
+bundle: pub
+label: 'Publication Type'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  termIdSpace: TPUB
+  termAccession: '0000015'
+  debug: false
+  fixed_value: ''
+field_type: chado_property_type_default

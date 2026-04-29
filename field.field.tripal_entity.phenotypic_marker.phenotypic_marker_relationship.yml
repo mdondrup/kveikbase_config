@@ -1,0 +1,24 @@
+uuid: 2e5b9f52-f088-4755-9910-710378477bf6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.tripal_entity.phenotypic_marker_relationship
+    - tripal.content_type.phenotypic_marker
+  module:
+    - tripal_chado
+id: tripal_entity.phenotypic_marker.phenotypic_marker_relationship
+field_name: phenotypic_marker_relationship
+entity_type: tripal_entity
+bundle: phenotypic_marker
+label: Relationship
+description: "Sequence features related to this heritable phenotypic marker. Think of relationship statements as sentences: SUBJECT TYPE OBJECT (e.g. 'Sara (subject) is the mother of (type) Jacob (object)'). By default the current heritable phenotypic marker is the subject; chose Reverse if the object is the current heritable phenotypic marker."
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  termIdSpace: SBO
+  termAccession: '0000374'
+  debug: false
+field_type: chado_relationship_type_default

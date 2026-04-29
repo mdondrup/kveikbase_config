@@ -1,0 +1,24 @@
+uuid: c14a0317-94a2-4282-b98d-6a0b4b5dd8d4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.tripal_entity.organism_infraspecific_name
+    - tripal.content_type.organism
+  module:
+    - tripal_chado
+id: tripal_entity.organism.organism_infraspecific_name
+field_name: organism_infraspecific_name
+entity_type: tripal_entity
+bundle: organism
+label: Infraspecies
+description: 'The infraspecfic name for the organism.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  termIdSpace: TAXRANK
+  termAccession: '0000045'
+  debug: false
+field_type: chado_string_type_default

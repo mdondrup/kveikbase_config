@@ -1,0 +1,26 @@
+uuid: ab7431c1-e3a6-4016-8474-4d9d351eba72
+langcode: en
+status: true
+dependencies:
+  module:
+    - tripal
+    - tripal_chado
+id: tripal_entity.genome_assembly_source_version
+field_name: genome_assembly_source_version
+entity_type: tripal_entity
+type: chado_string_type_default
+settings:
+  termIdSpace: SIO
+  termAccession: '001377'
+  max_length: 255
+  storage_plugin_id: chado_storage
+  storage_plugin_settings:
+    base_table: analysis
+    base_column: sourceversion
+module: tripal_chado
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

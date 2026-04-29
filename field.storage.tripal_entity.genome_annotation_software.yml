@@ -1,0 +1,26 @@
+uuid: 542c79e6-019d-443e-bb0a-eb8d062e002d
+langcode: en
+status: true
+dependencies:
+  module:
+    - tripal
+    - tripal_chado
+id: tripal_entity.genome_annotation_software
+field_name: genome_annotation_software
+entity_type: tripal_entity
+type: chado_string_type_default
+settings:
+  termIdSpace: SWO
+  termAccession: '0000001'
+  max_length: 255
+  storage_plugin_id: chado_storage
+  storage_plugin_settings:
+    base_table: analysis
+    base_column: program
+module: tripal_chado
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

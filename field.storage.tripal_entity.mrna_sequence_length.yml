@@ -1,0 +1,25 @@
+uuid: c6caf5c8-3346-4df4-ac09-06a4e2f90ca1
+langcode: en
+status: true
+dependencies:
+  module:
+    - tripal
+    - tripal_chado
+id: tripal_entity.mrna_sequence_length
+field_name: mrna_sequence_length
+entity_type: tripal_entity
+type: chado_sequence_length_type_default
+settings:
+  termIdSpace: data
+  termAccession: '1249'
+  storage_plugin_id: chado_storage
+  storage_plugin_settings:
+    base_table: feature
+    base_column: seqlen
+module: tripal_chado
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

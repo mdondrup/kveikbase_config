@@ -1,0 +1,24 @@
+uuid: 91a23aa6-17ee-4054-91af-f51823b7ce0c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.tripal_entity.phenotypic_marker_dbxref
+    - tripal.content_type.phenotypic_marker
+  module:
+    - tripal_chado
+id: tripal_entity.phenotypic_marker.phenotypic_marker_dbxref
+field_name: phenotypic_marker_dbxref
+entity_type: tripal_entity
+bundle: phenotypic_marker
+label: 'Primary Database Reference'
+description: 'The ID where this record may be available in an external online database.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  termIdSpace: SBO
+  termAccession: '0000554'
+  debug: false
+field_type: chado_dbxref_type_default

@@ -1,0 +1,25 @@
+uuid: 59dc399f-4cf3-4716-b684-efa0a90942de
+langcode: en
+status: true
+dependencies:
+  module:
+    - tripal
+    - tripal_chado
+id: tripal_entity.protocol_software
+field_name: protocol_software
+entity_type: tripal_entity
+type: chado_text_type_default
+settings:
+  termIdSpace: SWO
+  termAccession: '0000001'
+  storage_plugin_id: chado_storage
+  storage_plugin_settings:
+    base_table: protocol
+    base_column: softwaredescription
+module: tripal_chado
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

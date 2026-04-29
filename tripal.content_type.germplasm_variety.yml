@@ -1,0 +1,19 @@
+uuid: be848f97-8c9b-4871-8885-63206e1ed75d
+langcode: en
+status: true
+dependencies: {  }
+third_party_settings:
+  tripal:
+    chado_base_table: stock
+    bundle_type_table: stock
+    bundle_type_column: type_id
+id: germplasm_variety
+label: 'Germplasm Variety'
+termIdSpace: CO_010
+termAccession: '0000029'
+help_text: 'Use the germplasm variety page for information about specific variety of germplasm.'
+category: Germplasm
+title_format: '[germplasm_variety_name]'
+url_format: 'germplasm_variety/[TripalEntity__entity_id]'
+hide_empty_field: true
+ajax_field: true

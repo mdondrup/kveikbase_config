@@ -1,0 +1,25 @@
+uuid: d4ef2853-b94d-4e17-b64c-a9e7b27edffe
+langcode: en
+status: true
+dependencies:
+  module:
+    - tripal
+    - tripal_chado
+id: tripal_entity.protocol_pub
+field_name: protocol_pub
+entity_type: tripal_entity
+type: chado_pub_type_default
+settings:
+  termIdSpace: TPUB
+  termAccession: '0000002'
+  storage_plugin_id: chado_storage
+  storage_plugin_settings:
+    base_table: protocol
+    base_column: pub_id
+module: tripal_chado
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

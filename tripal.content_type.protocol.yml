@@ -1,0 +1,17 @@
+uuid: 312d0c3b-1061-4b94-8d8d-b7c375165d5c
+langcode: en
+status: true
+dependencies: {  }
+third_party_settings:
+  tripal:
+    chado_base_table: protocol
+id: protocol
+label: Protocol
+termIdSpace: sep
+termAccession: '00101'
+help_text: 'Use the protocol page for a parameterizable description of a process.'
+category: General
+title_format: '[protocol_name]'
+url_format: 'protocol/[TripalEntity__entity_id]'
+hide_empty_field: true
+ajax_field: true

@@ -1,0 +1,26 @@
+uuid: a35c5c1a-4d11-4402-85cf-45d9c6d72897
+langcode: en
+status: true
+dependencies:
+  module:
+    - tripal
+    - tripal_chado
+id: tripal_entity.organism_genus
+field_name: organism_genus
+entity_type: tripal_entity
+type: chado_string_type_default
+settings:
+  termIdSpace: TAXRANK
+  termAccession: '0000005'
+  max_length: 255
+  storage_plugin_id: chado_storage
+  storage_plugin_settings:
+    base_table: organism
+    base_column: genus
+module: tripal_chado
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

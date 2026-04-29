@@ -1,0 +1,25 @@
+uuid: 2658ec1f-5993-48d6-bc03-26ba4816db53
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.tripal_entity.organism_infraspecific_type
+    - tripal.content_type.organism
+  module:
+    - tripal_chado
+id: tripal_entity.organism.organism_infraspecific_type
+field_name: organism_infraspecific_type
+entity_type: tripal_entity
+bundle: organism
+label: 'Infraspecific Type'
+description: 'The connector type (e.g. subspecies, varietas, forma, etc.) for the infraspecific name.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  termIdSpace: local
+  termAccession: infraspecific_type
+  debug: false
+  fixed_value: ''
+field_type: chado_additional_type_type_default

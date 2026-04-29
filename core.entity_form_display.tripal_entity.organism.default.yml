@@ -1,0 +1,106 @@
+uuid: 94770644-5987-43af-8bac-506041c8e928
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.tripal_entity.organism.organism_abbreviation
+    - field.field.tripal_entity.organism.organism_comment
+    - field.field.tripal_entity.organism.organism_common_name
+    - field.field.tripal_entity.organism.organism_dbxref
+    - field.field.tripal_entity.organism.organism_genus
+    - field.field.tripal_entity.organism.organism_infraspecific_name
+    - field.field.tripal_entity.organism.organism_infraspecific_type
+    - field.field.tripal_entity.organism.organism_pub
+    - field.field.tripal_entity.organism.organism_species
+    - tripal.content_type.organism
+  module:
+    - path
+    - tripal_chado
+id: tripal_entity.organism.default
+targetEntityType: tripal_entity
+bundle: organism
+mode: default
+content:
+  created:
+    type: datetime_timestamp
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  organism_abbreviation:
+    type: chado_string_type_widget
+    weight: 30
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  organism_comment:
+    type: chado_text_type_widget
+    weight: 40
+    region: content
+    settings:
+      filter_format: basic_html
+    third_party_settings: {  }
+  organism_common_name:
+    type: chado_string_type_widget
+    weight: 35
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  organism_dbxref:
+    type: chado_dbxref_widget_default
+    weight: 68
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  organism_genus:
+    type: chado_string_type_widget
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  organism_infraspecific_name:
+    type: chado_string_type_widget
+    weight: 25
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  organism_infraspecific_type:
+    type: chado_additional_type_widget_default
+    weight: 20
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  organism_pub:
+    type: chado_pub_widget_default
+    weight: 45
+    region: content
+    settings:
+      widget_select_limit: null
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  organism_species:
+    type: chado_string_type_widget
+    weight: 15
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 100
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  uid:
+    type: entity_reference_autocomplete
+    weight: 5
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden: {  }

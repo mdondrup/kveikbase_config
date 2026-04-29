@@ -1,0 +1,28 @@
+uuid: 0f214995-104b-4fc0-acdc-8ea3aa7b0500
+langcode: en
+status: true
+dependencies:
+  module:
+    - tripal
+    - tripal_chado
+id: tripal_entity.pub_relationship
+field_name: pub_relationship
+entity_type: tripal_entity
+type: chado_relationship_type_default
+settings:
+  termIdSpace: SBO
+  termAccession: '0000374'
+  storage_plugin_id: chado_storage
+  storage_plugin_settings:
+    base_table: pub
+    base_column: uniquename
+    linker_table: pub_relationship
+    subject_column: subject_id
+    object_column: object_id
+module: tripal_chado
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

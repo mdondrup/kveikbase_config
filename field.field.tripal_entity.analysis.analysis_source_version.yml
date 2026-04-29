@@ -1,0 +1,24 @@
+uuid: c171ec6b-e504-4be0-8168-3010001b2b0c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.tripal_entity.analysis_source_version
+    - tripal.content_type.analysis
+  module:
+    - tripal_chado
+id: tripal_entity.analysis.analysis_source_version
+field_name: analysis_source_version
+entity_type: tripal_entity
+bundle: analysis
+label: 'Data Source Version'
+description: 'The version number of the data source (if applicable). If not available, we suggest using the date you accessed/aquired the dataset.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  termIdSpace: SIO
+  termAccession: '001377'
+  debug: false
+field_type: chado_string_type_default

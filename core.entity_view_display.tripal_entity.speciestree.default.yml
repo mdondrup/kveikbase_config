@@ -1,0 +1,66 @@
+uuid: cc52cb67-de57-41a0-92d5-8cb6bcc57189
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.tripal_entity.speciestree.speciestree_analysis
+    - field.field.tripal_entity.speciestree.speciestree_comment
+    - field.field.tripal_entity.speciestree.speciestree_dbxref
+    - field.field.tripal_entity.speciestree.speciestree_name
+    - field.field.tripal_entity.speciestree.speciestree_type
+    - tripal.content_type.speciestree
+  module:
+    - tripal_chado
+id: tripal_entity.speciestree.default
+targetEntityType: tripal_entity
+bundle: speciestree
+mode: default
+content:
+  speciestree_analysis:
+    type: chado_analysis_formatter_default
+    label: above
+    settings:
+      token_string: '[name]'
+    third_party_settings: {  }
+    weight: 25
+    region: content
+  speciestree_comment:
+    type: chado_text_type_formatter
+    label: above
+    settings:
+      field_prefix: ''
+      field_suffix: ''
+      hide_condition: ''
+      hide_value: ''
+    third_party_settings: {  }
+    weight: 30
+    region: content
+  speciestree_dbxref:
+    type: chado_dbxref_formatter_default
+    label: above
+    settings:
+      token_string: '[db_urlprefix]'
+    third_party_settings: {  }
+    weight: 68
+    region: content
+  speciestree_name:
+    type: chado_string_type_formatter
+    label: above
+    settings:
+      field_prefix: ''
+      field_suffix: ''
+      hide_condition: ''
+      hide_value: ''
+    third_party_settings: {  }
+    weight: 10
+    region: content
+  speciestree_type:
+    type: chado_additional_type_formatter_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 20
+    region: content
+hidden:
+  title: true
+  uid: true

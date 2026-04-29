@@ -1,0 +1,24 @@
+uuid: 23f2a29b-6e20-4466-8027-0137536b7a58
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.tripal_entity.breeding_cross_relationship
+    - tripal.content_type.breeding_cross
+  module:
+    - tripal_chado
+id: tripal_entity.breeding_cross.breeding_cross_relationship
+field_name: breeding_cross_relationship
+entity_type: tripal_entity
+bundle: breeding_cross
+label: Relationship
+description: "Germplasm related to this one. Think of relationship statements as sentences: SUBJECT TYPE OBJECT (e.g. 'Sara (subject) is the mother of (type) Jacob (object)'). By default the current germplasm is the subject; chose Reverse if the object is the current germplasm."
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  termIdSpace: SBO
+  termAccession: '0000374'
+  debug: false
+field_type: chado_relationship_type_default

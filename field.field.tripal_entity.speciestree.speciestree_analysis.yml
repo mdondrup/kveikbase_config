@@ -1,0 +1,24 @@
+uuid: d05004d3-8998-4f68-b483-a5f4604f155e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.tripal_entity.speciestree_analysis
+    - tripal.content_type.speciestree
+  module:
+    - tripal_chado
+id: tripal_entity.speciestree.speciestree_analysis
+field_name: speciestree_analysis
+entity_type: tripal_entity
+bundle: speciestree
+label: Analysis
+description: 'The analysis from which the tree was generated.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  termIdSpace: operation
+  termAccession: '2945'
+  debug: false
+field_type: chado_analysis_type_default

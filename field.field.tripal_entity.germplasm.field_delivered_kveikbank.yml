@@ -1,0 +1,27 @@
+uuid: 6eef569a-9120-41b6-99cc-2298f637216e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.tripal_entity.field_delivered_kveikbank
+    - tripal.content_type.germplasm
+  module:
+    - tripal
+third_party_settings:
+  tripal:
+    termIdSpace: SIO
+    termAccession: '001166'
+id: tripal_entity.germplasm.field_delivered_kveikbank
+field_name: field_delivered_kveikbank
+entity_type: tripal_entity
+bundle: germplasm
+label: Delivered_KveikBank
+description: 'The culture was delivered to KveikBank.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  on_label: 'Yes'
+  off_label: 'No'
+field_type: boolean

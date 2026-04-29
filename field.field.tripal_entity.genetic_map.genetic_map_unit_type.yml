@@ -1,0 +1,24 @@
+uuid: 05e6059d-c787-4a06-b219-3f8985267fe8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.tripal_entity.genetic_map_unit_type
+    - tripal.content_type.genetic_map
+  module:
+    - tripal_chado
+id: tripal_entity.genetic_map.genetic_map_unit_type
+field_name: genetic_map_unit_type
+entity_type: tripal_entity
+bundle: genetic_map
+label: 'Unit Type'
+description: 'A unit of measurement is a standardized quantity of a physical quality.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  termIdSpace: UO
+  termAccession: '0000000'
+  debug: false
+field_type: chado_unit_type_default

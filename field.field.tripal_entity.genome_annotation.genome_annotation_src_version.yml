@@ -1,0 +1,24 @@
+uuid: ff0d2e3b-0c05-44bc-8571-1e78a33fde40
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.tripal_entity.genome_annotation_src_version
+    - tripal.content_type.genome_annotation
+  module:
+    - tripal_chado
+id: tripal_entity.genome_annotation.genome_annotation_src_version
+field_name: genome_annotation_src_version
+entity_type: tripal_entity
+bundle: genome_annotation
+label: 'Data Source Version'
+description: 'The version number of the data source (if applicable).'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  termIdSpace: SIO
+  termAccession: '001377'
+  debug: false
+field_type: chado_string_type_default

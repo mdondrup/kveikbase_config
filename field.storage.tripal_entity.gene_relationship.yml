@@ -1,0 +1,28 @@
+uuid: f6f10bfd-e386-4913-83b4-fbfa83eb90be
+langcode: en
+status: true
+dependencies:
+  module:
+    - tripal
+    - tripal_chado
+id: tripal_entity.gene_relationship
+field_name: gene_relationship
+entity_type: tripal_entity
+type: chado_relationship_type_default
+settings:
+  termIdSpace: SBO
+  termAccession: '0000374'
+  storage_plugin_id: chado_storage
+  storage_plugin_settings:
+    base_table: feature
+    base_column: name
+    linker_table: feature_relationship
+    subject_column: subject_id
+    object_column: object_id
+module: tripal_chado
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

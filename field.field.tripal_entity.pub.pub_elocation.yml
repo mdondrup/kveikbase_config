@@ -1,0 +1,25 @@
+uuid: 3d4fa5f2-d779-4d4f-a2b8-1e973f6f1b12
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.tripal_entity.pub_elocation
+    - tripal.content_type.pub
+  module:
+    - tripal_chado
+id: tripal_entity.pub.pub_elocation
+field_name: pub_elocation
+entity_type: tripal_entity
+bundle: pub
+label: Elocation
+description: 'Provides an electronic location for the items. This includes Digital Object Identifiers (DOI) or Publisher Item Identifiers (PII).'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  termIdSpace: TPUB
+  termAccession: '0000080'
+  debug: false
+  fixed_value: ''
+field_type: chado_property_type_default

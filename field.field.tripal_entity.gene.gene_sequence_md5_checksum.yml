@@ -1,0 +1,25 @@
+uuid: 3a04fd52-d295-4375-b620-10c8e4997b5d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.tripal_entity.gene_sequence_md5_checksum
+    - tripal.content_type.gene
+  module:
+    - tripal_chado
+id: tripal_entity.gene.gene_sequence_md5_checksum
+field_name: gene_sequence_md5_checksum
+entity_type: tripal_entity
+bundle: gene
+label: 'Sequence MD5 Checksum'
+description: 'The 32-character checksum of the sequence, calculated using the MD5 algorithm.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  termIdSpace: data
+  termAccession: '2190'
+  debug: false
+  fixed_value: '1'
+field_type: chado_sequence_checksum_type_default

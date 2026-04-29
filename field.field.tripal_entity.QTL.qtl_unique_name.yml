@@ -1,0 +1,24 @@
+uuid: 5d0adaf0-6517-4716-bcb4-1c73d5f9db4a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.tripal_entity.qtl_unique_name
+    - tripal.content_type.QTL
+  module:
+    - tripal_chado
+id: tripal_entity.QTL.qtl_unique_name
+field_name: qtl_unique_name
+entity_type: tripal_entity
+bundle: QTL
+label: 'Unique Name'
+description: 'A name that uniquely identifies the QTL within the organism.'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  termIdSpace: data
+  termAccession: '0842'
+  debug: false
+field_type: chado_text_type_default

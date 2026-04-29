@@ -1,0 +1,24 @@
+uuid: 93a1c932-8a13-4558-a92b-99943818d2fb
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.tripal_entity.dna_library_synonym
+    - tripal.content_type.dna_library
+  module:
+    - tripal_chado
+id: tripal_entity.dna_library.dna_library_synonym
+field_name: dna_library_synonym
+entity_type: tripal_entity
+bundle: dna_library
+label: Synonyms
+description: 'Alternate names, aliases or synonyms for this record.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  termIdSpace: schema
+  termAccession: alternateName
+  debug: false
+field_type: chado_synonym_type_default

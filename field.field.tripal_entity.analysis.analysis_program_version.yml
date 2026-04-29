@@ -1,0 +1,24 @@
+uuid: a6542730-6851-47a3-88f8-9b5643fa2ccb
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.tripal_entity.analysis_program_version
+    - tripal.content_type.analysis
+  module:
+    - tripal_chado
+id: tripal_entity.analysis.analysis_program_version
+field_name: analysis_program_version
+entity_type: tripal_entity
+bundle: analysis
+label: 'Software Version'
+description: "The version of the program, pipeline, workflow or method used to perform this analysis. (e.g. TBLASTX 2.0MP-WashU [09-Nov-2000]). If there is no version, enter the date the analysis was performed or 'n/a' if version is not applicable to this analysis."
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  termIdSpace: IAO
+  termAccession: '0000129'
+  debug: false
+field_type: chado_string_type_default

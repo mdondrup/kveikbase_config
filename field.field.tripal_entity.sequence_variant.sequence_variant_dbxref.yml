@@ -1,0 +1,24 @@
+uuid: cbb0b617-ca15-4a2c-8c9b-b018038472c4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.tripal_entity.sequence_variant_dbxref
+    - tripal.content_type.sequence_variant
+  module:
+    - tripal_chado
+id: tripal_entity.sequence_variant.sequence_variant_dbxref
+field_name: sequence_variant_dbxref
+entity_type: tripal_entity
+bundle: sequence_variant
+label: 'Primary Database Reference'
+description: 'The ID where this record may be available in an external online database.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  termIdSpace: SBO
+  termAccession: '0000554'
+  debug: false
+field_type: chado_dbxref_type_default

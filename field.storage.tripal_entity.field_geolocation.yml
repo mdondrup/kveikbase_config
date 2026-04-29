@@ -1,0 +1,19 @@
+uuid: 652466d6-e1ed-46ed-b127-cfdaa094f7ce
+langcode: en
+status: true
+dependencies:
+  module:
+    - geolocation
+    - tripal
+id: tripal_entity.field_geolocation
+field_name: field_geolocation
+entity_type: tripal_entity
+type: geolocation
+settings: {  }
+module: geolocation
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

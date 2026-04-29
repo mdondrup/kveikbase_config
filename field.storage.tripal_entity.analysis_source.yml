@@ -1,0 +1,26 @@
+uuid: 58d4963b-c16e-4deb-95b9-fc5704da5c41
+langcode: en
+status: true
+dependencies:
+  module:
+    - tripal
+    - tripal_chado
+id: tripal_entity.analysis_source
+field_name: analysis_source
+entity_type: tripal_entity
+type: chado_string_type_default
+settings:
+  termIdSpace: NCIT
+  termAccession: C16493
+  max_length: 255
+  storage_plugin_id: chado_storage
+  storage_plugin_settings:
+    base_table: analysis
+    base_column: sourcename
+module: tripal_chado
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

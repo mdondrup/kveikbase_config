@@ -1,0 +1,14 @@
+uuid: 65ee8d00-3e1d-4d08-bbdd-e8374b85058c
+langcode: en
+status: true
+dependencies: {  }
+id: strain
+label: Strain
+termIdSpace: TAXRANK
+termAccession: '0001001'
+help_text: 'A specific kveik strain'
+category: General
+title_format: 'Entity [TripalEntity__entity_id]'
+url_format: '[TripalEntityType__term_label]/[TripalEntity__entity_id]'
+hide_empty_field: true
+ajax_field: true

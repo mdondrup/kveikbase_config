@@ -1,0 +1,26 @@
+uuid: 4d71bef4-463f-4a66-8c2c-18fd280dc2e5
+langcode: en
+status: true
+dependencies:
+  module:
+    - tripal
+    - tripal_chado
+id: tripal_entity.germplasm_type
+field_name: germplasm_type
+entity_type: tripal_entity
+type: chado_additional_type_type_default
+settings:
+  termIdSpace: CO_010
+  termAccession: '0000044'
+  storage_plugin_id: chado_storage
+  storage_plugin_settings:
+    base_table: stock
+    type_table: stock
+    type_column: type_id
+module: tripal_chado
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

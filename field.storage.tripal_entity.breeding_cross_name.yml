@@ -1,0 +1,26 @@
+uuid: bb3d82df-66ef-4bdb-89e9-d3e3e77fb3f5
+langcode: en
+status: true
+dependencies:
+  module:
+    - tripal
+    - tripal_chado
+id: tripal_entity.breeding_cross_name
+field_name: breeding_cross_name
+entity_type: tripal_entity
+type: chado_string_type_default
+settings:
+  termIdSpace: schema
+  termAccession: name
+  max_length: 255
+  storage_plugin_id: chado_storage
+  storage_plugin_settings:
+    base_table: stock
+    base_column: name
+module: tripal_chado
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

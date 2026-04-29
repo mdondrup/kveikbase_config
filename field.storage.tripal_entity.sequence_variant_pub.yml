@@ -1,0 +1,26 @@
+uuid: e1e5976d-cb5d-437a-9373-4d13fefbe0e4
+langcode: en
+status: true
+dependencies:
+  module:
+    - tripal
+    - tripal_chado
+id: tripal_entity.sequence_variant_pub
+field_name: sequence_variant_pub
+entity_type: tripal_entity
+type: chado_pub_type_default
+settings:
+  termIdSpace: TPUB
+  termAccession: '0000002'
+  storage_plugin_id: chado_storage
+  storage_plugin_settings:
+    base_table: feature
+    linker_table: feature_pub
+    linker_fkey_column: pub_id
+module: tripal_chado
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

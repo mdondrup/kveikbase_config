@@ -1,0 +1,24 @@
+uuid: f267b58b-e834-48f7-910d-20a394b7f816
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.tripal_entity.sequence_variant_organism
+    - tripal.content_type.sequence_variant
+  module:
+    - tripal_chado
+id: tripal_entity.sequence_variant.sequence_variant_organism
+field_name: sequence_variant_organism
+entity_type: tripal_entity
+bundle: sequence_variant
+label: Organism
+description: 'A material entity that is an individual living system, such as animal, plant, bacteria or virus, that is capable of replicating or reproducing, growth and maintenance in the right environment. An organism may be unicellular or made up, like humans, of many billions of cells divided into specialized tissues and organs.'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  termIdSpace: OBI
+  termAccession: '0100026'
+  debug: false
+field_type: chado_organism_type_default

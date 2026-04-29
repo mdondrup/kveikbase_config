@@ -1,0 +1,24 @@
+uuid: ca2515ad-6fd5-4fa6-829d-e990afea6d51
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.tripal_entity.publication_featuremap
+    - tripal.content_type.pub
+  module:
+    - tripal_chado
+id: tripal_entity.pub.publication_featuremap
+field_name: publication_featuremap
+entity_type: tripal_entity
+bundle: pub
+label: Map
+description: 'One or more genetic or physical maps mentioned in this publication'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  termIdSpace: data
+  termAccession: '1274'
+  debug: false
+field_type: chado_featuremap_type_default

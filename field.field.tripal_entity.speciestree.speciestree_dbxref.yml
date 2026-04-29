@@ -1,0 +1,24 @@
+uuid: 8f2d4870-cde7-45ac-9d34-2f46260d1002
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.tripal_entity.speciestree_dbxref
+    - tripal.content_type.speciestree
+  module:
+    - tripal_chado
+id: tripal_entity.speciestree.speciestree_dbxref
+field_name: speciestree_dbxref
+entity_type: tripal_entity
+bundle: speciestree
+label: 'Primary Database Reference'
+description: 'The ID where this record may be available in an external online database.'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  termIdSpace: SBO
+  termAccession: '0000554'
+  debug: false
+field_type: chado_dbxref_type_default

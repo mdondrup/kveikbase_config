@@ -1,0 +1,116 @@
+uuid: b53bf73b-2ae7-438a-8827-4394b4e72f9e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.tripal_entity.germplasm_variety.germplasm_variety_dbxref
+    - field.field.tripal_entity.germplasm_variety.germplasm_variety_dbxref_ann
+    - field.field.tripal_entity.germplasm_variety.germplasm_variety_description
+    - field.field.tripal_entity.germplasm_variety.germplasm_variety_is_obsolete
+    - field.field.tripal_entity.germplasm_variety.germplasm_variety_name
+    - field.field.tripal_entity.germplasm_variety.germplasm_variety_organism
+    - field.field.tripal_entity.germplasm_variety.germplasm_variety_pub
+    - field.field.tripal_entity.germplasm_variety.germplasm_variety_relationship
+    - field.field.tripal_entity.germplasm_variety.germplasm_variety_type
+    - field.field.tripal_entity.germplasm_variety.germplasm_variety_unique_name
+    - tripal.content_type.germplasm_variety
+  module:
+    - tripal_chado
+id: tripal_entity.germplasm_variety.default
+targetEntityType: tripal_entity
+bundle: germplasm_variety
+mode: default
+content:
+  germplasm_variety_dbxref:
+    type: chado_dbxref_formatter_default
+    label: above
+    settings:
+      token_string: '[db_urlprefix]'
+    third_party_settings: {  }
+    weight: 68
+    region: content
+  germplasm_variety_dbxref_ann:
+    type: chado_dbxref_formatter_default
+    label: above
+    settings:
+      token_string: '[db_urlprefix]'
+    third_party_settings: {  }
+    weight: 68
+    region: content
+  germplasm_variety_description:
+    type: chado_text_type_formatter
+    label: above
+    settings:
+      field_prefix: ''
+      field_suffix: ''
+      hide_condition: ''
+      hide_value: ''
+    third_party_settings: {  }
+    weight: 20
+    region: content
+  germplasm_variety_is_obsolete:
+    type: chado_boolean_type_formatter
+    label: above
+    settings:
+      false_string: 'False'
+      true_string: 'True'
+      hide_condition: ''
+    third_party_settings: {  }
+    weight: 90
+    region: content
+  germplasm_variety_name:
+    type: chado_string_type_formatter
+    label: above
+    settings:
+      field_prefix: ''
+      field_suffix: ''
+      hide_condition: ''
+      hide_value: ''
+    third_party_settings: {  }
+    weight: 10
+    region: content
+  germplasm_variety_organism:
+    type: chado_organism_formatter_default
+    label: above
+    settings:
+      token_string: '<i>[genus] [species]</i> [infratype_abbrev] <i>[infraname]</i>'
+    third_party_settings: {  }
+    weight: 10
+    region: content
+  germplasm_variety_pub:
+    type: chado_pub_formatter_default
+    label: above
+    settings:
+      token_string: '[uniquename]'
+    third_party_settings: {  }
+    weight: 30
+    region: content
+  germplasm_variety_relationship:
+    type: chado_relationship_formatter_default
+    label: above
+    settings:
+      token_string: 'The [subject_bundle] <strong>[subject_name]</strong> [type_name] [object_bundle] <strong>[object_name]</strong>'
+    third_party_settings: {  }
+    weight: 49
+    region: content
+  germplasm_variety_type:
+    type: chado_additional_type_formatter_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 25
+    region: content
+  germplasm_variety_unique_name:
+    type: chado_text_type_formatter
+    label: above
+    settings:
+      field_prefix: ''
+      field_suffix: ''
+      hide_condition: ''
+      hide_value: ''
+    third_party_settings: {  }
+    weight: 15
+    region: content
+hidden:
+  title: true
+  uid: true

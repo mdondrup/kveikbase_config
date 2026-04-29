@@ -1,0 +1,24 @@
+uuid: a89aec03-2af6-4d36-9f2e-532eba1c57d4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.tripal_entity.protocol_instrument
+    - tripal.content_type.protocol
+  module:
+    - tripal_chado
+id: tripal_entity.protocol.protocol_instrument
+field_name: protocol_instrument
+entity_type: tripal_entity
+bundle: protocol
+label: Instrument
+description: 'An instrument is a device which provides a mechanical or electronic function.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  termIdSpace: EFO
+  termAccession: '0000548'
+  debug: false
+field_type: chado_text_type_default

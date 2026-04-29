@@ -1,0 +1,25 @@
+uuid: 899b0259-b642-4912-81ae-8a5f159f9819
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.tripal_entity.field_contact
+    - tripal.content_type.germplasm
+  module:
+    - tripal
+third_party_settings:
+  tripal:
+    termIdSpace: SIO
+    termAccession: '001323'
+id: tripal_entity.germplasm.field_contact
+field_name: field_contact
+entity_type: tripal_entity
+bundle: germplasm
+label: Contact
+description: 'Contact email address'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: email

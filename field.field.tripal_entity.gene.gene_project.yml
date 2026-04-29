@@ -1,0 +1,24 @@
+uuid: 1ea511ac-84de-44be-826d-868f13a3f68b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.tripal_entity.gene_project
+    - tripal.content_type.gene
+  module:
+    - tripal_chado
+id: tripal_entity.gene.gene_project
+field_name: gene_project
+entity_type: tripal_entity
+bundle: gene
+label: Project
+description: 'The project which this gene is a part of'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  termIdSpace: NCIT
+  termAccession: C47885
+  debug: false
+field_type: chado_project_type_default

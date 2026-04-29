@@ -1,0 +1,322 @@
+uuid: 6af84dd8-2bf7-46b5-a8ea-ff3bfc8c1d4c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.tripal_entity.pub.pub_abstract
+    - field.field.tripal_entity.pub.pub_authors
+    - field.field.tripal_entity.pub.pub_citation
+    - field.field.tripal_entity.pub.pub_dbxref
+    - field.field.tripal_entity.pub.pub_doi
+    - field.field.tripal_entity.pub.pub_eissn
+    - field.field.tripal_entity.pub.pub_elocation
+    - field.field.tripal_entity.pub.pub_is_obsolete
+    - field.field.tripal_entity.pub.pub_issn
+    - field.field.tripal_entity.pub.pub_issue
+    - field.field.tripal_entity.pub.pub_journal_abbreviation
+    - field.field.tripal_entity.pub.pub_journal_country
+    - field.field.tripal_entity.pub.pub_language
+    - field.field.tripal_entity.pub.pub_language_abbr
+    - field.field.tripal_entity.pub.pub_miniref
+    - field.field.tripal_entity.pub.pub_pages
+    - field.field.tripal_entity.pub.pub_pii
+    - field.field.tripal_entity.pub.pub_publication_date
+    - field.field.tripal_entity.pub.pub_publication_model
+    - field.field.tripal_entity.pub.pub_publication_type
+    - field.field.tripal_entity.pub.pub_publisher
+    - field.field.tripal_entity.pub.pub_pubplace
+    - field.field.tripal_entity.pub.pub_pyear
+    - field.field.tripal_entity.pub.pub_relationship
+    - field.field.tripal_entity.pub.pub_series_name
+    - field.field.tripal_entity.pub.pub_title
+    - field.field.tripal_entity.pub.pub_type
+    - field.field.tripal_entity.pub.pub_uniquename
+    - field.field.tripal_entity.pub.pub_url
+    - field.field.tripal_entity.pub.pub_volume
+    - field.field.tripal_entity.pub.pub_volumetitle
+    - field.field.tripal_entity.pub.publication_featuremap
+    - tripal.content_type.pub
+  module:
+    - tripal_chado
+id: tripal_entity.pub.default
+targetEntityType: tripal_entity
+bundle: pub
+mode: default
+content:
+  pub_abstract:
+    type: chado_property_formatter_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 44
+    region: content
+  pub_authors:
+    type: chado_property_formatter_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 40
+    region: content
+  pub_citation:
+    type: chado_property_formatter_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 35
+    region: content
+  pub_dbxref:
+    type: chado_dbxref_formatter_default
+    label: above
+    settings:
+      token_string: '[db_urlprefix]'
+    third_party_settings: {  }
+    weight: 68
+    region: content
+  pub_doi:
+    type: chado_property_formatter_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 30
+    region: content
+  pub_eissn:
+    type: chado_property_formatter_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 32
+    region: content
+  pub_elocation:
+    type: chado_property_formatter_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 42
+    region: content
+  pub_is_obsolete:
+    type: chado_boolean_type_formatter
+    label: above
+    settings:
+      false_string: 'False'
+      true_string: 'True'
+      hide_condition: ''
+    third_party_settings: {  }
+    weight: 90
+    region: content
+  pub_issn:
+    type: chado_property_formatter_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 36
+    region: content
+  pub_issue:
+    type: chado_string_type_formatter
+    label: above
+    settings:
+      field_prefix: ''
+      field_suffix: ''
+      hide_condition: ''
+      hide_value: ''
+    third_party_settings: {  }
+    weight: 22
+    region: content
+  pub_journal_abbreviation:
+    type: chado_property_formatter_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 31
+    region: content
+  pub_journal_country:
+    type: chado_property_formatter_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 43
+    region: content
+  pub_language:
+    type: chado_property_formatter_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 41
+    region: content
+  pub_language_abbr:
+    type: chado_property_formatter_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 37
+    region: content
+  pub_miniref:
+    type: chado_string_type_formatter
+    label: above
+    settings:
+      field_prefix: ''
+      field_suffix: ''
+      hide_condition: ''
+      hide_value: ''
+    third_party_settings: {  }
+    weight: 50
+    region: content
+  pub_pages:
+    type: chado_string_type_formatter
+    label: above
+    settings:
+      field_prefix: ''
+      field_suffix: ''
+      hide_condition: ''
+      hide_value: ''
+    third_party_settings: {  }
+    weight: 24
+    region: content
+  pub_pii:
+    type: chado_property_formatter_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 45
+    region: content
+  pub_publication_date:
+    type: chado_property_formatter_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 33
+    region: content
+  pub_publication_model:
+    type: chado_property_formatter_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 39
+    region: content
+  pub_publication_type:
+    type: chado_property_formatter_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 38
+    region: content
+  pub_publisher:
+    type: chado_string_type_formatter
+    label: above
+    settings:
+      field_prefix: ''
+      field_suffix: ''
+      hide_condition: ''
+      hide_value: ''
+    third_party_settings: {  }
+    weight: 26
+    region: content
+  pub_pubplace:
+    type: chado_string_type_formatter
+    label: above
+    settings:
+      field_prefix: ''
+      field_suffix: ''
+      hide_condition: ''
+      hide_value: ''
+    third_party_settings: {  }
+    weight: 28
+    region: content
+  pub_pyear:
+    type: chado_string_type_formatter
+    label: above
+    settings:
+      field_prefix: ''
+      field_suffix: ''
+      hide_condition: ''
+      hide_value: ''
+    third_party_settings: {  }
+    weight: 20
+    region: content
+  pub_relationship:
+    type: chado_relationship_formatter_default
+    label: above
+    settings:
+      token_string: 'The [subject_bundle] <strong>[subject_name]</strong> [type_name] [object_bundle] <strong>[object_name]</strong>'
+    third_party_settings: {  }
+    weight: 67
+    region: content
+  pub_series_name:
+    type: chado_string_type_formatter
+    label: above
+    settings:
+      field_prefix: ''
+      field_suffix: ''
+      hide_condition: ''
+      hide_value: ''
+    third_party_settings: {  }
+    weight: 14
+    region: content
+  pub_title:
+    type: chado_text_type_formatter
+    label: above
+    settings:
+      field_prefix: ''
+      field_suffix: ''
+      hide_condition: ''
+      hide_value: ''
+    third_party_settings: {  }
+    weight: 10
+    region: content
+  pub_type:
+    type: chado_additional_type_formatter_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 12
+    region: content
+  pub_uniquename:
+    type: chado_text_type_formatter
+    label: above
+    settings:
+      field_prefix: ''
+      field_suffix: ''
+      hide_condition: ''
+      hide_value: ''
+    third_party_settings: {  }
+    weight: 34
+    region: content
+  pub_url:
+    type: chado_property_formatter_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 42
+    region: content
+  pub_volume:
+    type: chado_string_type_formatter
+    label: above
+    settings:
+      field_prefix: ''
+      field_suffix: ''
+      hide_condition: ''
+      hide_value: ''
+    third_party_settings: {  }
+    weight: 16
+    region: content
+  pub_volumetitle:
+    type: chado_text_type_formatter
+    label: above
+    settings:
+      field_prefix: ''
+      field_suffix: ''
+      hide_condition: ''
+      hide_value: ''
+    third_party_settings: {  }
+    weight: 18
+    region: content
+  publication_featuremap:
+    type: chado_featuremap_formatter_default
+    label: above
+    settings:
+      token_string: '[name]'
+    third_party_settings: {  }
+    weight: 83
+    region: content
+hidden:
+  title: true
+  uid: true

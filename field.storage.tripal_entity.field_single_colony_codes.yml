@@ -1,0 +1,21 @@
+uuid: 9dba99e5-92e7-4699-95a5-9445c0f7a465
+langcode: en
+status: true
+dependencies:
+  module:
+    - tripal
+id: tripal_entity.field_single_colony_codes
+field_name: field_single_colony_codes
+entity_type: tripal_entity
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

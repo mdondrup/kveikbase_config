@@ -1,0 +1,35 @@
+uuid: 691ad09d-5cc5-4eef-a062-2c39f325416e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.tripal_entity.field_taxonomy
+    - taxonomy.vocabulary.tags
+    - tripal.content_type.germplasm
+  module:
+    - tripal
+third_party_settings:
+  tripal:
+    termIdSpace: SIO
+    termAccession: '001166'
+id: tripal_entity.germplasm.field_taxonomy
+field_name: field_taxonomy
+entity_type: tripal_entity
+bundle: germplasm
+label: tags
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      tags: tags
+    sort:
+      field: name
+      direction: asc
+    auto_create: 0
+    auto_create_bundle: ''
+field_type: entity_reference

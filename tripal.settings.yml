@@ -1,0 +1,20 @@
+_core:
+  default_config_hash: 903BMK8ERfB7VWwkTvS2v0yPJz0NwsS0-esC8VDXfUg
+langcode: en
+tripal_entity_type:
+  max_id: 0
+  allowed_title_tags: 'em i strong u'
+  default_cache_backend_field_values: true
+files:
+  max_size: 1000000000
+  quota: 1000000000
+  expiration: 60
+reserved_schema_patterns:
+  '_test*': 'testing purposes'
+  public: 'Drupal installation'
+  frange: 'feature range (chado)'
+  genetic_code: 'genetic code (chado)'
+  so: 'sequence ontology (chado)'
+test_schema_base_names:
+  default: _test_biodb
+  chado: _test_chado

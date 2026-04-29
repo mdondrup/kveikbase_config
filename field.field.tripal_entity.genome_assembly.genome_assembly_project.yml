@@ -1,0 +1,24 @@
+uuid: 3cedb236-8260-45c2-9364-262635824481
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.tripal_entity.genome_assembly_project
+    - tripal.content_type.genome_assembly
+  module:
+    - tripal_chado
+id: tripal_entity.genome_assembly.genome_assembly_project
+field_name: genome_assembly_project
+entity_type: tripal_entity
+bundle: genome_assembly
+label: Project
+description: 'The project which this genome assembly is a part of'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  termIdSpace: NCIT
+  termAccession: C47885
+  debug: false
+field_type: chado_project_type_default

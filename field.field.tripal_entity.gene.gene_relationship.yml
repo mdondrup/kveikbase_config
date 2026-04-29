@@ -1,0 +1,24 @@
+uuid: 11b7f76b-8f2e-45f3-9301-09703488b29e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.tripal_entity.gene_relationship
+    - tripal.content_type.gene
+  module:
+    - tripal_chado
+id: tripal_entity.gene.gene_relationship
+field_name: gene_relationship
+entity_type: tripal_entity
+bundle: gene
+label: Relationship
+description: "Sequence features related to this gene. Think of relationship statements as sentences: SUBJECT TYPE OBJECT (e.g. 'Sara (subject) is the mother of (type) Jacob (object)'). By default the current gene is the subject; chose Reverse if the object is the current gene."
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  termIdSpace: SBO
+  termAccession: '0000374'
+  debug: false
+field_type: chado_relationship_type_default

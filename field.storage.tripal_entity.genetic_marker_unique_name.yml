@@ -1,0 +1,25 @@
+uuid: cee2be1b-53a0-45dd-b6b2-1fde1965dcfc
+langcode: en
+status: true
+dependencies:
+  module:
+    - tripal
+    - tripal_chado
+id: tripal_entity.genetic_marker_unique_name
+field_name: genetic_marker_unique_name
+entity_type: tripal_entity
+type: chado_text_type_default
+settings:
+  termIdSpace: data
+  termAccession: '0842'
+  storage_plugin_id: chado_storage
+  storage_plugin_settings:
+    base_table: feature
+    base_column: uniquename
+module: tripal_chado
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
