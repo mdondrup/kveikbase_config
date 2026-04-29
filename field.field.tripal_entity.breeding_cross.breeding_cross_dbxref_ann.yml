@@ -1,0 +1,24 @@
+uuid: 23d242f7-15bf-44bb-b9dd-155652d6c700
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.tripal_entity.breeding_cross_dbxref_ann
+    - tripal.content_type.breeding_cross
+  module:
+    - tripal_chado
+id: tripal_entity.breeding_cross.breeding_cross_dbxref_ann
+field_name: breeding_cross_dbxref_ann
+entity_type: tripal_entity
+bundle: breeding_cross
+label: 'Database Reference Annotations'
+description: 'The IDs where this record may be available in other external online databases.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  termIdSpace: SBO
+  termAccession: '0000552'
+  debug: false
+field_type: chado_dbxref_type_default

@@ -1,0 +1,26 @@
+uuid: f1f439e1-bfaf-40fc-ba82-b6f69238135b
+langcode: en
+status: true
+dependencies:
+  module:
+    - tripal
+    - tripal_chado
+id: tripal_entity.genome_project_name
+field_name: genome_project_name
+entity_type: tripal_entity
+type: chado_string_type_default
+settings:
+  termIdSpace: schema
+  termAccession: name
+  max_length: 255
+  storage_plugin_id: chado_storage
+  storage_plugin_settings:
+    base_table: project
+    base_column: name
+module: tripal_chado
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

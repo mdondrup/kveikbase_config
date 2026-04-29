@@ -1,0 +1,24 @@
+uuid: 34e2e241-458b-4757-b181-5e5f8d728ca6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.tripal_entity.gene_uniquename
+    - tripal.content_type.gene
+  module:
+    - tripal_chado
+id: tripal_entity.gene.gene_uniquename
+field_name: gene_uniquename
+entity_type: tripal_entity
+bundle: gene
+label: 'Unique Name'
+description: 'A name that uniquely identifies the gene within the organism.'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  termIdSpace: data
+  termAccession: '0842'
+  debug: false
+field_type: chado_text_type_default

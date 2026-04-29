@@ -1,0 +1,26 @@
+uuid: 62d9b655-0ce1-42fc-86d6-44068177509f
+langcode: en
+status: true
+dependencies:
+  module:
+    - tripal
+    - tripal_chado
+id: tripal_entity.dna_library_contact
+field_name: dna_library_contact
+entity_type: tripal_entity
+type: chado_contact_type_default
+settings:
+  termIdSpace: NCIT
+  termAccession: C47954
+  storage_plugin_id: chado_storage
+  storage_plugin_settings:
+    base_table: library
+    linker_table: library_contact
+    linker_fkey_column: contact_id
+module: tripal_chado
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

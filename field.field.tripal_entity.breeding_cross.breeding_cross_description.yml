@@ -1,0 +1,24 @@
+uuid: 4f93e030-756a-4120-814e-9188df128c2f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.tripal_entity.breeding_cross_description
+    - tripal.content_type.breeding_cross
+  module:
+    - tripal_chado
+id: tripal_entity.breeding_cross.breeding_cross_description
+field_name: breeding_cross_description
+entity_type: tripal_entity
+bundle: breeding_cross
+label: Description
+description: 'A description of the item.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  termIdSpace: schema
+  termAccession: description
+  debug: false
+field_type: chado_text_type_default

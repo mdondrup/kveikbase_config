@@ -1,0 +1,18 @@
+uuid: 56a8efbd-ff33-4b64-96a0-c56dec66bca5
+langcode: en
+status: true
+dependencies:
+  module:
+    - tripal
+id: tripal_entity.field_single_culture
+field_name: field_single_culture
+entity_type: tripal_entity
+type: boolean
+settings: {  }
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

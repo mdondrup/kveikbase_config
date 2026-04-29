@@ -1,0 +1,25 @@
+uuid: 81cbae76-7a2a-44c0-9e6d-1444dfa99176
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.tripal_entity.ril_type
+    - tripal.content_type.ril
+  module:
+    - tripal_chado
+id: tripal_entity.ril.ril_type
+field_name: ril_type
+entity_type: tripal_entity
+bundle: ril
+label: Type
+description: 'An additional type for the item, typically used for adding more specific types from external vocabularies in microdata syntax. This is a relationship between something and a class that the thing is in.'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  termIdSpace: CO_010
+  termAccession: '0000162'
+  debug: false
+  fixed_value: 'CO_010:0000162'
+field_type: chado_additional_type_type_default

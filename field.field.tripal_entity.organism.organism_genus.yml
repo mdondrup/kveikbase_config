@@ -1,0 +1,24 @@
+uuid: d2611465-d4c3-4551-9ab3-9ea9c4ff39a7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.tripal_entity.organism_genus
+    - tripal.content_type.organism
+  module:
+    - tripal_chado
+id: tripal_entity.organism.organism_genus
+field_name: organism_genus
+entity_type: tripal_entity
+bundle: organism
+label: Genus
+description: 'The genus name of the organism.'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  termIdSpace: TAXRANK
+  termAccession: '0000005'
+  debug: false
+field_type: chado_string_type_default

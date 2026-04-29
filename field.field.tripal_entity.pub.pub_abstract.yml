@@ -1,0 +1,25 @@
+uuid: e9142525-5c7f-487b-b0c6-e1ef40cb7bad
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.tripal_entity.pub_abstract
+    - tripal.content_type.pub
+  module:
+    - tripal_chado
+id: tripal_entity.pub.pub_abstract
+field_name: pub_abstract
+entity_type: tripal_entity
+bundle: pub
+label: Abstract
+description: 'The fully printed abstract for the publication.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  termIdSpace: TPUB
+  termAccession: '0000050'
+  debug: false
+  fixed_value: ''
+field_type: chado_property_type_default

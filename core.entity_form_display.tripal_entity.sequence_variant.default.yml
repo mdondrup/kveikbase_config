@@ -1,0 +1,158 @@
+uuid: 52474468-b275-4f7a-b7f4-0484a5aa86b1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.tripal_entity.sequence_variant.sequence_variant_contact
+    - field.field.tripal_entity.sequence_variant.sequence_variant_dbxref
+    - field.field.tripal_entity.sequence_variant.sequence_variant_dbxref_ann
+    - field.field.tripal_entity.sequence_variant.sequence_variant_is_analysis
+    - field.field.tripal_entity.sequence_variant.sequence_variant_is_obsolete
+    - field.field.tripal_entity.sequence_variant.sequence_variant_md5_checksum
+    - field.field.tripal_entity.sequence_variant.sequence_variant_name
+    - field.field.tripal_entity.sequence_variant.sequence_variant_organism
+    - field.field.tripal_entity.sequence_variant.sequence_variant_pub
+    - field.field.tripal_entity.sequence_variant.sequence_variant_relationship
+    - field.field.tripal_entity.sequence_variant.sequence_variant_sequence
+    - field.field.tripal_entity.sequence_variant.sequence_variant_sequence_length
+    - field.field.tripal_entity.sequence_variant.sequence_variant_synonym
+    - field.field.tripal_entity.sequence_variant.sequence_variant_type
+    - field.field.tripal_entity.sequence_variant.sequence_variant_unique_name
+    - tripal.content_type.sequence_variant
+  module:
+    - path
+    - tripal_chado
+id: tripal_entity.sequence_variant.default
+targetEntityType: tripal_entity
+bundle: sequence_variant
+mode: default
+content:
+  created:
+    type: datetime_timestamp
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 100
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  sequence_variant_contact:
+    type: chado_contact_widget_default
+    weight: 80
+    region: content
+    settings:
+      widget_select_limit: null
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  sequence_variant_dbxref:
+    type: chado_dbxref_widget_default
+    weight: 68
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  sequence_variant_dbxref_ann:
+    type: chado_dbxref_widget_default
+    weight: 68
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  sequence_variant_is_analysis:
+    type: chado_boolean_type_widget
+    weight: 90
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  sequence_variant_is_obsolete:
+    type: chado_boolean_type_widget
+    weight: 90
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  sequence_variant_md5_checksum:
+    type: chado_sequence_checksum_widget_default
+    weight: 30
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  sequence_variant_name:
+    type: chado_string_type_widget
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  sequence_variant_organism:
+    type: chado_organism_widget_default
+    weight: 10
+    region: content
+    settings:
+      widget_select_limit: null
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  sequence_variant_pub:
+    type: chado_pub_widget_default
+    weight: 85
+    region: content
+    settings:
+      widget_select_limit: null
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  sequence_variant_relationship:
+    type: chado_relationship_widget_default
+    weight: 49
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  sequence_variant_sequence:
+    type: chado_sequence_widget_default
+    weight: 20
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  sequence_variant_sequence_length:
+    type: chado_sequence_length_widget_default
+    weight: 25
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  sequence_variant_synonym:
+    type: chado_synonym_widget_default
+    weight: 66
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  sequence_variant_type:
+    type: chado_additional_type_widget_default
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  sequence_variant_unique_name:
+    type: chado_text_type_widget
+    weight: 15
+    region: content
+    settings:
+      filter_format: plain_text
+    third_party_settings: {  }
+  uid:
+    type: entity_reference_autocomplete
+    weight: 5
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden: {  }

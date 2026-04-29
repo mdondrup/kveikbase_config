@@ -1,0 +1,24 @@
+uuid: 055fec7d-8a74-4d4c-a7e6-9c3ade01ab8b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.tripal_entity.genome_annotation_relationship
+    - tripal.content_type.genome_annotation
+  module:
+    - tripal_chado
+id: tripal_entity.genome_annotation.genome_annotation_relationship
+field_name: genome_annotation_relationship
+entity_type: tripal_entity
+bundle: genome_annotation
+label: Relationship
+description: "Analyses related to this genome annotation. Think of relationship statements as sentences: SUBJECT TYPE OBJECT (e.g. 'Sara (subject) is the mother of (type) Jacob (object)'). By default the current genome annotation is the subject; chose Reverse if the object is the current genome annotation."
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  termIdSpace: SBO
+  termAccession: '0000374'
+  debug: false
+field_type: chado_relationship_type_default

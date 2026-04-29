@@ -1,0 +1,24 @@
+uuid: a05ea822-0238-40ce-867e-9e24720fcc8d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.tripal_entity.project_analysis
+    - tripal.content_type.project
+  module:
+    - tripal_chado
+id: tripal_entity.project.project_analysis
+field_name: project_analysis
+entity_type: tripal_entity
+bundle: project
+label: Analysis
+description: 'Application of analytical methods to existing data of a specific type'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  termIdSpace: operation
+  termAccession: '2945'
+  debug: false
+field_type: chado_analysis_type_default

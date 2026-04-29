@@ -1,0 +1,25 @@
+uuid: 3b1d4aa9-63e8-4ca0-823b-29322a6e1d5f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.tripal_entity.pub_authors
+    - tripal.content_type.pub
+  module:
+    - tripal_chado
+id: tripal_entity.pub.pub_authors
+field_name: pub_authors
+entity_type: tripal_entity
+bundle: pub
+label: Authors
+description: 'The list of authors of the publication. For PubMed style citations list each author with the last name first, followed by initials. Each author should be separated by a comma.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  termIdSpace: TPUB
+  termAccession: '0000047'
+  debug: false
+  fixed_value: ''
+field_type: chado_property_type_default

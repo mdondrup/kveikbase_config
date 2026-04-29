@@ -1,0 +1,25 @@
+uuid: ccda1d7c-e668-4a9a-9bbc-b6939f7890ef
+langcode: en
+status: true
+dependencies:
+  module:
+    - tripal
+    - tripal_chado
+id: tripal_entity.breeding_cross_dbxref
+field_name: breeding_cross_dbxref
+entity_type: tripal_entity
+type: chado_dbxref_type_default
+settings:
+  termIdSpace: SBO
+  termAccession: '0000554'
+  storage_plugin_id: chado_storage
+  storage_plugin_settings:
+    base_table: stock
+    base_column: dbxref_id
+module: tripal_chado
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

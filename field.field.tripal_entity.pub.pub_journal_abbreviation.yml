@@ -1,0 +1,25 @@
+uuid: b4e57a72-8483-4744-9be2-eb8efe1bb4e1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.tripal_entity.pub_journal_abbreviation
+    - tripal.content_type.pub
+  module:
+    - tripal_chado
+id: tripal_entity.pub.pub_journal_abbreviation
+field_name: pub_journal_abbreviation
+entity_type: tripal_entity
+bundle: pub
+label: 'Journal Abbreviation'
+description: 'The journal title ISO Abbreviation.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  termIdSpace: TPUB
+  termAccession: '0000038'
+  debug: false
+  fixed_value: ''
+field_type: chado_property_type_default

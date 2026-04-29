@@ -1,0 +1,25 @@
+uuid: 06f85c1e-da3f-4f99-97cb-6a344f738021
+langcode: en
+status: true
+dependencies:
+  module:
+    - tripal
+    - tripal_chado
+id: tripal_entity.dna_library_organism
+field_name: dna_library_organism
+entity_type: tripal_entity
+type: chado_organism_type_default
+settings:
+  termIdSpace: OBI
+  termAccession: '0100026'
+  storage_plugin_id: chado_storage
+  storage_plugin_settings:
+    base_table: library
+    base_column: organism_id
+module: tripal_chado
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,25 @@
+uuid: 25558eaa-8537-44d9-8276-341b98005351
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.tripal_entity.mrna_type
+    - tripal.content_type.mrna
+  module:
+    - tripal_chado
+id: tripal_entity.mrna.mrna_type
+field_name: mrna_type
+entity_type: tripal_entity
+bundle: mrna
+label: Type
+description: 'An additional type for the item, typically used for adding more specific types from external vocabularies in microdata syntax. This is a relationship between something and a class that the thing is in.'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  termIdSpace: SO
+  termAccession: '0000234'
+  debug: false
+  fixed_value: 'SO:0000234'
+field_type: chado_additional_type_type_default

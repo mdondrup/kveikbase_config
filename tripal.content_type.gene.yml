@@ -1,0 +1,19 @@
+uuid: 98c09b0b-6d0b-4ebb-a73b-e68d046d343a
+langcode: en
+status: true
+dependencies: {  }
+third_party_settings:
+  tripal:
+    chado_base_table: feature
+    bundle_type_table: feature
+    bundle_type_column: type_id
+id: gene
+label: Gene
+termIdSpace: SO
+termAccession: '0000704'
+help_text: 'Use the gene page for a region (or regions) that includes all of the sequence elements necessary to encode a functional transcript. A gene may include regulatory regions, transcribed regions and/or other functional sequence regions.'
+category: Genomic
+title_format: '[gene_name]'
+url_format: 'gene/[TripalEntity__entity_id]'
+hide_empty_field: true
+ajax_field: true

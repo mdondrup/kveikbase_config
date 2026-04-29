@@ -1,0 +1,24 @@
+uuid: 66dc6f0b-47e2-483c-b25f-a00b3c26f378
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.tripal_entity.gene_sequence_coordinates
+    - tripal.content_type.gene
+  module:
+    - tripal_chado
+id: tripal_entity.gene.gene_sequence_coordinates
+field_name: gene_sequence_coordinates
+entity_type: tripal_entity
+bundle: gene
+label: 'Sequence Coordinates'
+description: 'Locations on reference sequences where the feature is located.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  termIdSpace: data
+  termAccession: '2012'
+  debug: false
+field_type: chado_sequence_coordinates_default

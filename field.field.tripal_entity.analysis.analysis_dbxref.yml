@@ -1,0 +1,24 @@
+uuid: 08a94546-26dd-4d5e-b96c-b9a439b40e47
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.tripal_entity.analysis_dbxref
+    - tripal.content_type.analysis
+  module:
+    - tripal_chado
+id: tripal_entity.analysis.analysis_dbxref
+field_name: analysis_dbxref
+entity_type: tripal_entity
+bundle: analysis
+label: 'Database Reference Annotations'
+description: "The IDs where this record may be available in other external online databases. This might be a digital object identifier (DOI; e.g. doi.org/10.1093/bib/bbab238) or unique identifier. The site administrator will have configured the options available under 'Database' to generate a URL based on this value if the external online database supports it. If the specific option is not available, then contact the site administrator to have it added."
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  termIdSpace: SBO
+  termAccession: '0000552'
+  debug: false
+field_type: chado_dbxref_type_default

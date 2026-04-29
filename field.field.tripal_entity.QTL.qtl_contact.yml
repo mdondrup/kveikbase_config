@@ -1,0 +1,24 @@
+uuid: 4b1588ea-57a1-4f24-9cc4-16c2a6833921
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.tripal_entity.qtl_contact
+    - tripal.content_type.QTL
+  module:
+    - tripal_chado
+id: tripal_entity.QTL.qtl_contact
+field_name: qtl_contact
+entity_type: tripal_entity
+bundle: QTL
+label: Contact
+description: 'An individual or organization that serves as a contact for this record.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  termIdSpace: NCIT
+  termAccession: C47954
+  debug: false
+field_type: chado_contact_type_default

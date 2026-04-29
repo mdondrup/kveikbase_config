@@ -1,0 +1,24 @@
+uuid: f02d2c72-4762-4643-a18f-0d4a564f3ffa
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.tripal_entity.speciestree_name
+    - tripal.content_type.speciestree
+  module:
+    - tripal_chado
+id: tripal_entity.speciestree.speciestree_name
+field_name: speciestree_name
+entity_type: tripal_entity
+bundle: speciestree
+label: Name
+description: 'The name of the phylogenetic tree'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  termIdSpace: schema
+  termAccession: name
+  debug: false
+field_type: chado_string_type_default

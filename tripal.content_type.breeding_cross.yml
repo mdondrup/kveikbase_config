@@ -1,0 +1,19 @@
+uuid: 3a338cbd-f29f-40d1-a05c-ea4b565fd16f
+langcode: en
+status: true
+dependencies: {  }
+third_party_settings:
+  tripal:
+    chado_base_table: stock
+    bundle_type_table: stock
+    bundle_type_column: type_id
+id: breeding_cross
+label: 'Breeding Cross'
+termIdSpace: CO_010
+termAccession: '0000255'
+help_text: 'Use the breeding cross page for information about a cross between two germplasm in a breeding application.'
+category: Germplasm
+title_format: '[breeding_cross_name]'
+url_format: 'breeding_cross/[TripalEntity__entity_id]'
+hide_empty_field: true
+ajax_field: true

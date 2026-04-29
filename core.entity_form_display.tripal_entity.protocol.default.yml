@@ -1,0 +1,103 @@
+uuid: af3ba317-f11b-4527-bdaf-5e7f5d0fd6cb
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.tripal_entity.protocol.protocol_dbxref
+    - field.field.tripal_entity.protocol.protocol_description
+    - field.field.tripal_entity.protocol.protocol_instrument
+    - field.field.tripal_entity.protocol.protocol_name
+    - field.field.tripal_entity.protocol.protocol_pub
+    - field.field.tripal_entity.protocol.protocol_software
+    - field.field.tripal_entity.protocol.protocol_type
+    - field.field.tripal_entity.protocol.protocol_uri
+    - tripal.content_type.protocol
+  module:
+    - path
+    - tripal_chado
+id: tripal_entity.protocol.default
+targetEntityType: tripal_entity
+bundle: protocol
+mode: default
+content:
+  created:
+    type: datetime_timestamp
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 100
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  protocol_dbxref:
+    type: chado_dbxref_widget_default
+    weight: 68
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  protocol_description:
+    type: chado_text_type_widget
+    weight: 20
+    region: content
+    settings:
+      filter_format: basic_html
+    third_party_settings: {  }
+  protocol_instrument:
+    type: chado_text_type_widget
+    weight: 25
+    region: content
+    settings:
+      filter_format: basic_html
+    third_party_settings: {  }
+  protocol_name:
+    type: chado_text_type_widget
+    weight: 10
+    region: content
+    settings:
+      filter_format: plain_text
+    third_party_settings: {  }
+  protocol_pub:
+    type: chado_pub_widget_default
+    weight: 15
+    region: content
+    settings:
+      widget_select_limit: null
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  protocol_software:
+    type: chado_text_type_widget
+    weight: 30
+    region: content
+    settings:
+      filter_format: basic_html
+    third_party_settings: {  }
+  protocol_type:
+    type: chado_additional_type_widget_default
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  protocol_uri:
+    type: chado_text_type_widget
+    weight: 15
+    region: content
+    settings:
+      filter_format: plain_text
+    third_party_settings: {  }
+  uid:
+    type: entity_reference_autocomplete
+    weight: 5
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden: {  }

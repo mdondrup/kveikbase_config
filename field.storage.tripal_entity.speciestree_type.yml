@@ -1,0 +1,26 @@
+uuid: 5469199c-83fb-4724-b8b1-0a1f78f78a98
+langcode: en
+status: true
+dependencies:
+  module:
+    - tripal
+    - tripal_chado
+id: tripal_entity.speciestree_type
+field_name: speciestree_type
+entity_type: tripal_entity
+type: chado_additional_type_type_default
+settings:
+  termIdSpace: data
+  termAccession: '3272'
+  storage_plugin_id: chado_storage
+  storage_plugin_settings:
+    base_table: phylotree
+    type_table: phylotree
+    type_column: type_id
+module: tripal_chado
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

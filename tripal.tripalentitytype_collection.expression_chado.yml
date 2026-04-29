@@ -1,0 +1,46 @@
+uuid: 269f5b0d-f29b-4dba-b762-ab04274851cb
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: 86qW0UTgEohDz0m8KApl1vBhTBXL1Mx7mlz3c0pHFys
+id: expression_chado
+label: 'Expression Content Types (Chado)'
+description: 'Content types based on Chado focused on supporting expression data such as samples and assays.'
+content_types:
+  -
+    label: 'Biological Sample'
+    term: 'sep:00195'
+    help_text: 'Use the biological sample page for any material taken from a biological system for use in a systematic study.'
+    category: Expression
+    id: biosample
+    title_format: '[biosample_name]'
+    url_format: 'biosample/[TripalEntity__entity_id]'
+    synonyms:
+      - bio_data_25
+    settings:
+      chado_base_table: biomaterial
+  -
+    label: Assay
+    term: 'OBI:0000070'
+    help_text: 'Use the assay page to describe an experimental approach used to measure the characteristics of an item.'
+    category: Expression
+    id: assay
+    title_format: '[assay_name]'
+    url_format: 'assay/[TripalEntity__entity_id]'
+    synonyms:
+      - bio_data_26
+    settings:
+      chado_base_table: assay
+  -
+    label: 'Array Design'
+    term: 'EFO:0000269'
+    help_text: 'Use the array design page to describe the systematic arrangement of similar objects, usually in rows and columns, used by an instrument to perform an assay.'
+    category: Expression
+    id: array_design
+    title_format: '[array_design_name]'
+    url_format: 'array_design/[TripalEntity__entity_id]'
+    synonyms:
+      - bio_data_27
+    settings:
+      chado_base_table: arraydesign

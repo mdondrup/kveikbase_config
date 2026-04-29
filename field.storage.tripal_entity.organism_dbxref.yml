@@ -1,0 +1,26 @@
+uuid: fab46421-777e-4424-9c3e-4226fdd27b5e
+langcode: en
+status: true
+dependencies:
+  module:
+    - tripal
+    - tripal_chado
+id: tripal_entity.organism_dbxref
+field_name: organism_dbxref
+entity_type: tripal_entity
+type: chado_dbxref_type_default
+settings:
+  termIdSpace: SBO
+  termAccession: '0000552'
+  storage_plugin_id: chado_storage
+  storage_plugin_settings:
+    base_table: organism
+    linker_table: organism_dbxref
+    linker_fkey_column: dbxref_id
+module: tripal_chado
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

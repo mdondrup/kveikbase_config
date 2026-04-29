@@ -1,0 +1,17 @@
+uuid: 7deda57b-d6c4-4b84-8fc6-9b707a77b128
+langcode: en
+status: true
+dependencies: {  }
+third_party_settings:
+  tripal:
+    chado_base_table: pub
+id: pub
+label: Publication
+termIdSpace: TPUB
+termAccession: '0000002'
+help_text: 'Use the publication page for books, journal articles, or other citable work.'
+category: General
+title_format: '[pub_title]'
+url_format: 'pub/[TripalEntity__entity_id]'
+hide_empty_field: true
+ajax_field: true

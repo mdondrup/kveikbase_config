@@ -1,0 +1,22 @@
+uuid: 5849fbda-57ce-45bb-942b-06ec7fa3b08f
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - business_responsive_theme
+_core:
+  default_config_hash: d2gU9L262pIeNdqJoH351gQruu-s201QEBJAKGsRfD8
+id: business_responsive_theme_content
+theme: business_responsive_theme
+region: content
+weight: 1
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  label_display: '0'
+  provider: system
+visibility: {  }

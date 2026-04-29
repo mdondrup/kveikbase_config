@@ -1,0 +1,20 @@
+uuid: ce397e6c-8cd3-42ab-95b4-3be3a00fa473
+langcode: en
+status: true
+dependencies:
+  module:
+    - datetime
+    - tripal
+id: tripal_entity.field_sampling_date
+field_name: field_sampling_date
+entity_type: tripal_entity
+type: datetime
+settings:
+  datetime_type: date
+module: datetime
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,25 @@
+uuid: 56faf723-9741-44a6-9e4f-ad802daac9fc
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.tripal_entity.pub_publication_date
+    - tripal.content_type.pub
+  module:
+    - tripal_chado
+id: tripal_entity.pub.pub_publication_date
+field_name: pub_publication_date
+entity_type: tripal_entity
+bundle: pub
+label: 'Publication Date'
+description: 'The date the work was published. This should be in the format: YYYY Mon Day, where YYYY is a 4 digit year, Mon is a 3-letter English abbreviation for the month followed by the day. The month and day are optional.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  termIdSpace: TPUB
+  termAccession: '0000046'
+  debug: false
+  fixed_value: ''
+field_type: chado_property_type_default

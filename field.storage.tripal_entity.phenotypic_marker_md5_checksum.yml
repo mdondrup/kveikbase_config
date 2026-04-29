@@ -1,0 +1,25 @@
+uuid: 7b0078dc-0762-4ca5-9349-4dff85199063
+langcode: en
+status: true
+dependencies:
+  module:
+    - tripal
+    - tripal_chado
+id: tripal_entity.phenotypic_marker_md5_checksum
+field_name: phenotypic_marker_md5_checksum
+entity_type: tripal_entity
+type: chado_sequence_checksum_type_default
+settings:
+  termIdSpace: data
+  termAccession: '2190'
+  storage_plugin_id: chado_storage
+  storage_plugin_settings:
+    base_table: feature
+    base_column: md5checksum
+module: tripal_chado
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

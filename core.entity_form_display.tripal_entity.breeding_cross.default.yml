@@ -1,0 +1,119 @@
+uuid: 5b521b20-917c-45fc-8820-b45a5c598aa1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.tripal_entity.breeding_cross.breeding_cross_dbxref
+    - field.field.tripal_entity.breeding_cross.breeding_cross_dbxref_ann
+    - field.field.tripal_entity.breeding_cross.breeding_cross_description
+    - field.field.tripal_entity.breeding_cross.breeding_cross_is_obsolete
+    - field.field.tripal_entity.breeding_cross.breeding_cross_name
+    - field.field.tripal_entity.breeding_cross.breeding_cross_organism
+    - field.field.tripal_entity.breeding_cross.breeding_cross_pub
+    - field.field.tripal_entity.breeding_cross.breeding_cross_relationship
+    - field.field.tripal_entity.breeding_cross.breeding_cross_type
+    - field.field.tripal_entity.breeding_cross.breeding_cross_unique_name
+    - tripal.content_type.breeding_cross
+  module:
+    - path
+    - tripal_chado
+id: tripal_entity.breeding_cross.default
+targetEntityType: tripal_entity
+bundle: breeding_cross
+mode: default
+content:
+  breeding_cross_dbxref:
+    type: chado_dbxref_widget_default
+    weight: 68
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  breeding_cross_dbxref_ann:
+    type: chado_dbxref_widget_default
+    weight: 68
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  breeding_cross_description:
+    type: chado_text_type_widget
+    weight: 20
+    region: content
+    settings:
+      filter_format: basic_html
+    third_party_settings: {  }
+  breeding_cross_is_obsolete:
+    type: chado_boolean_type_widget
+    weight: 90
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  breeding_cross_name:
+    type: chado_string_type_widget
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  breeding_cross_organism:
+    type: chado_organism_widget_default
+    weight: 10
+    region: content
+    settings:
+      widget_select_limit: null
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  breeding_cross_pub:
+    type: chado_pub_widget_default
+    weight: 30
+    region: content
+    settings:
+      widget_select_limit: null
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  breeding_cross_relationship:
+    type: chado_relationship_widget_default
+    weight: 49
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  breeding_cross_type:
+    type: chado_additional_type_widget_default
+    weight: 25
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  breeding_cross_unique_name:
+    type: chado_text_type_widget
+    weight: 15
+    region: content
+    settings:
+      filter_format: plain_text
+    third_party_settings: {  }
+  created:
+    type: datetime_timestamp
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 100
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  uid:
+    type: entity_reference_autocomplete
+    weight: 5
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden: {  }

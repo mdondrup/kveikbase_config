@@ -1,0 +1,24 @@
+uuid: 5ea850d2-3320-4c4b-a8b6-8fa47f28ee61
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.tripal_entity.germplasm_variety_name
+    - tripal.content_type.germplasm_variety
+  module:
+    - tripal_chado
+id: tripal_entity.germplasm_variety.germplasm_variety_name
+field_name: germplasm_variety_name
+entity_type: tripal_entity
+bundle: germplasm_variety
+label: Name
+description: 'The name of the item.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  termIdSpace: schema
+  termAccession: name
+  debug: false
+field_type: chado_string_type_default

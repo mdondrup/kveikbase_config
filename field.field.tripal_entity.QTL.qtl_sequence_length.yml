@@ -1,0 +1,25 @@
+uuid: 7b63384b-3125-4df9-ac49-496015bfc278
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.tripal_entity.qtl_sequence_length
+    - tripal.content_type.QTL
+  module:
+    - tripal_chado
+id: tripal_entity.QTL.qtl_sequence_length
+field_name: qtl_sequence_length
+entity_type: tripal_entity
+bundle: QTL
+label: 'Sequence Length'
+description: 'The size (length) of a sequence, subsequence or region in a sequence, or range(s) of lengths.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  termIdSpace: data
+  termAccession: '1249'
+  debug: false
+  fixed_value: '1'
+field_type: chado_sequence_length_type_default

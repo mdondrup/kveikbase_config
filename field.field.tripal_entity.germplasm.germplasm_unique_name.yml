@@ -1,0 +1,24 @@
+uuid: 4b1ee513-7f03-40d7-9341-cff1aa222c9c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.tripal_entity.germplasm_unique_name
+    - tripal.content_type.germplasm
+  module:
+    - tripal_chado
+id: tripal_entity.germplasm.germplasm_unique_name
+field_name: germplasm_unique_name
+entity_type: tripal_entity
+bundle: germplasm
+label: 'Unique Name'
+description: 'A name that uniquely identifies the germplasm within this organism.'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  termIdSpace: data
+  termAccession: '0842'
+  debug: false
+field_type: chado_text_type_default

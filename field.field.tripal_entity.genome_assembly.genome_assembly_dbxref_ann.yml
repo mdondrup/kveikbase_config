@@ -1,0 +1,24 @@
+uuid: 66d67eb1-19c9-4bf8-86f8-403033da3994
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.tripal_entity.genome_assembly_dbxref_ann
+    - tripal.content_type.genome_assembly
+  module:
+    - tripal_chado
+id: tripal_entity.genome_assembly.genome_assembly_dbxref_ann
+field_name: genome_assembly_dbxref_ann
+entity_type: tripal_entity
+bundle: genome_assembly
+label: 'Database Reference Annotations'
+description: 'The IDs where this record may be available in other external online databases.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  termIdSpace: SBO
+  termAccession: '0000552'
+  debug: false
+field_type: chado_dbxref_type_default

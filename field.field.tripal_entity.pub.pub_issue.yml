@@ -1,0 +1,24 @@
+uuid: 502d4516-45b4-4d5c-954d-105c18452e0d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.tripal_entity.pub_issue
+    - tripal.content_type.pub
+  module:
+    - tripal_chado
+id: tripal_entity.pub.pub_issue
+field_name: pub_issue
+entity_type: tripal_entity
+bundle: pub
+label: Issue
+description: 'The issue of the series (e.g. journal) where the publication was printed.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  termIdSpace: TPUB
+  termAccession: '0000043'
+  debug: false
+field_type: chado_string_type_default

@@ -1,0 +1,24 @@
+uuid: d6d6e7b9-cf58-43a9-8c1e-fc827707ad10
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.tripal_entity.project_dbxref
+    - tripal.content_type.project
+  module:
+    - tripal_chado
+id: tripal_entity.project.project_dbxref
+field_name: project_dbxref
+entity_type: tripal_entity
+bundle: project
+label: 'Database Reference Annotations'
+description: 'The IDs where this record may be available in other external online databases.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  termIdSpace: SBO
+  termAccession: '0000552'
+  debug: false
+field_type: chado_dbxref_type_default

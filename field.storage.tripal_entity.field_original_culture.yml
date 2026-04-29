@@ -1,0 +1,18 @@
+uuid: 9f6ac707-2ddf-4ec2-b279-1af923a4429a
+langcode: en
+status: true
+dependencies:
+  module:
+    - tripal
+id: tripal_entity.field_original_culture
+field_name: field_original_culture
+entity_type: tripal_entity
+type: boolean
+settings: {  }
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

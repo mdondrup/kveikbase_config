@@ -1,0 +1,21 @@
+uuid: 8b40b557-f3c5-4c95-9255-487019722162
+langcode: en
+status: true
+dependencies:
+  module:
+    - tripal
+id: tripal_entity.field_place
+field_name: field_place
+entity_type: tripal_entity
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

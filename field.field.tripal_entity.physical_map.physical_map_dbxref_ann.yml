@@ -1,0 +1,24 @@
+uuid: ddabe0ab-db58-4c38-9080-a2815f086325
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.tripal_entity.physical_map_dbxref_ann
+    - tripal.content_type.physical_map
+  module:
+    - tripal_chado
+id: tripal_entity.physical_map.physical_map_dbxref_ann
+field_name: physical_map_dbxref_ann
+entity_type: tripal_entity
+bundle: physical_map
+label: 'Database Reference Annotations'
+description: 'The IDs where this record may be available in other external online databases.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  termIdSpace: SBO
+  termAccession: '0000552'
+  debug: false
+field_type: chado_dbxref_type_default

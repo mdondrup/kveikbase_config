@@ -1,0 +1,25 @@
+uuid: bd9fce14-988e-4ce3-9316-f52be22a96dd
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.tripal_entity.qtl_type
+    - tripal.content_type.QTL
+  module:
+    - tripal_chado
+id: tripal_entity.QTL.qtl_type
+field_name: qtl_type
+entity_type: tripal_entity
+bundle: QTL
+label: Type
+description: 'An additional type for the item, typically used for adding more specific types from external vocabularies in microdata syntax. This is a relationship between something and a class that the thing is in.'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  termIdSpace: SO
+  termAccession: '0000771'
+  debug: false
+  fixed_value: 'SO:0000771'
+field_type: chado_additional_type_type_default

@@ -1,0 +1,24 @@
+uuid: 6033e6ac-7e42-4768-9439-69d98ab7f285
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.tripal_entity.pub_pages
+    - tripal.content_type.pub
+  module:
+    - tripal_chado
+id: tripal_entity.pub.pub_pages
+field_name: pub_pages
+entity_type: tripal_entity
+bundle: pub
+label: 'Page Numbers'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  termIdSpace: TPUB
+  termAccession: '0000044'
+  debug: false
+field_type: chado_string_type_default

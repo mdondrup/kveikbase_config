@@ -1,0 +1,25 @@
+uuid: e0ed1839-9fe3-4566-9211-3e295b0c7e0a
+langcode: en
+status: true
+dependencies:
+  module:
+    - tripal
+    - tripal_chado
+id: tripal_entity.breeding_cross_is_obsolete
+field_name: breeding_cross_is_obsolete
+entity_type: tripal_entity
+type: chado_boolean_type_default
+settings:
+  termIdSpace: local
+  termAccession: is_obsolete
+  storage_plugin_id: chado_storage
+  storage_plugin_settings:
+    base_table: stock
+    base_column: is_obsolete
+module: tripal_chado
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

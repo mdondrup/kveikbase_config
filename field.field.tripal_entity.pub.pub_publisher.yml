@@ -1,0 +1,24 @@
+uuid: ead9ffcc-3feb-4a78-8c07-b389fc40b9e6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.tripal_entity.pub_publisher
+    - tripal.content_type.pub
+  module:
+    - tripal_chado
+id: tripal_entity.pub.pub_publisher
+field_name: pub_publisher
+entity_type: tripal_entity
+bundle: pub
+label: Publisher
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  termIdSpace: TPUB
+  termAccession: '0000244'
+  debug: false
+field_type: chado_string_type_default

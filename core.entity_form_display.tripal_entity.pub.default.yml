@@ -1,0 +1,301 @@
+uuid: 0a75a6ef-096c-4ebd-8d3a-63f43ce1cb77
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.tripal_entity.pub.pub_abstract
+    - field.field.tripal_entity.pub.pub_authors
+    - field.field.tripal_entity.pub.pub_citation
+    - field.field.tripal_entity.pub.pub_dbxref
+    - field.field.tripal_entity.pub.pub_doi
+    - field.field.tripal_entity.pub.pub_eissn
+    - field.field.tripal_entity.pub.pub_elocation
+    - field.field.tripal_entity.pub.pub_is_obsolete
+    - field.field.tripal_entity.pub.pub_issn
+    - field.field.tripal_entity.pub.pub_issue
+    - field.field.tripal_entity.pub.pub_journal_abbreviation
+    - field.field.tripal_entity.pub.pub_journal_country
+    - field.field.tripal_entity.pub.pub_language
+    - field.field.tripal_entity.pub.pub_language_abbr
+    - field.field.tripal_entity.pub.pub_miniref
+    - field.field.tripal_entity.pub.pub_pages
+    - field.field.tripal_entity.pub.pub_pii
+    - field.field.tripal_entity.pub.pub_publication_date
+    - field.field.tripal_entity.pub.pub_publication_model
+    - field.field.tripal_entity.pub.pub_publication_type
+    - field.field.tripal_entity.pub.pub_publisher
+    - field.field.tripal_entity.pub.pub_pubplace
+    - field.field.tripal_entity.pub.pub_pyear
+    - field.field.tripal_entity.pub.pub_relationship
+    - field.field.tripal_entity.pub.pub_series_name
+    - field.field.tripal_entity.pub.pub_title
+    - field.field.tripal_entity.pub.pub_type
+    - field.field.tripal_entity.pub.pub_uniquename
+    - field.field.tripal_entity.pub.pub_url
+    - field.field.tripal_entity.pub.pub_volume
+    - field.field.tripal_entity.pub.pub_volumetitle
+    - field.field.tripal_entity.pub.publication_featuremap
+    - tripal.content_type.pub
+  module:
+    - path
+    - tripal_chado
+id: tripal_entity.pub.default
+targetEntityType: tripal_entity
+bundle: pub
+mode: default
+content:
+  created:
+    type: datetime_timestamp
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 100
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  pub_abstract:
+    type: chado_property_widget_default
+    weight: 44
+    region: content
+    settings:
+      filter_format: basic_html
+      num_rows: 3
+    third_party_settings: {  }
+  pub_authors:
+    type: chado_property_widget_default
+    weight: 40
+    region: content
+    settings:
+      filter_format: basic_html
+      num_rows: 3
+    third_party_settings: {  }
+  pub_citation:
+    type: chado_property_widget_default
+    weight: 35
+    region: content
+    settings:
+      filter_format: basic_html
+      num_rows: 3
+    third_party_settings: {  }
+  pub_dbxref:
+    type: chado_dbxref_widget_default
+    weight: 68
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  pub_doi:
+    type: chado_property_widget_default
+    weight: 30
+    region: content
+    settings:
+      filter_format: basic_html
+      num_rows: 3
+    third_party_settings: {  }
+  pub_eissn:
+    type: chado_property_widget_default
+    weight: 32
+    region: content
+    settings:
+      filter_format: basic_html
+      num_rows: 3
+    third_party_settings: {  }
+  pub_elocation:
+    type: chado_property_widget_default
+    weight: 42
+    region: content
+    settings:
+      filter_format: basic_html
+      num_rows: 3
+    third_party_settings: {  }
+  pub_is_obsolete:
+    type: chado_boolean_type_widget
+    weight: 90
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  pub_issn:
+    type: chado_property_widget_default
+    weight: 36
+    region: content
+    settings:
+      filter_format: basic_html
+      num_rows: 3
+    third_party_settings: {  }
+  pub_issue:
+    type: chado_string_type_widget
+    weight: 22
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  pub_journal_abbreviation:
+    type: chado_property_widget_default
+    weight: 31
+    region: content
+    settings:
+      filter_format: basic_html
+      num_rows: 3
+    third_party_settings: {  }
+  pub_journal_country:
+    type: chado_property_widget_default
+    weight: 43
+    region: content
+    settings:
+      filter_format: basic_html
+      num_rows: 3
+    third_party_settings: {  }
+  pub_language:
+    type: chado_property_widget_default
+    weight: 41
+    region: content
+    settings:
+      filter_format: basic_html
+      num_rows: 3
+    third_party_settings: {  }
+  pub_language_abbr:
+    type: chado_property_widget_default
+    weight: 37
+    region: content
+    settings:
+      filter_format: basic_html
+      num_rows: 3
+    third_party_settings: {  }
+  pub_miniref:
+    type: chado_string_type_widget
+    weight: 50
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  pub_pages:
+    type: chado_string_type_widget
+    weight: 24
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  pub_pii:
+    type: chado_property_widget_default
+    weight: 45
+    region: content
+    settings:
+      filter_format: basic_html
+      num_rows: 3
+    third_party_settings: {  }
+  pub_publication_date:
+    type: chado_property_widget_default
+    weight: 33
+    region: content
+    settings:
+      filter_format: basic_html
+      num_rows: 3
+    third_party_settings: {  }
+  pub_publication_model:
+    type: chado_property_widget_default
+    weight: 39
+    region: content
+    settings:
+      filter_format: basic_html
+      num_rows: 3
+    third_party_settings: {  }
+  pub_publication_type:
+    type: chado_property_widget_default
+    weight: 38
+    region: content
+    settings:
+      filter_format: basic_html
+      num_rows: 3
+    third_party_settings: {  }
+  pub_publisher:
+    type: chado_string_type_widget
+    weight: 26
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  pub_pubplace:
+    type: chado_string_type_widget
+    weight: 28
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  pub_pyear:
+    type: chado_string_type_widget
+    weight: 20
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  pub_relationship:
+    type: chado_relationship_widget_default
+    weight: 67
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  pub_series_name:
+    type: chado_string_type_widget
+    weight: 14
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  pub_title:
+    type: chado_text_type_widget
+    weight: 10
+    region: content
+    settings:
+      filter_format: basic_html
+    third_party_settings: {  }
+  pub_type:
+    type: chado_additional_type_widget_default
+    weight: 12
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  pub_uniquename:
+    type: chado_text_type_widget
+    weight: 34
+    region: content
+    settings:
+      filter_format: plain_text
+    third_party_settings: {  }
+  pub_url:
+    type: chado_property_widget_default
+    weight: 42
+    region: content
+    settings:
+      filter_format: basic_html
+      num_rows: 3
+    third_party_settings: {  }
+  pub_volume:
+    type: chado_string_type_widget
+    weight: 16
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  pub_volumetitle:
+    type: chado_text_type_widget
+    weight: 18
+    region: content
+    settings:
+      filter_format: basic_html
+    third_party_settings: {  }
+  publication_featuremap:
+    type: chado_featuremap_widget_default
+    weight: 83
+    region: content
+    settings:
+      widget_select_limit: null
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  uid:
+    type: entity_reference_autocomplete
+    weight: 5
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden: {  }

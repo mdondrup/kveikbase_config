@@ -1,0 +1,24 @@
+uuid: aac38fbd-9f79-46d6-93da-65921d17d8f7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.tripal_entity.pub_relationship
+    - tripal.content_type.pub
+  module:
+    - tripal_chado
+id: tripal_entity.pub.pub_relationship
+field_name: pub_relationship
+entity_type: tripal_entity
+bundle: pub
+label: Relationship
+description: "Publications related to this one. Think of relationship statements as sentences: SUBJECT TYPE OBJECT (e.g. 'Sara (subject) is the mother of (type) Jacob (object)'). By default the current publication is the subject; chose Reverse if the object is the current publication."
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  termIdSpace: SBO
+  termAccession: '0000374'
+  debug: false
+field_type: chado_relationship_type_default

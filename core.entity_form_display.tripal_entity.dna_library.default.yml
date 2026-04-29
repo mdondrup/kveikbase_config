@@ -1,0 +1,116 @@
+uuid: 10b55af1-c374-4730-9158-7e58089716c4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.tripal_entity.dna_library.dna_library_contact
+    - field.field.tripal_entity.dna_library.dna_library_dbxref_ann
+    - field.field.tripal_entity.dna_library.dna_library_name
+    - field.field.tripal_entity.dna_library.dna_library_organism
+    - field.field.tripal_entity.dna_library.dna_library_pub
+    - field.field.tripal_entity.dna_library.dna_library_synonym
+    - field.field.tripal_entity.dna_library.dna_library_type
+    - field.field.tripal_entity.dna_library.dna_library_uniquename
+    - field.field.tripal_entity.dna_library.library_is_obsolete
+    - tripal.content_type.dna_library
+  module:
+    - path
+    - tripal_chado
+id: tripal_entity.dna_library.default
+targetEntityType: tripal_entity
+bundle: dna_library
+mode: default
+content:
+  created:
+    type: datetime_timestamp
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  dna_library_contact:
+    type: chado_contact_widget_default
+    weight: 50
+    region: content
+    settings:
+      widget_select_limit: null
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  dna_library_dbxref_ann:
+    type: chado_dbxref_widget_default
+    weight: 68
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  dna_library_name:
+    type: chado_string_type_widget
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  dna_library_organism:
+    type: chado_organism_widget_default
+    weight: 20
+    region: content
+    settings:
+      widget_select_limit: null
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  dna_library_pub:
+    type: chado_pub_widget_default
+    weight: 85
+    region: content
+    settings:
+      widget_select_limit: null
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  dna_library_synonym:
+    type: chado_synonym_widget_default
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  dna_library_type:
+    type: chado_additional_type_widget_default
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  dna_library_uniquename:
+    type: chado_text_type_widget
+    weight: 15
+    region: content
+    settings:
+      filter_format: plain_text
+    third_party_settings: {  }
+  library_is_obsolete:
+    type: chado_integer_type_widget
+    weight: 90
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 100
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  uid:
+    type: entity_reference_autocomplete
+    weight: 5
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden: {  }

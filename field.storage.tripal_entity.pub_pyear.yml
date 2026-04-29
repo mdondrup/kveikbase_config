@@ -1,0 +1,26 @@
+uuid: 3f45e25f-9a3f-4915-88f2-f0c54a125804
+langcode: en
+status: true
+dependencies:
+  module:
+    - tripal
+    - tripal_chado
+id: tripal_entity.pub_pyear
+field_name: pub_pyear
+entity_type: tripal_entity
+type: chado_string_type_default
+settings:
+  termIdSpace: TPUB
+  termAccession: '0000059'
+  max_length: 255
+  storage_plugin_id: chado_storage
+  storage_plugin_settings:
+    base_table: pub
+    base_column: pyear
+module: tripal_chado
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

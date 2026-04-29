@@ -1,0 +1,24 @@
+uuid: d3931472-0668-467b-918f-57c3946a0097
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.tripal_entity.study_name
+    - tripal.content_type.study
+  module:
+    - tripal_chado
+id: tripal_entity.study.study_name
+field_name: study_name
+entity_type: tripal_entity
+bundle: study
+label: Name
+description: 'The name of the item.'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  termIdSpace: schema
+  termAccession: name
+  debug: false
+field_type: chado_text_type_default

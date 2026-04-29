@@ -1,0 +1,24 @@
+uuid: 7539e471-a24d-4f74-b281-3ee8778b00a7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.tripal_entity.phylotree_analysis
+    - tripal.content_type.phylotree
+  module:
+    - tripal_chado
+id: tripal_entity.phylotree.phylotree_analysis
+field_name: phylotree_analysis
+entity_type: tripal_entity
+bundle: phylotree
+label: Analysis
+description: 'The analysis from which the tree was generated.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  termIdSpace: operation
+  termAccession: '2945'
+  debug: false
+field_type: chado_analysis_type_default

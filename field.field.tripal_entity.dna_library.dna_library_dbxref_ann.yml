@@ -1,0 +1,24 @@
+uuid: 1750bdf4-c611-49e4-9ecf-4f4340187da1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.tripal_entity.dna_library_dbxref_ann
+    - tripal.content_type.dna_library
+  module:
+    - tripal_chado
+id: tripal_entity.dna_library.dna_library_dbxref_ann
+field_name: dna_library_dbxref_ann
+entity_type: tripal_entity
+bundle: dna_library
+label: 'Database Reference Annotations'
+description: 'The IDs where this record may be available in other external online databases.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  termIdSpace: SBO
+  termAccession: '0000552'
+  debug: false
+field_type: chado_dbxref_type_default

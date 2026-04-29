@@ -1,0 +1,158 @@
+uuid: 719ea386-fec1-4404-9a7f-cd9e75ae2fa0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.tripal_entity.phenotypic_marker.phenotypic_marker_contact
+    - field.field.tripal_entity.phenotypic_marker.phenotypic_marker_dbxref
+    - field.field.tripal_entity.phenotypic_marker.phenotypic_marker_dbxref_ann
+    - field.field.tripal_entity.phenotypic_marker.phenotypic_marker_is_analysis
+    - field.field.tripal_entity.phenotypic_marker.phenotypic_marker_is_obsolete
+    - field.field.tripal_entity.phenotypic_marker.phenotypic_marker_length
+    - field.field.tripal_entity.phenotypic_marker.phenotypic_marker_md5_checksum
+    - field.field.tripal_entity.phenotypic_marker.phenotypic_marker_name
+    - field.field.tripal_entity.phenotypic_marker.phenotypic_marker_organism
+    - field.field.tripal_entity.phenotypic_marker.phenotypic_marker_pub
+    - field.field.tripal_entity.phenotypic_marker.phenotypic_marker_relationship
+    - field.field.tripal_entity.phenotypic_marker.phenotypic_marker_sequence
+    - field.field.tripal_entity.phenotypic_marker.phenotypic_marker_synonym
+    - field.field.tripal_entity.phenotypic_marker.phenotypic_marker_type
+    - field.field.tripal_entity.phenotypic_marker.phenotypic_marker_unique_name
+    - tripal.content_type.phenotypic_marker
+  module:
+    - path
+    - tripal_chado
+id: tripal_entity.phenotypic_marker.default
+targetEntityType: tripal_entity
+bundle: phenotypic_marker
+mode: default
+content:
+  created:
+    type: datetime_timestamp
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 100
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  phenotypic_marker_contact:
+    type: chado_contact_widget_default
+    weight: 80
+    region: content
+    settings:
+      widget_select_limit: null
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  phenotypic_marker_dbxref:
+    type: chado_dbxref_widget_default
+    weight: 68
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  phenotypic_marker_dbxref_ann:
+    type: chado_dbxref_widget_default
+    weight: 68
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  phenotypic_marker_is_analysis:
+    type: chado_boolean_type_widget
+    weight: 90
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  phenotypic_marker_is_obsolete:
+    type: chado_boolean_type_widget
+    weight: 90
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  phenotypic_marker_length:
+    type: chado_sequence_length_widget_default
+    weight: 25
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  phenotypic_marker_md5_checksum:
+    type: chado_sequence_checksum_widget_default
+    weight: 30
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  phenotypic_marker_name:
+    type: chado_string_type_widget
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  phenotypic_marker_organism:
+    type: chado_organism_widget_default
+    weight: 10
+    region: content
+    settings:
+      widget_select_limit: null
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  phenotypic_marker_pub:
+    type: chado_pub_widget_default
+    weight: 85
+    region: content
+    settings:
+      widget_select_limit: null
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  phenotypic_marker_relationship:
+    type: chado_relationship_widget_default
+    weight: 49
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  phenotypic_marker_sequence:
+    type: chado_sequence_widget_default
+    weight: 20
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  phenotypic_marker_synonym:
+    type: chado_synonym_widget_default
+    weight: 66
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  phenotypic_marker_type:
+    type: chado_additional_type_widget_default
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  phenotypic_marker_unique_name:
+    type: chado_text_type_widget
+    weight: 15
+    region: content
+    settings:
+      filter_format: plain_text
+    third_party_settings: {  }
+  uid:
+    type: entity_reference_autocomplete
+    weight: 5
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden: {  }

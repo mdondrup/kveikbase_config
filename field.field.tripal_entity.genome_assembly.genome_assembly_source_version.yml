@@ -1,0 +1,24 @@
+uuid: 1f96504a-ab9a-4bf5-8f82-f467cc8a3cf9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.tripal_entity.genome_assembly_source_version
+    - tripal.content_type.genome_assembly
+  module:
+    - tripal_chado
+id: tripal_entity.genome_assembly.genome_assembly_source_version
+field_name: genome_assembly_source_version
+entity_type: tripal_entity
+bundle: genome_assembly
+label: 'Data Source Version'
+description: 'The version number of the data source (if applicable).'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  termIdSpace: SIO
+  termAccession: '001377'
+  debug: false
+field_type: chado_string_type_default

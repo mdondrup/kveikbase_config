@@ -1,0 +1,24 @@
+uuid: b2ffe79e-f94e-4d8c-bdb1-f023e3f999be
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.tripal_entity.genetic_map_description
+    - tripal.content_type.genetic_map
+  module:
+    - tripal_chado
+id: tripal_entity.genetic_map.genetic_map_description
+field_name: genetic_map_description
+entity_type: tripal_entity
+bundle: genetic_map
+label: Description
+description: 'A description of the item.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  termIdSpace: schema
+  termAccession: description
+  debug: false
+field_type: chado_text_type_default

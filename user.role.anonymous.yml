@@ -1,0 +1,81 @@
+uuid: 8a671405-70c7-49ed-9dd1-5f67a78ec83c
+langcode: en
+status: true
+dependencies:
+  config:
+    - filter.format.restricted_html
+    - tripal.content_type.QTL
+    - tripal.content_type.analysis
+    - tripal.content_type.breeding_cross
+    - tripal.content_type.contact
+    - tripal.content_type.dna_library
+    - tripal.content_type.gene
+    - tripal.content_type.genetic_map
+    - tripal.content_type.genetic_marker
+    - tripal.content_type.genome_annotation
+    - tripal.content_type.genome_assembly
+    - tripal.content_type.genome_project
+    - tripal.content_type.germplasm
+    - tripal.content_type.germplasm_variety
+    - tripal.content_type.mrna
+    - tripal.content_type.organism
+    - tripal.content_type.phenotypic_marker
+    - tripal.content_type.phylotree
+    - tripal.content_type.physical_map
+    - tripal.content_type.project
+    - tripal.content_type.protocol
+    - tripal.content_type.pub
+    - tripal.content_type.ril
+    - tripal.content_type.sequence_variant
+    - tripal.content_type.speciestree
+    - tripal.content_type.strain
+    - tripal.content_type.study
+  module:
+    - announcements_feed
+    - comment
+    - contact
+    - filter
+    - klaro
+    - search
+    - system
+    - tripal
+_core:
+  default_config_hash: 6WavjUYXIegP9AAg2zXGx54MWIVoomC3SZhNiqe-Dyk
+id: anonymous
+label: 'Anonymous user'
+weight: 0
+is_admin: false
+permissions:
+  - 'access announcements'
+  - 'access comments'
+  - 'access content'
+  - 'access site-wide contact form'
+  - 'search content'
+  - 'use klaro'
+  - 'use text format restricted_html'
+  - 'view all QTL content'
+  - 'view all analysis content'
+  - 'view all breeding_cross content'
+  - 'view all contact content'
+  - 'view all dna_library content'
+  - 'view all gene content'
+  - 'view all genetic_map content'
+  - 'view all genetic_marker content'
+  - 'view all genome_annotation content'
+  - 'view all genome_assembly content'
+  - 'view all genome_project content'
+  - 'view all germplasm content'
+  - 'view all germplasm_variety content'
+  - 'view all mrna content'
+  - 'view all organism content'
+  - 'view all phenotypic_marker content'
+  - 'view all phylotree content'
+  - 'view all physical_map content'
+  - 'view all project content'
+  - 'view all protocol content'
+  - 'view all pub content'
+  - 'view all ril content'
+  - 'view all sequence_variant content'
+  - 'view all speciestree content'
+  - 'view all strain content'
+  - 'view all study content'

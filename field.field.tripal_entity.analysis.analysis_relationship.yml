@@ -1,0 +1,24 @@
+uuid: d1076fcf-734e-43ec-8127-14951638c005
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.tripal_entity.analysis_relationship
+    - tripal.content_type.analysis
+  module:
+    - tripal_chado
+id: tripal_entity.analysis.analysis_relationship
+field_name: analysis_relationship
+entity_type: tripal_entity
+bundle: analysis
+label: Relationship
+description: "Analyses related to this one. Think of relationship statements as sentences: SUBJECT TYPE OBJECT (e.g. 'Sara (subject) is the mother of (type) Jacob (object)'). By default the current analysis is the subject; chose Reverse if the object is the current analysis."
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  termIdSpace: SBO
+  termAccession: '0000374'
+  debug: false
+field_type: chado_relationship_type_default

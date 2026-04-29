@@ -1,0 +1,26 @@
+uuid: ff0ed6bb-c8f7-4f6a-b9c4-320e215d7bff
+langcode: en
+status: true
+dependencies:
+  module:
+    - tripal
+    - tripal_chado
+id: tripal_entity.sequence_variant_contact
+field_name: sequence_variant_contact
+entity_type: tripal_entity
+type: chado_contact_type_default
+settings:
+  termIdSpace: NCIT
+  termAccession: C47954
+  storage_plugin_id: chado_storage
+  storage_plugin_settings:
+    base_table: feature
+    linker_table: feature_contact
+    linker_fkey_column: contact_id
+module: tripal_chado
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

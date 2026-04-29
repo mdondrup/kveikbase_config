@@ -1,0 +1,25 @@
+uuid: 0dcfff59-5271-4728-a2ea-629e8de2084b
+langcode: en
+status: true
+dependencies:
+  module:
+    - tripal
+    - tripal_chado
+id: tripal_entity.ril_is_obsolete
+field_name: ril_is_obsolete
+entity_type: tripal_entity
+type: chado_boolean_type_default
+settings:
+  termIdSpace: local
+  termAccession: is_obsolete
+  storage_plugin_id: chado_storage
+  storage_plugin_settings:
+    base_table: stock
+    base_column: is_obsolete
+module: tripal_chado
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

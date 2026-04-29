@@ -1,0 +1,24 @@
+uuid: c0947080-3bde-456b-b5d4-50da444a235f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.tripal_entity.protocol_uri
+    - tripal.content_type.protocol
+  module:
+    - tripal_chado
+id: tripal_entity.protocol.protocol_uri
+field_name: protocol_uri
+entity_type: tripal_entity
+bundle: protocol
+label: URI
+description: 'The name of a biological or bioinformatics database.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  termIdSpace: data
+  termAccession: '1047'
+  debug: false
+field_type: chado_text_type_default

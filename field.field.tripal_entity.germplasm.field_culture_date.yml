@@ -1,0 +1,26 @@
+uuid: b6d9b7b7-0063-4de5-9497-4f670f6fcd77
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.tripal_entity.field_culture_date
+    - tripal.content_type.germplasm
+  module:
+    - datetime
+    - tripal
+third_party_settings:
+  tripal:
+    termIdSpace: SIO
+    termAccession: '001166'
+id: tripal_entity.germplasm.field_culture_date
+field_name: field_culture_date
+entity_type: tripal_entity
+bundle: germplasm
+label: 'Culture date'
+description: 'Date of culture growth for kveikbank'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

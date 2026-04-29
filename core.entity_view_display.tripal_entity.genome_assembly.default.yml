@@ -1,0 +1,144 @@
+uuid: 3b7a2341-ca11-4034-9651-da028a00748a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.tripal_entity.genome_assembly.genome_assembly_dbxref_ann
+    - field.field.tripal_entity.genome_assembly.genome_assembly_description
+    - field.field.tripal_entity.genome_assembly.genome_assembly_name
+    - field.field.tripal_entity.genome_assembly.genome_assembly_program_version
+    - field.field.tripal_entity.genome_assembly.genome_assembly_project
+    - field.field.tripal_entity.genome_assembly.genome_assembly_pub
+    - field.field.tripal_entity.genome_assembly.genome_assembly_relationship
+    - field.field.tripal_entity.genome_assembly.genome_assembly_software
+    - field.field.tripal_entity.genome_assembly.genome_assembly_source_name
+    - field.field.tripal_entity.genome_assembly.genome_assembly_source_version
+    - field.field.tripal_entity.genome_assembly.genome_assembly_type
+    - field.field.tripal_entity.genome_assembly.genome_assembly_uri
+    - tripal.content_type.genome_assembly
+  module:
+    - tripal_chado
+id: tripal_entity.genome_assembly.default
+targetEntityType: tripal_entity
+bundle: genome_assembly
+mode: default
+content:
+  genome_assembly_dbxref_ann:
+    type: chado_dbxref_formatter_default
+    label: above
+    settings:
+      token_string: '[db_urlprefix]'
+    third_party_settings: {  }
+    weight: 68
+    region: content
+  genome_assembly_description:
+    type: chado_text_type_formatter
+    label: above
+    settings:
+      field_prefix: ''
+      field_suffix: ''
+      hide_condition: ''
+      hide_value: ''
+    third_party_settings: {  }
+    weight: 15
+    region: content
+  genome_assembly_name:
+    type: chado_string_type_formatter
+    label: above
+    settings:
+      field_prefix: ''
+      field_suffix: ''
+      hide_condition: ''
+      hide_value: ''
+    third_party_settings: {  }
+    weight: 10
+    region: content
+  genome_assembly_program_version:
+    type: chado_string_type_formatter
+    label: above
+    settings:
+      field_prefix: ''
+      field_suffix: ''
+      hide_condition: ''
+      hide_value: ''
+    third_party_settings: {  }
+    weight: 25
+    region: content
+  genome_assembly_project:
+    type: chado_project_formatter_default
+    label: above
+    settings:
+      token_string: '[name]'
+    third_party_settings: {  }
+    weight: 84
+    region: content
+  genome_assembly_pub:
+    type: chado_pub_formatter_default
+    label: above
+    settings:
+      token_string: '[uniquename]'
+    third_party_settings: {  }
+    weight: 82
+    region: content
+  genome_assembly_relationship:
+    type: chado_relationship_formatter_default
+    label: above
+    settings:
+      token_string: 'The [subject_bundle] <strong>[subject_name]</strong> [type_name] [object_bundle] <strong>[object_name]</strong>'
+    third_party_settings: {  }
+    weight: 49
+    region: content
+  genome_assembly_software:
+    type: chado_string_type_formatter
+    label: above
+    settings:
+      field_prefix: ''
+      field_suffix: ''
+      hide_condition: ''
+      hide_value: ''
+    third_party_settings: {  }
+    weight: 20
+    region: content
+  genome_assembly_source_name:
+    type: chado_string_type_formatter
+    label: above
+    settings:
+      field_prefix: ''
+      field_suffix: ''
+      hide_condition: ''
+      hide_value: ''
+    third_party_settings: {  }
+    weight: 35
+    region: content
+  genome_assembly_source_version:
+    type: chado_string_type_formatter
+    label: above
+    settings:
+      field_prefix: ''
+      field_suffix: ''
+      hide_condition: ''
+      hide_value: ''
+    third_party_settings: {  }
+    weight: 40
+    region: content
+  genome_assembly_type:
+    type: chado_additional_type_formatter_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 10
+    region: content
+  genome_assembly_uri:
+    type: chado_text_type_formatter
+    label: above
+    settings:
+      field_prefix: ''
+      field_suffix: ''
+      hide_condition: ''
+      hide_value: ''
+    third_party_settings: {  }
+    weight: 45
+    region: content
+hidden:
+  title: true
+  uid: true

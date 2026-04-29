@@ -1,0 +1,25 @@
+uuid: a190f737-d084-4c55-9010-872f668cc4b9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.tripal_entity.dna_library_type
+    - tripal.content_type.dna_library
+  module:
+    - tripal_chado
+id: tripal_entity.dna_library.dna_library_type
+field_name: dna_library_type
+entity_type: tripal_entity
+bundle: dna_library
+label: 'Library Type'
+description: 'An additional type for the item, typically used for adding more specific types from external vocabularies in microdata syntax. This is a relationship between something and a class that the thing is in.'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  termIdSpace: NCIT
+  termAccession: C16223
+  debug: false
+  fixed_value: 'NCIT:C16223'
+field_type: chado_additional_type_type_default

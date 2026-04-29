@@ -1,0 +1,77 @@
+uuid: 635699c1-51a5-40f1-a9be-8862a8870c7b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.tripal_entity.contact.contact_description
+    - field.field.tripal_entity.contact.contact_name
+    - field.field.tripal_entity.contact.contact_project
+    - field.field.tripal_entity.contact.contact_relationship
+    - field.field.tripal_entity.contact.contact_type
+    - tripal.content_type.contact
+  module:
+    - path
+    - tripal_chado
+id: tripal_entity.contact.default
+targetEntityType: tripal_entity
+bundle: contact
+mode: default
+content:
+  contact_description:
+    type: chado_string_type_widget
+    weight: 15
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  contact_name:
+    type: chado_string_type_widget
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  contact_project:
+    type: chado_project_widget_default
+    weight: 60
+    region: content
+    settings:
+      widget_select_limit: null
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  contact_relationship:
+    type: chado_relationship_widget_default
+    weight: 49
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  contact_type:
+    type: chado_additional_type_widget_default
+    weight: 20
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  created:
+    type: datetime_timestamp
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 100
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  uid:
+    type: entity_reference_autocomplete
+    weight: 5
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden: {  }

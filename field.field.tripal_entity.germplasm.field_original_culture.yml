@@ -1,0 +1,27 @@
+uuid: 0d210c04-1c67-4047-a9d9-6c7c40f1ccfc
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.tripal_entity.field_original_culture
+    - tripal.content_type.germplasm
+  module:
+    - tripal
+third_party_settings:
+  tripal:
+    termIdSpace: SIO
+    termAccession: '001166'
+id: tripal_entity.germplasm.field_original_culture
+field_name: field_original_culture
+entity_type: tripal_entity
+bundle: germplasm
+label: 'Original culture'
+description: 'The original culture is in stock'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  on_label: 'Yes'
+  off_label: 'No'
+field_type: boolean

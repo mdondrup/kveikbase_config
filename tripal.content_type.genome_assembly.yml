@@ -1,0 +1,19 @@
+uuid: 06048822-fee2-434d-884d-869be6491245
+langcode: en
+status: true
+dependencies: {  }
+third_party_settings:
+  tripal:
+    chado_base_table: analysis
+    bundle_type_table: analysisprop
+    bundle_type_column: type_id
+id: genome_assembly
+label: 'Genome Assembly'
+termIdSpace: operation
+termAccession: '0525'
+help_text: 'Use the genome assembly page for an analyses specifcally for genome assembly. Such an analysis typically involves one or more workflows of bioinormatics tools to generate the assembly.'
+category: Genomic
+title_format: '[genome_assembly_name]'
+url_format: 'genome_assembly/[TripalEntity__entity_id]'
+hide_empty_field: true
+ajax_field: true

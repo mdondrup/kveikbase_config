@@ -1,0 +1,102 @@
+uuid: 0b0b4aab-d19f-4ba6-92ce-c43bed7fa25d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.tripal_entity.project.project_analysis
+    - field.field.tripal_entity.project.project_contact
+    - field.field.tripal_entity.project.project_dbxref
+    - field.field.tripal_entity.project.project_description
+    - field.field.tripal_entity.project.project_name
+    - field.field.tripal_entity.project.project_pub
+    - field.field.tripal_entity.project.project_relationship
+    - tripal.content_type.project
+  module:
+    - path
+    - tripal_chado
+id: tripal_entity.project.default
+targetEntityType: tripal_entity
+bundle: project
+mode: default
+content:
+  created:
+    type: datetime_timestamp
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 100
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  project_analysis:
+    type: chado_analysis_widget_default
+    weight: 25
+    region: content
+    settings:
+      widget_select_limit: null
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  project_contact:
+    type: chado_contact_widget_default
+    weight: 20
+    region: content
+    settings:
+      widget_select_limit: null
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  project_dbxref:
+    type: chado_dbxref_widget_default
+    weight: 68
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  project_description:
+    type: chado_text_type_widget
+    weight: 15
+    region: content
+    settings:
+      filter_format: basic_html
+    third_party_settings: {  }
+  project_name:
+    type: chado_string_type_widget
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  project_pub:
+    type: chado_pub_widget_default
+    weight: 30
+    region: content
+    settings:
+      widget_select_limit: null
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  project_relationship:
+    type: chado_relationship_widget_default
+    weight: 49
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  uid:
+    type: entity_reference_autocomplete
+    weight: 5
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden: {  }

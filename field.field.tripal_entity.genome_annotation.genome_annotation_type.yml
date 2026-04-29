@@ -1,0 +1,25 @@
+uuid: 458ab0f2-151d-4a45-8646-1f609e49400a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.tripal_entity.genome_annotation_type
+    - tripal.content_type.genome_annotation
+  module:
+    - tripal_chado
+id: tripal_entity.genome_annotation.genome_annotation_type
+field_name: genome_annotation_type
+entity_type: tripal_entity
+bundle: genome_annotation
+label: Type
+description: 'An additional type for the item, typically used for adding more specific types from external vocabularies in microdata syntax. This is a relationship between something and a class that the thing is in.'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  termIdSpace: operation
+  termAccession: '0362'
+  debug: false
+  fixed_value: 'operation:0362'
+field_type: chado_additional_type_type_default

@@ -1,0 +1,24 @@
+uuid: 5e137596-2ec5-436e-993d-411194b88bd7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.tripal_entity.phylotree_dbxref
+    - tripal.content_type.phylotree
+  module:
+    - tripal_chado
+id: tripal_entity.phylotree.phylotree_dbxref
+field_name: phylotree_dbxref
+entity_type: tripal_entity
+bundle: phylotree
+label: 'Primary Database Reference'
+description: 'The ID where this record may be available in an external online database.'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  termIdSpace: SBO
+  termAccession: '0000554'
+  debug: false
+field_type: chado_dbxref_type_default

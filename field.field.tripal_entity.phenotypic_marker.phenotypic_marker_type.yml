@@ -1,0 +1,25 @@
+uuid: a0f0dce3-643e-462c-9ebe-640ae014ff00
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.tripal_entity.phenotypic_marker_type
+    - tripal.content_type.phenotypic_marker
+  module:
+    - tripal_chado
+id: tripal_entity.phenotypic_marker.phenotypic_marker_type
+field_name: phenotypic_marker_type
+entity_type: tripal_entity
+bundle: phenotypic_marker
+label: Type
+description: 'An additional type for the item, typically used for adding more specific types from external vocabularies in microdata syntax. This is a relationship between something and a class that the thing is in.'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  termIdSpace: SO
+  termAccession: '0001500'
+  debug: false
+  fixed_value: 'SO:0001500'
+field_type: chado_additional_type_type_default

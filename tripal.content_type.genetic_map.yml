@@ -1,0 +1,19 @@
+uuid: 2b77d03f-3349-4a72-8edd-31f5d28280ad
+langcode: en
+status: true
+dependencies: {  }
+third_party_settings:
+  tripal:
+    chado_base_table: featuremap
+    bundle_type_table: featuremapprop
+    bundle_type_column: type_id
+id: genetic_map
+label: 'Genetic Map'
+termIdSpace: data
+termAccession: '1278'
+help_text: 'Use a genetic map page for a map showing the relative positions of genetic markers in a nucleic acid sequence, based on estimation of non-physical distance such as recombination frequencies.'
+category: Genetic
+title_format: '[genetic_map_name]'
+url_format: 'genetic_map/[TripalEntity__entity_id]'
+hide_empty_field: true
+ajax_field: true

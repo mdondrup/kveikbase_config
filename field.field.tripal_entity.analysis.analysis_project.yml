@@ -1,0 +1,24 @@
+uuid: 6a97ff95-fc21-4d3d-9fd1-a21085626089
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.tripal_entity.analysis_project
+    - tripal.content_type.analysis
+  module:
+    - tripal_chado
+id: tripal_entity.analysis.analysis_project
+field_name: analysis_project
+entity_type: tripal_entity
+bundle: analysis
+label: Project
+description: 'The project which this analysis is a part of or that is related to this analysis. This project page must already exist in order to link it here.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  termIdSpace: NCIT
+  termAccession: C47885
+  debug: false
+field_type: chado_project_type_default
