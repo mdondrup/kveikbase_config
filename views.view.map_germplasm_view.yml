@@ -1,0 +1,1104 @@
+uuid: 86669669-93e6-42ab-9e70-627acbdc08bb
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.tripal_entity.field_strain_geolocation
+    - field.storage.tripal_entity.germplasm_name
+    - field.storage.tripal_entity.germplasm_type
+    - system.menu.main
+    - tripal.content_type.germplasm
+  module:
+    - geolocation
+    - geolocation_leaflet
+    - tripal
+    - tripal_chado
+id: map_germplasm_view
+label: 'Map Germplasm_view'
+module: views
+description: ''
+tag: ''
+base_table: tripal_entity
+base_field: id
+display:
+  default:
+    id: default
+    display_title: Default
+    display_plugin: default
+    position: 0
+    display_options:
+      title: 'Strain Map'
+      fields:
+        id:
+          id: id
+          table: tripal_entity
+          field: id
+          relationship: none
+          group_type: group
+          admin_label: ''
+          entity_type: tripal_entity
+          entity_field: id
+          plugin_id: field
+          label: ''
+          exclude: true
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: number_integer
+          settings:
+            thousand_separator: ''
+            prefix_suffix: true
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+        germplasm_name:
+          id: germplasm_name
+          table: tripal_entity__germplasm_name
+          field: germplasm_name
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: field
+          label: ''
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: true
+            path: 'germplasm/{{ id }}'
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: chado_string_type_formatter
+          settings:
+            field_prefix: ''
+            field_suffix: ''
+            hide_condition: never
+            hide_value: ''
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+        germplasm_type:
+          id: germplasm_type
+          table: tripal_entity__germplasm_type
+          field: germplasm_type
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: field
+          label: ''
+          exclude: true
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: record_id
+          type: chado_additional_type_formatter_default
+          settings: {  }
+          group_column: ''
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+        field_strain_geolocation:
+          id: field_strain_geolocation
+          table: tripal_entity__field_strain_geolocation
+          field: field_strain_geolocation
+          relationship: none
+          group_type: group
+          admin_label: ''
+          entity_type: tripal_entity
+          plugin_id: geolocation_field
+          label: ''
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: ''
+          type: geolocation_sexagesimal
+          settings: {  }
+          group_column: ''
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+      pager:
+        type: none
+        options:
+          offset: 0
+      exposed_form:
+        type: basic
+        options:
+          submit_button: Apply
+          reset_button: true
+          reset_button_label: Reset
+          exposed_sorts_label: 'Sort by'
+          expose_sort_order: true
+          sort_asc_label: Asc
+          sort_desc_label: Desc
+      access:
+        type: none
+        options: {  }
+      cache:
+        type: tag
+        options: {  }
+      empty:
+        messages:
+          id: messages
+          table: views
+          field: messages
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: messages
+          empty: true
+      sorts:
+        created:
+          id: created
+          table: tripal_entity
+          field: created
+          relationship: none
+          group_type: group
+          admin_label: ''
+          entity_type: tripal_entity
+          entity_field: created
+          plugin_id: date
+          order: DESC
+          expose:
+            label: 'Authored on'
+            field_identifier: created
+          exposed: false
+          granularity: second
+      arguments: {  }
+      filters:
+        type:
+          id: type
+          table: tripal_entity
+          field: type
+          entity_type: tripal_entity
+          entity_field: type
+          plugin_id: bundle
+          value:
+            germplasm: germplasm
+          group: 1
+      filter_groups:
+        operator: AND
+        groups:
+          1: AND
+      style:
+        type: maps_common
+        options:
+          grouping: {  }
+          uses_fields: false
+          data_provider_id: geolocation_field_provider
+          data_provider_settings: {  }
+          geolocation_field: field_strain_geolocation
+          title_field: none
+          label_field: none
+          icon_field: ''
+          marker_row_number: 0
+          marker_icon_path: ''
+          even_empty: 1
+          dynamic_map:
+            enabled: 0
+            hide_form: 0
+            views_refresh_delay: '1200'
+            update_handler: ''
+            update_target: ''
+          centre:
+            fit_bounds:
+              enable: true
+          map_provider_id: ''
+          map_provider_settings: {  }
+      row:
+        type: 'entity:tripal_entity'
+        options:
+          relationship: none
+          view_mode: default
+      query:
+        type: views_query
+        options:
+          query_comment: ''
+          disable_sql_rewrite: false
+          distinct: false
+          replica: false
+          query_tags: {  }
+      relationships: {  }
+      use_ajax: true
+      header: {  }
+      footer: {  }
+      display_extenders: {  }
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+      tags:
+        - 'config:field.storage.tripal_entity.field_strain_geolocation'
+        - 'config:field.storage.tripal_entity.germplasm_name'
+        - 'config:field.storage.tripal_entity.germplasm_type'
+  block_1:
+    id: block_1
+    display_title: Block
+    display_plugin: block
+    position: 2
+    display_options:
+      pager:
+        type: full
+        options:
+          offset: 0
+          pagination_heading_level: h4
+          items_per_page: 5
+          total_pages: null
+          id: 0
+          tags:
+            next: 'Next ›'
+            previous: '‹ Previous'
+            first: '« First'
+            last: 'Last »'
+          expose:
+            items_per_page: false
+            items_per_page_label: 'Items per page'
+            items_per_page_options: '5, 10, 25, 50'
+            items_per_page_options_all: false
+            items_per_page_options_all_label: '- All -'
+            offset: false
+            offset_label: Offset
+          quantity: 9
+      defaults:
+        pager: false
+      display_extenders: {  }
+      block_description: Germplasm
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - url.query_args
+      tags:
+        - 'config:field.storage.tripal_entity.field_strain_geolocation'
+        - 'config:field.storage.tripal_entity.germplasm_name'
+        - 'config:field.storage.tripal_entity.germplasm_type'
+  page_1:
+    id: page_1
+    display_title: Page
+    display_plugin: page
+    position: 1
+    display_options:
+      style:
+        type: maps_common
+        options:
+          data_provider_id: geolocation_field_provider
+          geolocation_field: field_strain_geolocation
+          title_field: none
+          label_field: none
+          marker_row_number: 0
+          marker_icon_path: ''
+          even_empty: 1
+          centre:
+            first_row:
+              enable: false
+              weight: 0
+              settings:
+                location_option_id: first_row
+              map_center_id: location_plugins
+            fixed_value:
+              enable: false
+              weight: 0
+              settings:
+                location_option_id: fixed_value
+                latitude: 0.0
+                longitude: 0.0
+              map_center_id: location_plugins
+            ipstack:
+              enable: false
+              weight: 0
+              settings:
+                location_option_id: ipstack
+                access_key: ''
+              map_center_id: location_plugins
+            fit_bounds:
+              enable: true
+              weight: 0
+              settings:
+                min_zoom: 12
+              map_center_id: fit_bounds
+            fixed_boundaries:
+              enable: false
+              weight: 0
+              settings:
+                south: ''
+                west: ''
+                north: ''
+                east: ''
+              map_center_id: fixed_boundaries
+            fit_shapes:
+              enable: false
+              weight: 0
+              settings:
+                min_zoom: null
+              map_center_id: fit_shapes
+          map_provider_id: leaflet
+          map_provider_settings:
+            conditional_initialization: 'no'
+            conditional_description: ''
+            conditional_label: ''
+            conditional_viewport_threshold: 0.8
+            map_features:
+              client_location_indicator:
+                enabled: true
+                weight: 0
+              leaflet_disable_user_interaction:
+                enabled: false
+                weight: 0
+              geolocation_shapes:
+                enabled: false
+                weight: 0
+                settings:
+                  remove_markers: false
+                  polyline: true
+                  polyline_title: ''
+                  strokeColor: '#FF0000'
+                  strokeOpacity: 0.8
+                  strokeWidth: '2'
+                  polygon: false
+                  polygon_title: ''
+                  fillColor: '#FF0000'
+                  fillOpacity: 0.35
+              leaflet_gesture_handling:
+                enabled: false
+                weight: 0
+              leaflet_rotate:
+                enabled: false
+                weight: 0
+                settings:
+                  display_control: true
+                  bearing: 0.0
+              leaflet_control_attribution:
+                enabled: true
+                weight: 0
+                settings:
+                  position: bottomright
+                  prefix: Leaflet
+              leaflet_control_fullscreen:
+                enabled: true
+                weight: 0
+                settings:
+                  position: topright
+              control_geocoder:
+                enabled: false
+                weight: 0
+                settings:
+                  position: topleft
+                  geocoder: google_geocoding_api
+                  geocoder_settings:
+                    label: Address
+                    description: 'Enter an address to be localized.'
+                    autocomplete_min_length: 1
+                    component_restrictions:
+                      route: ''
+                      country: ''
+                      administrative_area: ''
+                      locality: ''
+                      postal_code: ''
+                    boundary_restriction:
+                      south: ''
+                      west: ''
+                      north: ''
+                      east: ''
+                    region: ''
+              control_loading_indicator:
+                enabled: true
+                weight: 0
+                settings:
+                  position: topleft
+                  loading_label: Loading
+              control_locate:
+                enabled: true
+                weight: 0
+                settings:
+                  position: bottomleft
+              control_recenter:
+                enabled: true
+                weight: 0
+                settings:
+                  position: bottomleft
+              leaflet_control_scale:
+                enabled: true
+                weight: 0
+                settings:
+                  position: bottomleft
+                  metric: true
+                  imperial: true
+              leaflet_control_layer:
+                enabled: false
+                weight: 0
+                settings:
+                  position: topleft
+                  default_label: Default
+                  tile_layer_providers:
+                    OpenStreetMap:
+                      'OpenStreetMap Mapnik':
+                        checkbox: true
+                        label: Mapnik
+                      'OpenStreetMap BlackAndWhite':
+                        checkbox: true
+                        label: BlackAndWhite
+                      'OpenStreetMap DE':
+                        checkbox: false
+                        label: ''
+                      'OpenStreetMap CH':
+                        checkbox: false
+                        label: ''
+                      'OpenStreetMap France':
+                        checkbox: false
+                        label: ''
+                      'OpenStreetMap HOT':
+                        checkbox: false
+                        label: ''
+                      'OpenStreetMap BZH':
+                        checkbox: false
+                        label: ''
+                    OpenTopoMap:
+                      OpenTopoMap:
+                        checkbox: true
+                        label: OpenTopoMap
+                    Thunderforest:
+                      'Thunderforest OpenCycleMap':
+                        checkbox: false
+                        label: ''
+                      'Thunderforest Transport':
+                        checkbox: false
+                        label: ''
+                      'Thunderforest TransportDark':
+                        checkbox: false
+                        label: ''
+                      'Thunderforest SpinalMap':
+                        checkbox: false
+                        label: ''
+                      'Thunderforest Landscape':
+                        checkbox: true
+                        label: ''
+                      'Thunderforest Outdoors':
+                        checkbox: false
+                        label: ''
+                      'Thunderforest Pioneer':
+                        checkbox: false
+                        label: ''
+                    OpenMapSurfer:
+                      'OpenMapSurfer Roads':
+                        checkbox: false
+                        label: ''
+                      'OpenMapSurfer Grayscale':
+                        checkbox: false
+                        label: ''
+                    Hydda:
+                      'Hydda Full':
+                        checkbox: false
+                        label: ''
+                      'Hydda Base':
+                        checkbox: false
+                        label: ''
+                    MapBox:
+                      MapBox:
+                        checkbox: true
+                        label: ''
+                    Stamen:
+                      'Stamen Toner':
+                        checkbox: false
+                        label: ''
+                      'Stamen TonerBackground':
+                        checkbox: false
+                        label: ''
+                      'Stamen TonerLite':
+                        checkbox: false
+                        label: ''
+                      'Stamen Watercolor':
+                        checkbox: false
+                        label: ''
+                      'Stamen Terrain':
+                        checkbox: false
+                        label: ''
+                      'Stamen TerrainBackground':
+                        checkbox: false
+                        label: ''
+                      'Stamen TopOSMRelief':
+                        checkbox: false
+                        label: ''
+                    Esri:
+                      'Esri WorldStreetMap':
+                        checkbox: false
+                        label: ''
+                      'Esri DeLorme':
+                        checkbox: false
+                        label: ''
+                      'Esri WorldTopoMap':
+                        checkbox: false
+                        label: ''
+                      'Esri WorldImagery':
+                        checkbox: false
+                        label: ''
+                      'Esri WorldTerrain':
+                        checkbox: false
+                        label: ''
+                      'Esri WorldShadedRelief':
+                        checkbox: false
+                        label: ''
+                      'Esri WorldPhysical':
+                        checkbox: false
+                        label: ''
+                      'Esri OceanBasemap':
+                        checkbox: false
+                        label: ''
+                      'Esri NatGeoWorldMap':
+                        checkbox: false
+                        label: ''
+                      'Esri WorldGrayCanvas':
+                        checkbox: false
+                        label: ''
+                    HERE:
+                      'HERE normalDay':
+                        checkbox: true
+                        label: ''
+                      'HERE normalDayCustom':
+                        checkbox: false
+                        label: ''
+                      'HERE normalDayGrey':
+                        checkbox: false
+                        label: ''
+                      'HERE normalDayMobile':
+                        checkbox: true
+                        label: ''
+                      'HERE normalDayGreyMobile':
+                        checkbox: false
+                        label: ''
+                      'HERE normalDayTransit':
+                        checkbox: false
+                        label: ''
+                      'HERE normalDayTransitMobile':
+                        checkbox: false
+                        label: ''
+                      'HERE normalNight':
+                        checkbox: false
+                        label: ''
+                      'HERE normalNightMobile':
+                        checkbox: true
+                        label: ''
+                      'HERE normalNightGrey':
+                        checkbox: true
+                        label: ''
+                      'HERE normalNightGreyMobile':
+                        checkbox: false
+                        label: ''
+                      'HERE normalNightTransit':
+                        checkbox: false
+                        label: ''
+                      'HERE normalNightTransitMobile':
+                        checkbox: false
+                        label: ''
+                      'HERE redcuedDay':
+                        checkbox: false
+                        label: ''
+                      'HERE redcuedNight':
+                        checkbox: false
+                        label: ''
+                      'HERE basicMap':
+                        checkbox: false
+                        label: ''
+                      'HERE mapLabels':
+                        checkbox: false
+                        label: ''
+                      'HERE trafficFlow':
+                        checkbox: false
+                        label: ''
+                      'HERE carnavDayGrey':
+                        checkbox: false
+                        label: ''
+                      'HERE hybridDayMobile':
+                        checkbox: false
+                        label: ''
+                      'HERE hybridDayTransit':
+                        checkbox: false
+                        label: ''
+                      'HERE hybridDayGrey':
+                        checkbox: false
+                        label: ''
+                      'HERE pedestrianDay':
+                        checkbox: false
+                        label: ''
+                      'HERE pedestrianNight':
+                        checkbox: false
+                        label: ''
+                      'HERE satelliteDay':
+                        checkbox: false
+                        label: ''
+                      'HERE terrainDay':
+                        checkbox: false
+                        label: ''
+                      'HERE terrainDayMobile':
+                        checkbox: false
+                        label: ''
+                    FreeMapSK:
+                      FreeMapSK:
+                        checkbox: false
+                        label: ''
+                    MtbMap:
+                      MtbMap:
+                        checkbox: false
+                        label: ''
+                    CartoDB:
+                      'CartoDB Positron':
+                        checkbox: false
+                        label: ''
+                      'CartoDB PositronNoLabels':
+                        checkbox: false
+                        label: ''
+                      'CartoDB PositronOnlyLabels':
+                        checkbox: false
+                        label: ''
+                      'CartoDB DarkMatter':
+                        checkbox: false
+                        label: ''
+                      'CartoDB DarkMatterNoLabels':
+                        checkbox: false
+                        label: ''
+                      'CartoDB DarkMatterOnlyLabels':
+                        checkbox: false
+                        label: ''
+                      'CartoDB Voyager':
+                        checkbox: false
+                        label: ''
+                      'CartoDB VoyagerNoLabels':
+                        checkbox: false
+                        label: ''
+                      'CartoDB VoyagerOnlyLabels':
+                        checkbox: false
+                        label: ''
+                      'CartoDB VoyagerLabelsUnder':
+                        checkbox: false
+                        label: ''
+                    HikeBike:
+                      HikeBike:
+                        checkbox: false
+                        label: ''
+                      'HikeBike HillShading':
+                        checkbox: false
+                        label: ''
+                    BasemapAT:
+                      'BasemapAT basemap':
+                        checkbox: false
+                        label: ''
+                      'BasemapAT grau':
+                        checkbox: false
+                        label: ''
+                      'BasemapAT overlay':
+                        checkbox: false
+                        label: ''
+                      'BasemapAT highdpi':
+                        checkbox: false
+                        label: ''
+                      'BasemapAT orthofoto':
+                        checkbox: false
+                        label: ''
+                    NLS:
+                      NLS:
+                        checkbox: false
+                        label: ''
+                    GeoportailFrance:
+                      'GeoportailFrance parcels':
+                        checkbox: false
+                        label: ''
+                      'GeoportailFrance ignMaps':
+                        checkbox: false
+                        label: ''
+                      'GeoportailFrance maps':
+                        checkbox: false
+                        label: ''
+                      'GeoportailFrance orthos':
+                        checkbox: false
+                        label: ''
+                  tile_providers_options:
+                    Thunderforest:
+                      apikey: ''
+                    MapBox:
+                      accessToken: ''
+                    HERE:
+                      app_id: ''
+                      app_code: ''
+                    GeoportailFrance:
+                      apikey: ''
+              control_tile_layers:
+                enabled: false
+                weight: 0
+                settings:
+                  position: topleft
+              control_view_fullscreen:
+                enabled: false
+                weight: 0
+                settings:
+                  position: topleft
+              leaflet_control_zoom:
+                enabled: true
+                weight: 0
+                settings:
+                  position: topleft
+              leaflet_max_bounds:
+                enabled: false
+                weight: 0
+                settings:
+                  north: null
+                  south: null
+                  east: null
+                  west: null
+              leaflet_custom_tile_layer:
+                enabled: false
+                weight: 0
+                settings:
+                  tile_layer_url: '//{s}.tile.osm.org/{z}/{x}/{y}.png'
+                  tile_layer_attribution: '&copy; <a href="https://osm.org/copyright">OpenStreetMap</a> contributors'
+                  tile_layer_subdomains: abc
+                  tile_layer_zoom: 18
+              leaflet_tile_layer_overlay:
+                enabled: false
+                weight: 0
+                settings:
+                  tile_layer_overlay: OpenInfraMap.Power
+              leaflet_tile_layer:
+                enabled: false
+                weight: 0
+                settings:
+                  tile_layer_provider: 'OpenStreetMap Mapnik'
+                  tile_provider_options:
+                    Thunderforest:
+                      apikey: ''
+                    MapBox:
+                      accessToken: ''
+                    HERE:
+                      app_id: ''
+                      app_code: ''
+                    GeoportailFrance:
+                      apikey: ''
+              leaflet_wms:
+                enabled: false
+                weight: 0
+                settings:
+                  url: ''
+                  version: 1.1.1
+                  layers: ''
+                  styles: ''
+                  srs: ''
+                  format: image/jpeg
+                  transparent: false
+                  identify: false
+            data_layers:
+              'geolocation_default_layer:default':
+                enabled: true
+                weight: -1
+                settings:
+                  features:
+                    leaflet_marker_clusterer:
+                      enabled: true
+                      weight: 0
+                      settings:
+                        cluster_settings:
+                          show_coverage_on_hover: true
+                          zoom_to_bounds_on_click: true
+                        disable_clustering_at_zoom: 0
+                        custom_marker_settings: ''
+                    leaflet_marker_icon:
+                      enabled: false
+                      weight: 0
+                      settings:
+                        marker_shadow_path: ''
+                        marker_icon_path: ''
+                        icon_size:
+                          width: null
+                          height: null
+                        icon_anchor:
+                          x: null
+                          'y': null
+                        popup_anchor:
+                          x: 0
+                          'y': 0
+                        shadow_size:
+                          width: null
+                          height: null
+                        shadow_anchor:
+                          x: null
+                          'y': null
+                    leaflet_marker_popup:
+                      enabled: true
+                      weight: 0
+                      settings:
+                        info_auto_display: true
+                        max_width: 300
+                        min_width: 50
+                        max_height: 0
+                        auto_pan: true
+                        keep_in_view: true
+                        close_button: true
+                        auto_close: true
+                        close_on_escape_key: true
+                        class_name: ''
+                    marker_zoom_by_anchor:
+                      enabled: true
+                      weight: 0
+                      settings:
+                        marker_zoom_anchor_id: ''
+            tile_layers:
+              geolocation_tile_thunderforest:
+                settings:
+                  apikey: ''
+                layers:
+                  'geolocation_tile_thunderforest:cycle':
+                    enabled: 0
+                  'geolocation_tile_thunderforest:transport':
+                    enabled: 0
+                  'geolocation_tile_thunderforest:transport-dark':
+                    enabled: 0
+                  'geolocation_tile_thunderforest:spinal-map':
+                    enabled: 0
+                  'geolocation_tile_thunderforest:landscape':
+                    enabled: 0
+                  'geolocation_tile_thunderforest:outdoors':
+                    enabled: 0
+                  'geolocation_tile_thunderforest:pioneer':
+                    enabled: 0
+                  'geolocation_tile_thunderforest:mobile-atlas':
+                    enabled: 0
+                  'geolocation_tile_thunderforest:neighbourhood':
+                    enabled: 0
+            zoom: '10'
+            height: 80vh
+            width: 80%
+            minZoom: '0'
+            maxZoom: '20'
+            maxBounds:
+              north_east_bound:
+                lat: null
+                lng: null
+              south_west_bound:
+                lat: null
+                lng: null
+            crs: EPSG3857
+            preferCanvas: true
+            zoomSnap: 1
+            zoomDelta: 1
+            trackResize: true
+            boxZoom: true
+            doubleClickZoom: false
+            dragging: true
+            zoomAnimation: true
+            zoomAnimationThreshold: 4
+            fadeAnimation: true
+            markerZoomAnimation: true
+            inertia: true
+            inertiaDeceleration: 3000
+            easeLinearity: 0.2
+            worldCopyJump: false
+            maxBoundsViscosity: 0.0
+            keyboard: true
+            keyboardPanDelta: 80
+            scrollWheelZoom: true
+            wheelDebounceTime: 40
+            wheelPxPerZoomLevel: 60
+            tap: true
+            tapTolerance: 15
+            touchZoom: true
+            bounceAtZoomLimits: true
+      row:
+        type: fields
+        options:
+          default_field_elements: true
+          inline:
+            germplasm_name: germplasm_name
+            field_strain_geolocation: field_strain_geolocation
+          separator: ''
+          hide_empty: false
+      defaults:
+        style: false
+        row: false
+      display_extenders: {  }
+      path: germplasm-map
+      menu:
+        type: normal
+        title: 'Strain Map'
+        description: ''
+        weight: 0
+        expanded: false
+        menu_name: main
+        parent: ''
+        context: '0'
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+      tags:
+        - 'config:field.storage.tripal_entity.field_strain_geolocation'
+        - 'config:field.storage.tripal_entity.germplasm_name'
+        - 'config:field.storage.tripal_entity.germplasm_type'

@@ -25,17 +25,18 @@ module:
   file: 0
   filter: 0
   geolocation: 0
+  geolocation_bing: 0
+  geolocation_geocodio: 0
+  geolocation_geometry: 0
+  geolocation_geometry_demo: 0
   geolocation_google_maps: 0
   geolocation_google_static_maps: 0
   geolocation_here: 0
+  geolocation_leaflet: 0
   gin_toolbar: 0
   help: 0
   history: 0
   image: 0
-  jquery_ui: 0
-  jquery_ui_autocomplete: 0
-  jquery_ui_menu: 0
-
   klaro: 0
   link: 0
   map_provider: 0
