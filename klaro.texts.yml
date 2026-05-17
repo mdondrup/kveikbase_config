@@ -1,6 +1,6 @@
 _core:
   default_config_hash: FHr6psQnRtYvXa9wwVyQsT3ytUtv2w9OvbvbdMDq4a0
-langcode: en
+langcode: nb
 consentModal:
   title: 'Use of personal data and cookies'
   description: "Please choose the services and 3rd party applications we would like to use.\r\n"
@@ -12,11 +12,11 @@ consentNotice:
   title: 'Use of personal data and cookies'
   changeDescription: 'There were changes since your last visit, please update your consent.'
   description: "We use cookies and process personal data for the following purposes: {purposes}.\r\n"
-  learnMore: Customize
+  learnMore: Tilpass
 ok: Accept
-save: Save
+save: Lagre
 decline: Decline
-close: Close
+close: Lukk
 acceptAll: 'Accept all'
 acceptSelected: 'Accept selected'
 service:
@@ -32,7 +32,7 @@ service:
   purposes: Purposes
   purpose: Purpose
 contextualConsent:
-  acceptAlways: Always
+  acceptAlways: Alltid
   acceptOnce: 'Yes (this time)'
   description: 'Load external content supplied by {title}?'
 poweredBy: 'Powered by Klaro!'

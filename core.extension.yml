@@ -1,6 +1,7 @@
 _core:
   default_config_hash: 4GIX5Esnc_umpXUBj4IIocRX7Mt5fPhm4AgXfE3E56E
 module:
+  advanced_language_selector: 0
   announcements_feed: 0
   automated_cron: 0
   big_pipe: 0
@@ -10,6 +11,7 @@ module:
   ckeditor5: 0
   comment: 0
   config: 0
+  config_translation: 0
   contact: 0
   contextual: 0
   datetime: 0
@@ -25,7 +27,6 @@ module:
   file: 0
   filter: 0
   geolocation: 0
-  geolocation_bing: 0
   geolocation_geocodio: 0
   geolocation_geometry: 0
   geolocation_geometry_demo: 0
@@ -37,11 +38,20 @@ module:
   help: 0
   history: 0
   image: 0
+  inline_form_errors: 0
+  jquery_ui: 0
+  jquery_ui_autocomplete: 0
+  jquery_ui_menu: 0
   klaro: 0
+  language: 0
+  layout_builder: 0
+  layout_discovery: 0
   link: 0
+  locale: 0
   map_provider: 0
   menu_link_content: 0
   menu_ui: 0
+  navigation: 0
   node: 0
   options: 0
   page_cache: 0
@@ -62,6 +72,7 @@ module:
   update: 0
   user: 0
   views_ui: 0
+  content_translation: 10
   views: 10
   standard: 1000
 theme:

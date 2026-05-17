@@ -1,5 +1,5 @@
-uuid: 1cd63740-33dd-4339-8a81-c83664fae675
-langcode: en
+uuid: 24a97a8f-412f-45f4-bff4-cf718a1e25bc
+langcode: nb
 status: true
 dependencies:
   module:
@@ -11,12 +11,12 @@ _core:
 id: searchform_2
 theme: tara
 region: search_box
-weight: 0
+weight: -5
 provider: null
 plugin: search_form_block
 settings:
   id: search_form_block
-  label: 'Search form'
+  label: Søkeskjema
   label_display: '0'
   provider: search
   page_id: null

@@ -1,5 +1,5 @@
 uuid: 06a8a4ec-d52c-4412-ab2d-b0cb1edde4a7
-langcode: en
+langcode: nb
 status: true
 dependencies:
   module:
@@ -7,7 +7,7 @@ dependencies:
 _core:
   default_config_hash: sOb26JSy3fGpWkvR0WYN6_hMqj_6d1rvbvrkzp1yya0
 id: node_make_sticky_action
-label: 'Make content sticky'
+label: 'Klistre innlegg på toppen av lister'
 type: node
 plugin: node_make_sticky_action
 configuration: {  }

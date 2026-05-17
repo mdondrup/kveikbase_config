@@ -1,0 +1,40 @@
+cancel_confirm:
+  subject: "Forespørsel om å\_kansellere [user:display-name] på [site:name]"
+  body: |-
+    [user:display-name]
+
+    En forespørsel om å kansellere kontoen din har blitt sendt fra [site:name].
+
+    Du kan nå avslutte kontoen din på [site:url-brief] ved å klikke på denne lenken eller kopiere og lime inn lenken i nettleseren din:
+
+    [user:cancel-url]
+
+    MERK: Når du avslutter kontoen din, kan dette ikke reverseres.
+
+    Denne lenken utløper om én dag, og ingenting vil skje hvis den ikke brukes.
+
+    --  Teamet på [site:name]
+password_reset:
+  subject: 'Nytt innloggingspassord for [user:display-name] på [site:name]'
+  body: "[user:display-name],\r\n\r\nDet har kommet en forespørsel om å endre passordet for kontoen din på [site:name].\r\n\r\nDu kan nå logge deg inn ved å klikke på denne lenken eller klippe-og-lime den inn i nettleseren:\r\n\r\n[user:one-time-login-url]\r\n\r\nDenne innloggings-lenken kan bare brukes én gang og fører til en side der du kan oppgi nytt passord. Den utløper etter en dag, og ingenting vil skje hvis den ikke blir brukt.\r\n\r\n--  Teamet på [site:name]"
+register_admin_created:
+  subject: 'En administrator har opprettet en konto for deg på [site:name]'
+  body: "[user:display-name],\r\n\r\nEn administrator på [site:name] har opprettet en konto for deg. Du kan nå logge deg inn ved å klikke på denne lenken eller klippe-og-lime den inn i nettleseren:\r\n\r\n[user:one-time-login-url]\r\n\r\nDenne innloggings-lenken kan bare brukes én gang og fører til en side der du kan velge passord.\r\n\r\nEtter at du har valgt passord, vil du kunne logge inn på [site:login-url] med å bruke:\r\n\r\nBrukernavn: [user:name]\r\nPassord: Passordet ditt (som du velger første gang du logger på)\r\n\r\n--  Teamet på [site:name]"
+register_no_approval_required:
+  subject: 'Kontoopplysninger for [user:display-name] på [site:name]'
+  body: "[user:display-name],\r\n\r\nTakk for at du registrerte deg på [site:name]. Du kan nå logge deg inn ved å klikke på denne lenken eller klippe-og-lime den inn i nettleseren:\r\n\r\n[user:one-time-login-url]\r\n\r\nDenne innloggings-lenken kan bare brukes én gang og fører til en side der du kan velge passord.\r\n\r\nEtter at du har valgt passord, vil du kunne logge inn på [site:login-url] med å bruke:\r\n\r\nBrukernavn: [user:name]\r\nPassord: Passordet ditt (som du velger første gang du logger på)\r\n\r\n--  Teamet på [site:name]"
+register_pending_approval:
+  subject: 'Kontoopplysninger for [user:display-name] på [site:name] (avventer godkjenning fra administrator)'
+  body: "[user:display-name],\r\n\r\nTakk for at du registrerte deg på [site:name]. Din søknad om en konto må først godkjennes. Når den er godkjent, vil du motta en ny e-post som inneholder informasjon om hvordan du logger på, velger passord og andre detaljer.\r\n\r\n-- Teamet på [site:name]"
+register_pending_approval_admin:
+  subject: 'Kontoopplysninger for [user:display-name] på [site:name] (avventer godkjenning fra administrator)'
+  body: "[user:display-name] har søkt om å få opprettet en brukerkonto.\r\n\r\n[user:edit-url]"
+status_activated:
+  subject: 'Kontoopplysninger for [user:display-name] på [site:name] (godkjent)'
+  body: "[user:display-name],\r\n\r\nKontoen din på [site:name] har blitt aktivert.\r\n\r\nDu kan nå logge deg inn ved å klikke på denne lenken eller klippe-og-lime den inn i nettleseren:\r\n\r\n[user:one-time-login-url]\r\n\r\nDenne innloggings-lenken kan bare brukes én gang og fører til en side der du kan velge passord.\r\n\r\nEtter at du har valgt passord, vil du kunne logge inn på [site:login-url] med å bruke:\r\n\r\nBrukernavn: [user:account-name]\r\nPassord: Passordet ditt (som du velger første gang du logger på)\r\n\r\n--  Teamet på [site:name]"
+status_blocked:
+  subject: 'Kontoopplysninger for [user:display-name] at [site:name] (blokkert)'
+  body: "[user:display-name],\r\n\r\nKontoen din på [site:name] har blitt blokkert.\r\n\r\n--  Teamet på [site:name]"
+status_canceled:
+  subject: 'Kontoopplysninger for [user:display-name] på [site:name] (slettet)'
+  body: "[user:display-name],\r\n\r\nKontoen din på [site:name] har blitt slettet.\r\n\r\n--  Teamet på [site:name]"

@@ -1,5 +1,5 @@
 uuid: 902bd2de-ad20-4a65-b3f0-bf4c87a9994e
-langcode: en
+langcode: nb
 status: true
 dependencies:
   module:
@@ -7,7 +7,7 @@ dependencies:
 _core:
   default_config_hash: lDM9mvIGAu8Sw8rt-uCO4Sr7yX5VPrDPxYcawkbKd6k
 id: node_make_unsticky_action
-label: 'Make content unsticky'
+label: 'Fjern klistring av innlegg på toppen av lister'
 type: node
 plugin: node_make_unsticky_action
 configuration: {  }

@@ -7,3 +7,21 @@ definitions:
     weight: 0
     expanded: false
     enabled: true
+  standard__front_page:
+    weight: -48
+    menu_name: main
+    parent: ''
+    expanded: false
+    enabled: true
+  user__page:
+    menu_name: account
+    parent: user.logout
+    weight: -10
+    expanded: false
+    enabled: true
+  navigation__user_links__user__edit:
+    enabled: false
+    menu_name: navigation-user-links
+    parent: ''
+    expanded: false
+    weight: 0

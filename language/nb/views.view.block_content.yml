@@ -1,0 +1,45 @@
+label: Innholdsblokker
+display:
+  default:
+    display_title: Standard
+    display_options:
+      title: Innholdsblokker
+      fields:
+        info:
+          label: 'Blokkas beskrivelse'
+          separator: ', '
+        type:
+          label: Blokktype
+          separator: ', '
+        changed:
+          label: Oppdatert
+        operations:
+          label: Handlinger
+      pager:
+        options:
+          tags:
+            next: 'Neste ›'
+            previous: '‹ Forrige'
+          expose:
+            items_per_page_label: 'Elementer per side'
+            items_per_page_options_all_label: '- Alle -'
+            offset_label: Forskyving
+      exposed_form:
+        options:
+          submit_button: Bruk
+          reset_button_label: Nullstill
+          exposed_sorts_label: 'Sortér etter'
+          sort_asc_label: Stigende
+          sort_desc_label: Synkende
+      filters:
+        info:
+          expose:
+            label: 'Blokkas beskrivelse'
+        type:
+          expose:
+            label: Blokktype
+  page_1:
+    display_title: Side
+    display_options:
+      menu:
+        title: Blokker

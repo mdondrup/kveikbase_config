@@ -1,5 +1,5 @@
 uuid: 82e22ebd-8d29-4362-b0ab-d5a7b5b05c5d
-langcode: en
+langcode: nb
 status: true
 dependencies:
   module:
@@ -7,7 +7,7 @@ dependencies:
 _core:
   default_config_hash: 5pE_4hurqtIlZN3XDi7eTo5RG13BMG0Rh9HYlRI3h8U
 id: user.register
-label: Register
+label: Registrer
 description: null
 targetEntityType: user
 cache: true

@@ -1,0 +1,92 @@
+label: Kommentarer
+display:
+  default:
+    display_title: Standard
+    display_options:
+      title: Kommentarer
+      fields:
+        comment_bulk_form:
+          action_title: Handling
+        subject:
+          label: Emne
+          separator: ', '
+        uid:
+          separator: ', '
+        name:
+          label: Forfatter
+          separator: ', '
+        entity_id:
+          label: 'Skrevet i'
+          separator: ', '
+        changed:
+          label: Oppdatert
+          separator: ', '
+        operations:
+          label: Handlinger
+        name_1:
+          separator: ', '
+      pager:
+        options:
+          expose:
+            items_per_page_label: 'Elementer per side'
+            items_per_page_options_all_label: '- Alle -'
+            offset_label: Forskyving
+      exposed_form:
+        options:
+          submit_button: Filtrer
+          reset_button_label: Nullstill
+          exposed_sorts_label: 'Sortér etter'
+          sort_asc_label: Stigende
+          sort_desc_label: Synkende
+      empty:
+        area_text_custom:
+          content: 'Ingen kommentarer tilgjengelige.'
+      filters:
+        subject:
+          expose:
+            label: Emne
+        combine:
+          expose:
+            label: Forfatternavn
+        langcode:
+          expose:
+            label: Språk
+      use_more_text: mer
+  page_published:
+    display_title: 'Publiserte kommentarer'
+    display_options:
+      menu:
+        title: Kommentarer
+  page_unapproved:
+    display_title: 'Ikke-godkjent kommentarer'
+    display_options:
+      fields:
+        comment_bulk_form:
+          action_title: Handling
+        subject:
+          label: Emne
+          separator: ', '
+        uid:
+          separator: ', '
+        name:
+          label: Forfatter
+          separator: ', '
+        entity_id:
+          label: 'Skrevet i'
+          separator: ', '
+        changed:
+          label: Oppdatert
+          separator: ', '
+        operations:
+          label: Handlinger
+        name_1:
+          separator: ', '
+      filters:
+        subject:
+          expose:
+            label: Emne
+        langcode:
+          expose:
+            label: Språk
+      menu:
+        title: 'Ikke-godkjent kommentarer'

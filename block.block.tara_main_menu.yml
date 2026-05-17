@@ -1,5 +1,5 @@
-uuid: bb77019a-a8b1-45a9-b473-94f2d6155a47
-langcode: en
+uuid: d8c7b9d9-d20c-4c48-952b-2ce66838ca0e
+langcode: nb
 status: true
 dependencies:
   config:
@@ -13,12 +13,12 @@ _core:
 id: tara_main_menu
 theme: tara
 region: primary_menu
-weight: 0
+weight: -5
 provider: null
 plugin: 'system_menu_block:main'
 settings:
   id: 'system_menu_block:main'
-  label: 'Main navigation'
+  label: Hovedmeny
   label_display: '0'
   provider: system
   level: 1

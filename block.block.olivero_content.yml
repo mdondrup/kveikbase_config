@@ -1,5 +1,5 @@
 uuid: 120df508-74da-48e1-bb04-398c0a12cf36
-langcode: en
+langcode: nb
 status: true
 dependencies:
   module:
@@ -16,7 +16,7 @@ provider: null
 plugin: system_main_block
 settings:
   id: system_main_block
-  label: 'Main page content'
+  label: Hovedsideinnhold
   label_display: '0'
   provider: system
 visibility: {  }

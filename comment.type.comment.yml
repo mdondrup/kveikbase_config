@@ -1,10 +1,10 @@
 uuid: 3a03d8dc-95b5-4236-8875-793847dfcb7b
-langcode: en
+langcode: nb
 status: true
 dependencies: {  }
 _core:
   default_config_hash: bqZsN31T2n0UjcbyCpOPi9D2iO0sAOHR7FnEs9qMvaA
 id: comment
-label: 'Default comments'
+label: 'Standard kommentarer'
 target_entity_type_id: node
-description: 'Allows commenting on content'
+description: 'Tillater kommentering av innhold'

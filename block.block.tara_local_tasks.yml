@@ -1,5 +1,5 @@
-uuid: d6939b03-3a72-42cb-a9be-c776717b6a7f
-langcode: en
+uuid: ea7dde5d-2254-43df-9f32-d3d3c8119bd5
+langcode: nb
 status: true
 dependencies:
   theme:
@@ -9,12 +9,12 @@ _core:
 id: tara_local_tasks
 theme: tara
 region: content
-weight: -8
+weight: -4
 provider: null
 plugin: local_tasks_block
 settings:
   id: local_tasks_block
-  label: Tabs
+  label: Faner
   label_display: '0'
   provider: core
   primary: true

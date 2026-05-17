@@ -27,7 +27,7 @@ display:
     display_plugin: default
     position: 0
     display_options:
-      title: 'Strain Map'
+      title: 'Kveik Map'
       fields:
         id:
           id: id
@@ -460,12 +460,13 @@ display:
           marker_icon_path: ''
           even_empty: 1
           centre:
-            first_row:
-              enable: false
+            fit_bounds:
+              enable: true
               weight: 0
               settings:
-                location_option_id: first_row
-              map_center_id: location_plugins
+                reset_zoom: false
+                min_zoom: 12
+              map_center_id: fit_bounds
             fixed_value:
               enable: false
               weight: 0
@@ -474,6 +475,12 @@ display:
                 latitude: 0.0
                 longitude: 0.0
               map_center_id: location_plugins
+            first_row:
+              enable: false
+              weight: 0
+              settings:
+                location_option_id: first_row
+              map_center_id: location_plugins
             ipstack:
               enable: false
               weight: 0
@@ -481,12 +488,6 @@ display:
                 location_option_id: ipstack
                 access_key: ''
               map_center_id: location_plugins
-            fit_bounds:
-              enable: true
-              weight: 0
-              settings:
-                min_zoom: 12
-              map_center_id: fit_bounds
             fixed_boundaries:
               enable: false
               weight: 0
@@ -496,27 +497,20 @@ display:
                 north: ''
                 east: ''
               map_center_id: fixed_boundaries
-            fit_shapes:
+            client_location:
               enable: false
               weight: 0
-              settings:
-                min_zoom: null
-              map_center_id: fit_shapes
+              map_center_id: client_location
           map_provider_id: leaflet
           map_provider_settings:
-            conditional_initialization: 'no'
-            conditional_description: ''
-            conditional_label: ''
-            conditional_viewport_threshold: 0.8
             map_features:
-              client_location_indicator:
+              leaflet_client_location_indicator:
+                weight: 0
                 enabled: true
-                weight: 0
               leaflet_disable_user_interaction:
-                enabled: false
                 weight: 0
-              geolocation_shapes:
                 enabled: false
+              geolocation_shapes:
                 weight: 0
                 settings:
                   remove_markers: false
@@ -529,33 +523,33 @@ display:
                   polygon_title: ''
                   fillColor: '#FF0000'
                   fillOpacity: 0.35
+                enabled: false
               leaflet_gesture_handling:
-                enabled: false
                 weight: 0
-              leaflet_rotate:
                 enabled: false
+              leaflet_rotate:
                 weight: 0
                 settings:
                   display_control: true
                   bearing: 0.0
+                enabled: false
               leaflet_control_attribution:
-                enabled: true
                 weight: 0
                 settings:
                   position: bottomright
                   prefix: Leaflet
-              leaflet_control_fullscreen:
                 enabled: true
+              leaflet_control_fullscreen:
                 weight: 0
                 settings:
                   position: topright
-              control_geocoder:
-                enabled: false
+                enabled: true
+              leaflet_control_geocoder:
                 weight: 0
                 settings:
-                  position: topleft
+                  position: topright
                   geocoder: google_geocoding_api
-                  geocoder_settings:
+                  settings:
                     label: Address
                     description: 'Enter an address to be localized.'
                     autocomplete_min_length: 1
@@ -571,31 +565,25 @@ display:
                       north: ''
                       east: ''
                     region: ''
-              control_loading_indicator:
-                enabled: true
+                enabled: false
+              leaflet_control_locate:
                 weight: 0
                 settings:
-                  position: topleft
-                  loading_label: Loading
-              control_locate:
-                enabled: true
-                weight: 0
-                settings:
-                  position: bottomleft
-              control_recenter:
-                enabled: true
+                  position: topright
+                enabled: false
+              leaflet_control_recenter:
                 weight: 0
                 settings:
                   position: bottomleft
+                enabled: true
               leaflet_control_scale:
-                enabled: true
                 weight: 0
                 settings:
                   position: bottomleft
                   metric: true
                   imperial: true
+                enabled: true
               leaflet_control_layer:
-                enabled: false
                 weight: 0
                 settings:
                   position: topleft
@@ -891,44 +879,88 @@ display:
                       app_code: ''
                     GeoportailFrance:
                       apikey: ''
-              control_tile_layers:
                 enabled: false
-                weight: 0
-                settings:
-                  position: topleft
-              control_view_fullscreen:
-                enabled: false
-                weight: 0
-                settings:
-                  position: topleft
               leaflet_control_zoom:
-                enabled: true
                 weight: 0
                 settings:
                   position: topleft
-              leaflet_max_bounds:
+                enabled: true
+              leaflet_marker_clusterer:
+                weight: 0
+                settings:
+                  cluster_settings:
+                    show_coverage_on_hover: true
+                    zoom_to_bounds_on_click: true
+                  disable_clustering_at_zoom: 0
+                  custom_marker_settings: ''
+                enabled: true
+              leaflet_marker_icon:
+                weight: 0
+                settings:
+                  marker_shadow_path: ''
+                  marker_icon_path: ''
+                  icon_size:
+                    width: null
+                    height: null
+                  icon_anchor:
+                    x: null
+                    'y': null
+                  popup_anchor:
+                    x: 0
+                    'y': 0
+                  shadow_size:
+                    width: null
+                    height: null
+                  shadow_anchor:
+                    x: null
+                    'y': null
                 enabled: false
+              leaflet_marker_popup:
+                weight: 0
+                settings:
+                  info_auto_display: true
+                  max_width: 300
+                  min_width: 50
+                  max_height: 0
+                  auto_pan: true
+                  keep_in_view: false
+                  close_button: true
+                  auto_close: true
+                  close_on_escape_key: true
+                  class_name: ''
+                enabled: true
+              geolocation_marker_scroll_to_id:
+                weight: 0
+                settings:
+                  scroll_target_id: ''
+                enabled: false
+              leaflet_marker_zoom_and_animate:
+                weight: 0
+                settings:
+                  marker_zoom_anchor_id: ''
+                enabled: false
+              leaflet_max_bounds:
                 weight: 0
                 settings:
                   north: null
                   south: null
                   east: null
                   west: null
-              leaflet_custom_tile_layer:
                 enabled: false
+              leaflet_custom_tile_layer:
                 weight: 0
                 settings:
                   tile_layer_url: '//{s}.tile.osm.org/{z}/{x}/{y}.png'
                   tile_layer_attribution: '&copy; <a href="https://osm.org/copyright">OpenStreetMap</a> contributors'
                   tile_layer_subdomains: abc
                   tile_layer_zoom: 18
-              leaflet_tile_layer_overlay:
                 enabled: false
+              leaflet_tile_layer_overlay:
                 weight: 0
                 settings:
                   tile_layer_overlay: OpenInfraMap.Power
-              leaflet_tile_layer:
                 enabled: false
+              leaflet_tile_layer:
                 weight: 0
                 settings:
                   tile_layer_provider: 'OpenStreetMap Mapnik'
@@ -942,8 +974,8 @@ display:
                       app_code: ''
                     GeoportailFrance:
                       apikey: ''
-              leaflet_wms:
                 enabled: false
+              leaflet_wms:
                 weight: 0
                 settings:
                   url: ''
@@ -954,84 +986,7 @@ display:
                   format: image/jpeg
                   transparent: false
                   identify: false
-            data_layers:
-              'geolocation_default_layer:default':
-                enabled: true
-                weight: -1
-                settings:
-                  features:
-                    leaflet_marker_clusterer:
-                      enabled: true
-                      weight: 0
-                      settings:
-                        cluster_settings:
-                          show_coverage_on_hover: true
-                          zoom_to_bounds_on_click: true
-                        disable_clustering_at_zoom: 0
-                        custom_marker_settings: ''
-                    leaflet_marker_icon:
-                      enabled: false
-                      weight: 0
-                      settings:
-                        marker_shadow_path: ''
-                        marker_icon_path: ''
-                        icon_size:
-                          width: null
-                          height: null
-                        icon_anchor:
-                          x: null
-                          'y': null
-                        popup_anchor:
-                          x: 0
-                          'y': 0
-                        shadow_size:
-                          width: null
-                          height: null
-                        shadow_anchor:
-                          x: null
-                          'y': null
-                    leaflet_marker_popup:
-                      enabled: true
-                      weight: 0
-                      settings:
-                        info_auto_display: true
-                        max_width: 300
-                        min_width: 50
-                        max_height: 0
-                        auto_pan: true
-                        keep_in_view: true
-                        close_button: true
-                        auto_close: true
-                        close_on_escape_key: true
-                        class_name: ''
-                    marker_zoom_by_anchor:
-                      enabled: true
-                      weight: 0
-                      settings:
-                        marker_zoom_anchor_id: ''
-            tile_layers:
-              geolocation_tile_thunderforest:
-                settings:
-                  apikey: ''
-                layers:
-                  'geolocation_tile_thunderforest:cycle':
-                    enabled: 0
-                  'geolocation_tile_thunderforest:transport':
-                    enabled: 0
-                  'geolocation_tile_thunderforest:transport-dark':
-                    enabled: 0
-                  'geolocation_tile_thunderforest:spinal-map':
-                    enabled: 0
-                  'geolocation_tile_thunderforest:landscape':
-                    enabled: 0
-                  'geolocation_tile_thunderforest:outdoors':
-                    enabled: 0
-                  'geolocation_tile_thunderforest:pioneer':
-                    enabled: 0
-                  'geolocation_tile_thunderforest:mobile-atlas':
-                    enabled: 0
-                  'geolocation_tile_thunderforest:neighbourhood':
-                    enabled: 0
+                enabled: false
             zoom: '10'
             height: 80vh
             width: 80%
@@ -1086,9 +1041,10 @@ display:
       path: germplasm-map
       menu:
         type: normal
-        title: 'Strain Map'
+        title: 'Vis på kart'
         description: ''
-        weight: 0
+        weight: -49
+        enabled: true
         expanded: false
         menu_name: main
         parent: ''

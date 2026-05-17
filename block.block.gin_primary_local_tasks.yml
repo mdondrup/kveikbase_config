@@ -1,5 +1,5 @@
 uuid: dea4dc29-4a45-42c9-a1a0-bc19719d4052
-langcode: en
+langcode: nb
 status: true
 dependencies:
   theme:
@@ -9,12 +9,12 @@ _core:
 id: gin_primary_local_tasks
 theme: gin
 region: header
-weight: 0
+weight: -3
 provider: null
 plugin: local_tasks_block
 settings:
   id: local_tasks_block
-  label: 'Primary tabs'
+  label: Primærfaner
   label_display: '0'
   provider: core
   primary: true

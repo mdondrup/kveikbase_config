@@ -1,6 +1,6 @@
 _core:
   default_config_hash: OE3ByQ7OzSlI54C2RfXPanzIytXm5DBLVA467r3020U
-langcode: en
+langcode: nb
 dialog_mode: manager
 auto_decorate_final_html: false
 auto_decorate_js_alter: true

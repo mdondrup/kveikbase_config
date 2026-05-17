@@ -1,13 +1,10 @@
 uuid: 8a671405-70c7-49ed-9dd1-5f67a78ec83c
-langcode: en
+langcode: nb
 status: true
 dependencies:
   config:
     - filter.format.restricted_html
     - tripal.content_type.QTL
-    - tripal.content_type.analysis
-    - tripal.content_type.breeding_cross
-    - tripal.content_type.contact
     - tripal.content_type.dna_library
     - tripal.content_type.gene
     - tripal.content_type.genetic_map
@@ -31,12 +28,8 @@ dependencies:
     - tripal.content_type.strain
     - tripal.content_type.study
   module:
-    - announcements_feed
-    - comment
-    - contact
     - filter
     - klaro
-    - search
     - system
     - tripal
 _core:
@@ -46,17 +39,10 @@ label: 'Anonymous user'
 weight: 0
 is_admin: false
 permissions:
-  - 'access announcements'
-  - 'access comments'
   - 'access content'
-  - 'access site-wide contact form'
-  - 'search content'
   - 'use klaro'
   - 'use text format restricted_html'
   - 'view all QTL content'
-  - 'view all analysis content'
-  - 'view all breeding_cross content'
-  - 'view all contact content'
   - 'view all dna_library content'
   - 'view all gene content'
   - 'view all genetic_map content'

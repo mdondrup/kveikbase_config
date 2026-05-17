@@ -1,47 +1,213 @@
 uuid: 8928542e-fa6b-4322-ac16-c4eaba8f6034
-langcode: en
+langcode: nb
 status: true
 dependencies:
   config:
+    - block_content.type.basic
     - node.type.article
+    - node.type.basic_location
     - node.type.page
     - taxonomy.vocabulary.tags
+    - tripal.content_type.QTL
+    - tripal.content_type.analysis
+    - tripal.content_type.breeding_cross
+    - tripal.content_type.contact
+    - tripal.content_type.dna_library
+    - tripal.content_type.gene
+    - tripal.content_type.genetic_map
+    - tripal.content_type.genetic_marker
+    - tripal.content_type.genome_annotation
+    - tripal.content_type.genome_assembly
+    - tripal.content_type.genome_project
+    - tripal.content_type.germplasm
+    - tripal.content_type.germplasm_variety
+    - tripal.content_type.mrna
+    - tripal.content_type.organism
+    - tripal.content_type.phenotypic_marker
+    - tripal.content_type.phylotree
+    - tripal.content_type.physical_map
+    - tripal.content_type.project
+    - tripal.content_type.protocol
+    - tripal.content_type.pub
+    - tripal.content_type.ril
+    - tripal.content_type.sequence_variant
+    - tripal.content_type.speciestree
+    - tripal.content_type.strain
+    - tripal.content_type.study
   module:
+    - block_content
     - comment
+    - contact
+    - content_translation
     - contextual
     - file
+    - help
+    - klaro
+    - language
+    - navigation
     - node
     - path
+    - search
+    - shortcut
     - system
     - taxonomy
     - toolbar
+    - tripal
 _core:
   default_config_hash: e_wG1u7SrGaJbY2-Szgbgl-c8T3kdirU3uTNq2c_QJQ
 id: content_editor
-label: 'Content editor'
+label: Innholdsredaktør
 weight: 2
 is_admin: false
 permissions:
   - 'access administration pages'
+  - 'access block library'
   - 'access content overview'
   - 'access contextual links'
   - 'access files overview'
+  - 'access help pages'
+  - 'access navigation'
+  - 'access site-wide contact form'
   - 'access toolbar'
+  - 'access user contact forms'
+  - 'access user profiles'
+  - 'administer block content'
+  - 'administer languages'
+  - 'administer shortcuts'
   - 'administer url aliases'
+  - 'allow tripal import'
+  - 'change own username'
+  - 'create QTL content'
+  - 'create analysis content'
   - 'create article content'
+  - 'create basic block content'
+  - 'create basic_location content'
+  - 'create breeding_cross content'
+  - 'create contact content'
+  - 'create gene content'
+  - 'create genetic_marker content'
+  - 'create genome_annotation content'
+  - 'create genome_assembly content'
+  - 'create genome_project content'
+  - 'create germplasm content'
+  - 'create germplasm_variety content'
+  - 'create mrna content'
+  - 'create organism content'
   - 'create page content'
+  - 'create phylotree content'
+  - 'create physical_map content'
+  - 'create project content'
+  - 'create protocol content'
+  - 'create pub content'
+  - 'create strain content'
+  - 'create study content'
   - 'create terms in tags'
   - 'create url aliases'
+  - 'delete any basic block content'
+  - 'delete any germplasm_variety content'
   - 'delete article revisions'
+  - 'delete basic_location revisions'
   - 'delete own article content'
   - 'delete own files'
+  - 'delete own germplasm content'
+  - 'delete own germplasm_variety content'
+  - 'delete own organism content'
   - 'delete own page content'
+  - 'delete own phenotypic_marker content'
+  - 'delete own phylotree content'
+  - 'delete own project content'
+  - 'delete own protocol content'
+  - 'delete own pub content'
   - 'delete page revisions'
+  - 'edit any article content'
+  - 'edit any basic block content'
+  - 'edit any basic_location content'
+  - 'edit any gene content'
+  - 'edit any genetic_map content'
+  - 'edit any genetic_marker content'
+  - 'edit any genome_annotation content'
+  - 'edit any genome_assembly content'
+  - 'edit any genome_project content'
+  - 'edit any germplasm content'
+  - 'edit any germplasm_variety content'
+  - 'edit any mrna content'
+  - 'edit any page content'
+  - 'edit any phylotree content'
+  - 'edit any strain content'
+  - 'edit any study content'
+  - 'edit own analysis content'
   - 'edit own article content'
+  - 'edit own basic_location content'
+  - 'edit own breeding_cross content'
   - 'edit own comments'
+  - 'edit own contact content'
+  - 'edit own gene content'
+  - 'edit own genome_annotation content'
+  - 'edit own genome_assembly content'
+  - 'edit own genome_project content'
+  - 'edit own germplasm content'
+  - 'edit own germplasm_variety content'
+  - 'edit own mrna content'
   - 'edit own page content'
+  - 'edit own physical_map content'
+  - 'edit own project content'
+  - 'edit own protocol content'
+  - 'edit own strain content'
+  - 'edit own study content'
   - 'edit terms in tags'
+  - 'publish tripal content'
   - 'revert all revisions'
+  - 'revert any basic block content revisions'
+  - 'revert article revisions'
+  - 'revert page revisions'
+  - 'translate article node'
+  - 'translate basic_location node'
+  - 'translate page node'
+  - 'unpublish any germplasm content'
+  - 'unpublish any germplasm_variety content'
+  - 'unpublish any strain content'
+  - 'unpublish own germplasm content'
+  - 'unpublish own germplasm_variety content'
+  - 'unpublish own strain content'
+  - 'upload files'
+  - 'use advanced search'
+  - 'use klaro'
+  - 'use strain_bulk_loader importer'
+  - 'view all QTL content'
+  - 'view all breeding_cross content'
+  - 'view all contact content'
+  - 'view all dna_library content'
+  - 'view all gene content'
+  - 'view all genetic_map content'
+  - 'view all genetic_marker content'
+  - 'view all genome_annotation content'
+  - 'view all genome_assembly content'
+  - 'view all genome_project content'
+  - 'view all germplasm content'
+  - 'view all germplasm_variety content'
+  - 'view all mrna content'
+  - 'view all organism content'
+  - 'view all phenotypic_marker content'
+  - 'view all phylotree content'
+  - 'view all physical_map content'
+  - 'view all project content'
+  - 'view all protocol content'
+  - 'view all pub content'
   - 'view all revisions'
+  - 'view all ril content'
+  - 'view all sequence_variant content'
+  - 'view all speciestree content'
+  - 'view all strain content'
+  - 'view all study content'
+  - 'view any basic block content history'
+  - 'view own genetic_marker content'
+  - 'view own genome_annotation content'
+  - 'view own germplasm content'
+  - 'view own mrna content'
+  - 'view own organism content'
+  - 'view own speciestree content'
+  - 'view own strain content'
+  - 'view own study content'
   - 'view own unpublished content'
+  - 'view page revisions'
   - 'view the administration theme'

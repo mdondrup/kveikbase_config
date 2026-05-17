@@ -1,5 +1,5 @@
 uuid: e4d74dd8-4c02-497d-9db8-66d153314885
-langcode: en
+langcode: nb
 status: true
 dependencies: {  }
 _core:
@@ -16,15 +16,15 @@ fields:
     description: 'The name of the item.'
     cardinality: 1
     required: false
-    storage_settings:
-      storage_plugin_id: chado_storage
-      storage_plugin_settings:
-        base_table: feature
-        base_column: name
-      max_length: 255
     settings:
       termIdSpace: schema
       termAccession: name
+    storage_settings:
+      storage_plugin_id: chado_storage
+      max_length: 255
+      storage_plugin_settings:
+        base_table: feature
+        base_column: name
     display:
       view:
         default:
@@ -43,14 +43,14 @@ fields:
     description: 'A name that uniquely identifies the gene within the organism.'
     cardinality: 1
     required: true
+    settings:
+      termIdSpace: data
+      termAccession: '0842'
     storage_settings:
       storage_plugin_id: chado_storage
       storage_plugin_settings:
         base_table: feature
         base_column: uniquename
-    settings:
-      termIdSpace: data
-      termAccession: '0842'
     display:
       view:
         default:
@@ -71,14 +71,14 @@ fields:
     description: 'One or more molecular sequences, possibly with associated annotation.'
     cardinality: 1
     required: false
+    settings:
+      termIdSpace: data
+      termAccession: '2044'
     storage_settings:
       storage_plugin_id: chado_storage
       storage_plugin_settings:
         base_table: feature
         base_column: residues
-    settings:
-      termIdSpace: data
-      termAccession: '2044'
     display:
       view:
         default:
@@ -97,14 +97,14 @@ fields:
     description: 'The size (length) of a sequence, subsequence or region in a sequence, or range(s) of lengths.'
     cardinality: 1
     required: false
+    settings:
+      termIdSpace: data
+      termAccession: '1249'
     storage_settings:
       storage_plugin_id: chado_storage
       storage_plugin_settings:
         base_table: feature
         base_column: seqlen
-    settings:
-      termIdSpace: data
-      termAccession: '1249'
     display:
       view:
         default:
@@ -123,14 +123,14 @@ fields:
     description: 'The 32-character checksum of the sequence, calculated using the MD5 algorithm.'
     cardinality: 1
     required: false
+    settings:
+      termIdSpace: data
+      termAccession: '2190'
     storage_settings:
       storage_plugin_id: chado_storage
       storage_plugin_settings:
         base_table: feature
         base_column: md5checksum
-    settings:
-      termIdSpace: data
-      termAccession: '2190'
     display:
       view:
         default:
@@ -149,14 +149,14 @@ fields:
     description: 'A material entity that is an individual living system, such as animal, plant, bacteria or virus, that is capable of replicating or reproducing, growth and maintenance in the right environment. An organism may be unicellular or made up, like humans, of many billions of cells divided into specialized tissues and organs.'
     cardinality: 1
     required: true
+    settings:
+      termIdSpace: OBI
+      termAccession: '0100026'
     storage_settings:
       storage_plugin_id: chado_storage
       storage_plugin_settings:
         base_table: feature
         base_column: organism_id
-    settings:
-      termIdSpace: OBI
-      termAccession: '0100026'
     display:
       view:
         default:
@@ -175,16 +175,16 @@ fields:
     description: 'An additional type for the item, typically used for adding more specific types from external vocabularies in microdata syntax. This is a relationship between something and a class that the thing is in.'
     cardinality: 1
     required: true
+    settings:
+      termIdSpace: SO
+      termAccession: '0000704'
+      fixed_value: 'SO:0000704'
     storage_settings:
       storage_plugin_id: chado_storage
       storage_plugin_settings:
         base_table: feature
         type_table: feature
         type_column: type_id
-    settings:
-      termIdSpace: SO
-      termAccession: '0000704'
-      fixed_value: 'SO:0000704'
     display:
       view:
         default:
@@ -203,6 +203,9 @@ fields:
     description: "Sequence features related to this gene. Think of relationship statements as sentences: SUBJECT TYPE OBJECT (e.g. 'Sara (subject) is the mother of (type) Jacob (object)'). By default the current gene is the subject; chose Reverse if the object is the current gene."
     cardinality: -1
     required: false
+    settings:
+      termIdSpace: SBO
+      termAccession: '0000374'
     storage_settings:
       storage_plugin_id: chado_storage
       storage_plugin_settings:
@@ -211,9 +214,6 @@ fields:
         linker_table: feature_relationship
         subject_column: subject_id
         object_column: object_id
-    settings:
-      termIdSpace: SBO
-      termAccession: '0000374'
     display:
       view:
         default:
@@ -232,15 +232,15 @@ fields:
     description: 'An individual or organization that serves as a contact for this record.'
     cardinality: -1
     required: false
+    settings:
+      termIdSpace: NCIT
+      termAccession: C47954
     storage_settings:
       storage_plugin_id: chado_storage
       storage_plugin_settings:
         base_table: feature
         linker_table: feature_contact
         linker_fkey_column: contact_id
-    settings:
-      termIdSpace: NCIT
-      termAccession: C47954
     display:
       view:
         default:
@@ -259,15 +259,15 @@ fields:
     description: 'Associates a publication (e.g. journal article, conference proceedings, book chapter, etc.) with this record.'
     cardinality: -1
     required: false
+    settings:
+      termIdSpace: TPUB
+      termAccession: '0000002'
     storage_settings:
       storage_plugin_id: chado_storage
       storage_plugin_settings:
         base_table: feature
         linker_table: feature_pub
         linker_fkey_column: pub_id
-    settings:
-      termIdSpace: TPUB
-      termAccession: '0000002'
     display:
       view:
         default:
@@ -286,15 +286,15 @@ fields:
     description: 'The project which this gene is a part of'
     cardinality: -1
     required: false
+    settings:
+      termIdSpace: NCIT
+      termAccession: C47885
     storage_settings:
       storage_plugin_id: chado_storage
       storage_plugin_settings:
         base_table: feature
         linker_table: project_feature
         linker_fkey_column: project_id
-    settings:
-      termIdSpace: NCIT
-      termAccession: C47885
     display:
       view:
         default:
@@ -313,15 +313,15 @@ fields:
     description: 'Indicates if this feature was predicted computationally using another feature.'
     cardinality: 1
     required: false
+    settings:
+      termIdSpace: local
+      termAccession: is_analysis
+      fixed_value: 'local:is_analysis'
     storage_settings:
       storage_plugin_id: chado_storage
       storage_plugin_settings:
         base_table: feature
         base_column: is_analysis
-    settings:
-      termIdSpace: local
-      termAccession: is_analysis
-      fixed_value: 'local:is_analysis'
     display:
       view:
         default:
@@ -340,15 +340,15 @@ fields:
     description: 'Indicates if this record is obsolete.'
     cardinality: 1
     required: false
+    settings:
+      termIdSpace: local
+      termAccession: is_obsolete
+      fixed_value: 'local:is_obsolete'
     storage_settings:
       storage_plugin_id: chado_storage
       storage_plugin_settings:
         base_table: feature
         base_column: is_obsolete
-    settings:
-      termIdSpace: local
-      termAccession: is_obsolete
-      fixed_value: 'local:is_obsolete'
     display:
       view:
         default:
@@ -367,15 +367,15 @@ fields:
     description: 'Alternate names, aliases or synonyms for this record.'
     cardinality: -1
     required: false
+    settings:
+      termIdSpace: schema
+      termAccession: alternateName
     storage_settings:
       storage_plugin_id: chado_storage
       storage_plugin_settings:
         base_table: feature
         linker_table: feature_synonym
         linker_fkey_column: feature_id
-    settings:
-      termIdSpace: schema
-      termAccession: alternateName
     display:
       view:
         default:
@@ -394,14 +394,14 @@ fields:
     description: 'The ID where this record may be available in an external online database.'
     cardinality: 1
     required: false
+    settings:
+      termIdSpace: SBO
+      termAccession: '0000554'
     storage_settings:
       storage_plugin_id: chado_storage
       storage_plugin_settings:
         base_table: feature
         base_column: dbxref_id
-    settings:
-      termIdSpace: SBO
-      termAccession: '0000554'
     display:
       view:
         default:
@@ -420,15 +420,15 @@ fields:
     description: 'The IDs where this record may be available in other external online databases.'
     cardinality: -1
     required: false
+    settings:
+      termIdSpace: SBO
+      termAccession: '0000552'
     storage_settings:
       storage_plugin_id: chado_storage
       storage_plugin_settings:
         base_table: feature
         linker_table: feature_dbxref
         linker_fkey_column: dbxref_id
-    settings:
-      termIdSpace: SBO
-      termAccession: '0000552'
     display:
       view:
         default:
@@ -447,15 +447,15 @@ fields:
     description: 'Locations on reference sequences where the feature is located.'
     cardinality: -1
     required: false
+    settings:
+      termIdSpace: data
+      termAccession: '2012'
     storage_settings:
       storage_plugin_id: chado_storage
       storage_plugin_settings:
         base_table: feature
         linker_table: featureloc
         linker_fkey_column: feature_id
-    settings:
-      termIdSpace: data
-      termAccession: '2012'
     display:
       view:
         default:
@@ -474,15 +474,15 @@ fields:
     description: 'The name of the item.'
     cardinality: 1
     required: false
-    storage_settings:
-      storage_plugin_id: chado_storage
-      storage_plugin_settings:
-        base_table: feature
-        base_column: name
-      max_length: 255
     settings:
       termIdSpace: schema
       termAccession: name
+    storage_settings:
+      storage_plugin_id: chado_storage
+      max_length: 255
+      storage_plugin_settings:
+        base_table: feature
+        base_column: name
     display:
       view:
         default:
@@ -501,14 +501,14 @@ fields:
     description: 'A name that uniquely identifies the mrna within the organism.'
     cardinality: 1
     required: true
+    settings:
+      termIdSpace: data
+      termAccession: '0842'
     storage_settings:
       storage_plugin_id: chado_storage
       storage_plugin_settings:
         base_table: feature
         base_column: uniquename
-    settings:
-      termIdSpace: data
-      termAccession: '0842'
     display:
       view:
         default:
@@ -529,14 +529,14 @@ fields:
     description: 'One or more molecular sequences, possibly with associated annotation.'
     cardinality: 1
     required: false
+    settings:
+      termIdSpace: data
+      termAccession: '2044'
     storage_settings:
       storage_plugin_id: chado_storage
       storage_plugin_settings:
         base_table: feature
         base_column: residues
-    settings:
-      termIdSpace: data
-      termAccession: '2044'
     display:
       view:
         default:
@@ -555,14 +555,14 @@ fields:
     description: 'The size (length) of a sequence, subsequence or region in a sequence, or range(s) of lengths.'
     cardinality: 1
     required: false
+    settings:
+      termIdSpace: data
+      termAccession: '1249'
     storage_settings:
       storage_plugin_id: chado_storage
       storage_plugin_settings:
         base_table: feature
         base_column: seqlen
-    settings:
-      termIdSpace: data
-      termAccession: '1249'
     display:
       view:
         default:
@@ -581,14 +581,14 @@ fields:
     description: 'The 32-character checksum of the sequence, calculated using the MD5 algorithm.'
     cardinality: 1
     required: false
+    settings:
+      termIdSpace: data
+      termAccession: '2190'
     storage_settings:
       storage_plugin_id: chado_storage
       storage_plugin_settings:
         base_table: feature
         base_column: md5checksum
-    settings:
-      termIdSpace: data
-      termAccession: '2190'
     display:
       view:
         default:
@@ -607,14 +607,14 @@ fields:
     description: 'A material entity that is an individual living system, such as animal, plant, bacteria or virus, that is capable of replicating or reproducing, growth and maintenance in the right environment. An organism may be unicellular or made up, like humans, of many billions of cells divided into specialized tissues and organs.'
     cardinality: 1
     required: true
+    settings:
+      termIdSpace: OBI
+      termAccession: '0100026'
     storage_settings:
       storage_plugin_id: chado_storage
       storage_plugin_settings:
         base_table: feature
         base_column: organism_id
-    settings:
-      termIdSpace: OBI
-      termAccession: '0100026'
     display:
       view:
         default:
@@ -633,16 +633,16 @@ fields:
     description: 'An additional type for the item, typically used for adding more specific types from external vocabularies in microdata syntax. This is a relationship between something and a class that the thing is in.'
     cardinality: 1
     required: true
+    settings:
+      termIdSpace: SO
+      termAccession: '0000234'
+      fixed_value: 'SO:0000234'
     storage_settings:
       storage_plugin_id: chado_storage
       storage_plugin_settings:
         base_table: feature
         type_table: feature
         type_column: type_id
-    settings:
-      termIdSpace: SO
-      termAccession: '0000234'
-      fixed_value: 'SO:0000234'
     display:
       view:
         default:
@@ -661,6 +661,9 @@ fields:
     description: "Sequence features related to this mRNA. Think of relationship statements as sentences: SUBJECT TYPE OBJECT (e.g. 'Sara (subject) is the mother of (type) Jacob (object)'). By default the current mRNA is the subject; chose Reverse if the object is the current mRNA."
     cardinality: -1
     required: false
+    settings:
+      termIdSpace: SBO
+      termAccession: '0000374'
     storage_settings:
       storage_plugin_id: chado_storage
       storage_plugin_settings:
@@ -669,9 +672,6 @@ fields:
         linker_table: feature_relationship
         subject_column: subject_id
         object_column: object_id
-    settings:
-      termIdSpace: SBO
-      termAccession: '0000374'
     display:
       view:
         default:
@@ -690,15 +690,15 @@ fields:
     description: 'An individual or organization that serves as a contact for this record.'
     cardinality: -1
     required: false
+    settings:
+      termIdSpace: NCIT
+      termAccession: C47954
     storage_settings:
       storage_plugin_id: chado_storage
       storage_plugin_settings:
         base_table: feature
         linker_table: feature_contact
         linker_fkey_column: contact_id
-    settings:
-      termIdSpace: NCIT
-      termAccession: C47954
     display:
       view:
         default:
@@ -717,15 +717,15 @@ fields:
     description: 'Associates a publication (e.g. journal article, conference proceedings, book chapter, etc.) with this record.'
     cardinality: -1
     required: false
+    settings:
+      termIdSpace: TPUB
+      termAccession: '0000002'
     storage_settings:
       storage_plugin_id: chado_storage
       storage_plugin_settings:
         base_table: feature
         linker_table: feature_pub
         linker_fkey_column: pub_id
-    settings:
-      termIdSpace: TPUB
-      termAccession: '0000002'
     display:
       view:
         default:
@@ -744,15 +744,15 @@ fields:
     description: 'The project which this mRNA is a part of'
     cardinality: -1
     required: false
+    settings:
+      termIdSpace: NCIT
+      termAccession: C47885
     storage_settings:
       storage_plugin_id: chado_storage
       storage_plugin_settings:
         base_table: feature
         linker_table: project_feature
         linker_fkey_column: project_id
-    settings:
-      termIdSpace: NCIT
-      termAccession: C47885
     display:
       view:
         default:
@@ -771,15 +771,15 @@ fields:
     description: 'Indicates if this feature was predicted computationally using another feature.'
     cardinality: 1
     required: false
+    settings:
+      termIdSpace: local
+      termAccession: is_analysis
+      fixed_value: 'local:is_analysis'
     storage_settings:
       storage_plugin_id: chado_storage
       storage_plugin_settings:
         base_table: feature
         base_column: is_analysis
-    settings:
-      termIdSpace: local
-      termAccession: is_analysis
-      fixed_value: 'local:is_analysis'
     display:
       view:
         default:
@@ -798,15 +798,15 @@ fields:
     description: 'Indicates if this record is obsolete.'
     cardinality: 1
     required: false
+    settings:
+      termIdSpace: local
+      termAccession: is_obsolete
+      fixed_value: 'local:is_obsolete'
     storage_settings:
       storage_plugin_id: chado_storage
       storage_plugin_settings:
         base_table: feature
         base_column: is_obsolete
-    settings:
-      termIdSpace: local
-      termAccession: is_obsolete
-      fixed_value: 'local:is_obsolete'
     display:
       view:
         default:
@@ -825,15 +825,15 @@ fields:
     description: 'Alternate names, aliases or synonyms for this record.'
     cardinality: -1
     required: false
+    settings:
+      termIdSpace: schema
+      termAccession: alternateName
     storage_settings:
       storage_plugin_id: chado_storage
       storage_plugin_settings:
         base_table: feature
         linker_table: feature_synonym
         linker_fkey_column: feature_id
-    settings:
-      termIdSpace: schema
-      termAccession: alternateName
     display:
       view:
         default:
@@ -852,14 +852,14 @@ fields:
     description: 'The ID where this record may be available in an external online database.'
     cardinality: 1
     required: false
+    settings:
+      termIdSpace: SBO
+      termAccession: '0000554'
     storage_settings:
       storage_plugin_id: chado_storage
       storage_plugin_settings:
         base_table: feature
         base_column: dbxref_id
-    settings:
-      termIdSpace: SBO
-      termAccession: '0000554'
     display:
       view:
         default:
@@ -878,15 +878,15 @@ fields:
     description: 'The IDs where this record may be available in other external online databases.'
     cardinality: -1
     required: false
+    settings:
+      termIdSpace: SBO
+      termAccession: '0000552'
     storage_settings:
       storage_plugin_id: chado_storage
       storage_plugin_settings:
         base_table: feature
         linker_table: feature_dbxref
         linker_fkey_column: dbxref_id
-    settings:
-      termIdSpace: SBO
-      termAccession: '0000552'
     display:
       view:
         default:
@@ -905,15 +905,15 @@ fields:
     description: 'The name of the item.'
     cardinality: 1
     required: false
-    storage_settings:
-      storage_plugin_id: chado_storage
-      storage_plugin_settings:
-        base_table: phylotree
-        base_column: name
-      max_length: 255
     settings:
       termIdSpace: schema
       termAccession: name
+    storage_settings:
+      storage_plugin_id: chado_storage
+      max_length: 255
+      storage_plugin_settings:
+        base_table: phylotree
+        base_column: name
     display:
       view:
         default:
@@ -932,16 +932,16 @@ fields:
     description: 'An additional type for the item, typically used for adding more specific types from external vocabularies in microdata syntax. This is a relationship between something and a class that the thing is in.'
     cardinality: 1
     required: false
+    settings:
+      termIdSpace: data
+      termAccession: '0872'
+      fixed_value: 'data:0872'
     storage_settings:
       storage_plugin_id: chado_storage
       storage_plugin_settings:
         base_table: phylotree
         type_table: phylotree
         type_column: type_id
-    settings:
-      termIdSpace: data
-      termAccession: '0872'
-      fixed_value: 'data:0872'
     display:
       view:
         default:
@@ -960,14 +960,14 @@ fields:
     description: 'The analysis from which the tree was generated.'
     cardinality: 1
     required: false
+    settings:
+      termIdSpace: operation
+      termAccession: '2945'
     storage_settings:
       storage_plugin_id: chado_storage
       storage_plugin_settings:
         base_table: phylotree
         base_column: analysis_id
-    settings:
-      termIdSpace: operation
-      termAccession: '2945'
     display:
       view:
         default:
@@ -986,14 +986,14 @@ fields:
     description: 'Comments, typically from users.'
     cardinality: 1
     required: false
+    settings:
+      termIdSpace: schema
+      termAccession: comment
     storage_settings:
       storage_plugin_id: chado_storage
       storage_plugin_settings:
         base_table: phylotree
         base_column: comment
-    settings:
-      termIdSpace: schema
-      termAccession: comment
     display:
       view:
         default:
@@ -1012,14 +1012,14 @@ fields:
     description: 'The ID where this record may be available in an external online database.'
     cardinality: 1
     required: true
+    settings:
+      termIdSpace: SBO
+      termAccession: '0000554'
     storage_settings:
       storage_plugin_id: chado_storage
       storage_plugin_settings:
         base_table: phylotree
         base_column: dbxref_id
-    settings:
-      termIdSpace: SBO
-      termAccession: '0000554'
     display:
       view:
         default:
@@ -1038,15 +1038,15 @@ fields:
     description: 'The name of the item.'
     cardinality: 1
     required: false
-    storage_settings:
-      storage_plugin_id: chado_storage
-      storage_plugin_settings:
-        base_table: featuremap
-        base_column: name
-      max_length: 255
     settings:
       termIdSpace: schema
       termAccession: name
+    storage_settings:
+      storage_plugin_id: chado_storage
+      max_length: 255
+      storage_plugin_settings:
+        base_table: featuremap
+        base_column: name
     display:
       view:
         default:
@@ -1065,14 +1065,14 @@ fields:
     description: 'A description of the item.'
     cardinality: 1
     required: false
+    settings:
+      termIdSpace: schema
+      termAccession: description
     storage_settings:
       storage_plugin_id: chado_storage
       storage_plugin_settings:
         base_table: featuremap
         base_column: description
-    settings:
-      termIdSpace: schema
-      termAccession: description
     display:
       view:
         default:
@@ -1091,15 +1091,15 @@ fields:
     description: 'A unit of measurement is a standardized quantity of a physical quality.'
     cardinality: 1
     required: false
+    settings:
+      termIdSpace: UO
+      termAccession: '0000000'
     storage_settings:
       storage_plugin_id: chado_storage
       storage_plugin_settings:
         base_table: featuremap
         type_table: featuremap
         type_column: unittype_id
-    settings:
-      termIdSpace: UO
-      termAccession: '0000000'
     display:
       view:
         default:
@@ -1118,16 +1118,16 @@ fields:
     description: 'An additional type for the item, typically used for adding more specific types from external vocabularies in microdata syntax. This is a relationship between something and a class that the thing is in.'
     cardinality: 1
     required: true
+    settings:
+      termIdSpace: data
+      termAccession: '1280'
+      fixed_value: 'data:1280'
     storage_settings:
       storage_plugin_id: chado_storage
       storage_plugin_settings:
         base_table: featuremap
         type_table: featuremapprop
         type_column: type_id
-    settings:
-      termIdSpace: data
-      termAccession: '1280'
-      fixed_value: 'data:1280'
     display:
       view:
         default:
@@ -1146,15 +1146,15 @@ fields:
     description: 'An individual or organization that serves as a contact for this record.'
     cardinality: -1
     required: false
+    settings:
+      termIdSpace: NCIT
+      termAccession: C47954
     storage_settings:
       storage_plugin_id: chado_storage
       storage_plugin_settings:
         base_table: featuremap
         linker_table: featuremap_contact
         linker_fkey_column: contact_id
-    settings:
-      termIdSpace: NCIT
-      termAccession: C47954
     display:
       view:
         default:
@@ -1173,15 +1173,15 @@ fields:
     description: 'Associates a publication (e.g. journal article, conference proceedings, book chapter, etc.) with this record.'
     cardinality: -1
     required: false
+    settings:
+      termIdSpace: TPUB
+      termAccession: '0000002'
     storage_settings:
       storage_plugin_id: chado_storage
       storage_plugin_settings:
         base_table: featuremap
         linker_table: featuremap_pub
         linker_fkey_column: pub_id
-    settings:
-      termIdSpace: TPUB
-      termAccession: '0000002'
     display:
       view:
         default:
@@ -1200,15 +1200,15 @@ fields:
     description: 'The IDs where this record may be available in other external online databases.'
     cardinality: -1
     required: false
+    settings:
+      termIdSpace: SBO
+      termAccession: '0000552'
     storage_settings:
       storage_plugin_id: chado_storage
       storage_plugin_settings:
         base_table: featuremap
         linker_table: featuremap_dbxref
         linker_fkey_column: dbxref_id
-    settings:
-      termIdSpace: SBO
-      termAccession: '0000552'
     display:
       view:
         default:
@@ -1227,15 +1227,15 @@ fields:
     description: 'The name of the item.'
     cardinality: 1
     required: false
-    storage_settings:
-      storage_plugin_id: chado_storage
-      storage_plugin_settings:
-        base_table: library
-        base_column: name
-      max_length: 255
     settings:
       termIdSpace: schema
       termAccession: name
+    storage_settings:
+      storage_plugin_id: chado_storage
+      max_length: 255
+      storage_plugin_settings:
+        base_table: library
+        base_column: name
     display:
       view:
         default:
@@ -1254,14 +1254,14 @@ fields:
     description: 'A name that uniquely identifies the DNA library on this site.'
     cardinality: 1
     required: true
+    settings:
+      termIdSpace: data
+      termAccession: '0842'
     storage_settings:
       storage_plugin_id: chado_storage
       storage_plugin_settings:
         base_table: library
         base_column: uniquename
-    settings:
-      termIdSpace: data
-      termAccession: '0842'
     display:
       view:
         default:
@@ -1282,16 +1282,16 @@ fields:
     description: 'An additional type for the item, typically used for adding more specific types from external vocabularies in microdata syntax. This is a relationship between something and a class that the thing is in.'
     cardinality: 1
     required: true
+    settings:
+      termIdSpace: NCIT
+      termAccession: C16223
+      fixed_value: 'NCIT:C16223'
     storage_settings:
       storage_plugin_id: chado_storage
       storage_plugin_settings:
         base_table: library
         type_table: library
         type_column: type_id
-    settings:
-      termIdSpace: NCIT
-      termAccession: C16223
-      fixed_value: 'NCIT:C16223'
     display:
       view:
         default:
@@ -1310,14 +1310,14 @@ fields:
     description: 'A material entity that is an individual living system, such as animal, plant, bacteria or virus, that is capable of replicating or reproducing, growth and maintenance in the right environment. An organism may be unicellular or made up, like humans, of many billions of cells divided into specialized tissues and organs.'
     cardinality: 1
     required: true
+    settings:
+      termIdSpace: OBI
+      termAccession: '0100026'
     storage_settings:
       storage_plugin_id: chado_storage
       storage_plugin_settings:
         base_table: library
         base_column: organism_id
-    settings:
-      termIdSpace: OBI
-      termAccession: '0100026'
     display:
       view:
         default:
@@ -1336,15 +1336,15 @@ fields:
     description: 'Alternate names, aliases or synonyms for this record.'
     cardinality: -1
     required: false
+    settings:
+      termIdSpace: schema
+      termAccession: alternateName
     storage_settings:
       storage_plugin_id: chado_storage
       storage_plugin_settings:
         base_table: library
         linker_table: library_synonym
         linker_fkey_column: library_id
-    settings:
-      termIdSpace: schema
-      termAccession: alternateName
     display:
       view:
         default:
@@ -1363,15 +1363,15 @@ fields:
     description: 'An individual or organization that serves as a contact for this record.'
     cardinality: -1
     required: false
+    settings:
+      termIdSpace: NCIT
+      termAccession: C47954
     storage_settings:
       storage_plugin_id: chado_storage
       storage_plugin_settings:
         base_table: library
         linker_table: library_contact
         linker_fkey_column: contact_id
-    settings:
-      termIdSpace: NCIT
-      termAccession: C47954
     display:
       view:
         default:
@@ -1390,15 +1390,15 @@ fields:
     description: 'The IDs where this record may be available in other external online databases.'
     cardinality: -1
     required: false
+    settings:
+      termIdSpace: SBO
+      termAccession: '0000552'
     storage_settings:
       storage_plugin_id: chado_storage
       storage_plugin_settings:
         base_table: library
         linker_table: library_dbxref
         linker_fkey_column: dbxref_id
-    settings:
-      termIdSpace: SBO
-      termAccession: '0000552'
     display:
       view:
         default:
@@ -1417,15 +1417,15 @@ fields:
     description: 'Associates a publication (e.g. journal article, conference proceedings, book chapter, etc.) with this record.'
     cardinality: -1
     required: false
+    settings:
+      termIdSpace: TPUB
+      termAccession: '0000002'
     storage_settings:
       storage_plugin_id: chado_storage
       storage_plugin_settings:
         base_table: library
         linker_table: library_pub
         linker_fkey_column: pub_id
-    settings:
-      termIdSpace: TPUB
-      termAccession: '0000002'
     display:
       view:
         default:
@@ -1444,14 +1444,14 @@ fields:
     description: 'Indicates if this record is obsolete.'
     cardinality: 1
     required: true
+    settings:
+      termIdSpace: local
+      termAccession: is_obsolete
     storage_settings:
       storage_plugin_id: chado_storage
       storage_plugin_settings:
         base_table: library
         base_column: is_obsolete
-    settings:
-      termIdSpace: local
-      termAccession: is_obsolete
     display:
       view:
         default:
@@ -1470,15 +1470,15 @@ fields:
     description: 'The name of the item.'
     cardinality: 1
     required: false
-    storage_settings:
-      storage_plugin_id: chado_storage
-      storage_plugin_settings:
-        base_table: analysis
-        base_column: name
-      max_length: 255
     settings:
       termIdSpace: schema
       termAccession: name
+    storage_settings:
+      storage_plugin_id: chado_storage
+      max_length: 255
+      storage_plugin_settings:
+        base_table: analysis
+        base_column: name
     display:
       view:
         default:
@@ -1497,14 +1497,14 @@ fields:
     description: 'A description of the item.'
     cardinality: 1
     required: false
+    settings:
+      termIdSpace: schema
+      termAccession: description
     storage_settings:
       storage_plugin_id: chado_storage
       storage_plugin_settings:
         base_table: analysis
         base_column: description
-    settings:
-      termIdSpace: schema
-      termAccession: description
     display:
       view:
         default:
@@ -1523,15 +1523,15 @@ fields:
     description: 'The program name (e.g. blastx, blastp, sim4, genscan. If the analysis was not derived from a software package then provide a very brief description of the pipeline, workflow or method.'
     cardinality: 1
     required: true
-    storage_settings:
-      storage_plugin_id: chado_storage
-      storage_plugin_settings:
-        base_table: analysis
-        base_column: program
-      max_length: 255
     settings:
       termIdSpace: SWO
       termAccession: '0000001'
+    storage_settings:
+      storage_plugin_id: chado_storage
+      max_length: 255
+      storage_plugin_settings:
+        base_table: analysis
+        base_column: program
     display:
       view:
         default:
@@ -1550,15 +1550,15 @@ fields:
     description: 'The version of the program, pipeline, workflow or method used to perform this analysis. (e.g. TBLASTX 2.0MP-WashU [09-Nov-2000]. Enter "n/a" if no version is available or applicable.'
     cardinality: 1
     required: true
-    storage_settings:
-      storage_plugin_id: chado_storage
-      storage_plugin_settings:
-        base_table: analysis
-        base_column: programversion
-      max_length: 255
     settings:
       termIdSpace: IAO
       termAccession: '0000129'
+    storage_settings:
+      storage_plugin_id: chado_storage
+      max_length: 255
+      storage_plugin_settings:
+        base_table: analysis
+        base_column: programversion
     display:
       view:
         default:
@@ -1577,15 +1577,15 @@ fields:
     description: 'The name of the source where data was obtained for this analysis.'
     cardinality: 1
     required: false
-    storage_settings:
-      storage_plugin_id: chado_storage
-      storage_plugin_settings:
-        base_table: analysis
-        base_column: sourcename
-      max_length: 255
     settings:
       termIdSpace: NCIT
       termAccession: C16493
+    storage_settings:
+      storage_plugin_id: chado_storage
+      max_length: 255
+      storage_plugin_settings:
+        base_table: analysis
+        base_column: sourcename
     display:
       view:
         default:
@@ -1604,15 +1604,15 @@ fields:
     description: 'The version number of the data source (if applicable).'
     cardinality: 1
     required: false
-    storage_settings:
-      storage_plugin_id: chado_storage
-      storage_plugin_settings:
-        base_table: analysis
-        base_column: sourceversion
-      max_length: 255
     settings:
       termIdSpace: SIO
       termAccession: '001377'
+    storage_settings:
+      storage_plugin_id: chado_storage
+      max_length: 255
+      storage_plugin_settings:
+        base_table: analysis
+        base_column: sourceversion
     display:
       view:
         default:
@@ -1631,14 +1631,14 @@ fields:
     description: 'The URI (e.g. web URL) where the source data can be retrieved.'
     cardinality: 1
     required: false
+    settings:
+      termIdSpace: data
+      termAccession: '1047'
     storage_settings:
       storage_plugin_id: chado_storage
       storage_plugin_settings:
         base_table: analysis
         base_column: sourceuri
-    settings:
-      termIdSpace: data
-      termAccession: '1047'
     display:
       view:
         default:
@@ -1659,16 +1659,16 @@ fields:
     description: 'An additional type for the item, typically used for adding more specific types from external vocabularies in microdata syntax. This is a relationship between something and a class that the thing is in.'
     cardinality: 1
     required: true
+    settings:
+      termIdSpace: operation
+      termAccession: '0525'
+      fixed_value: 'operation:0525'
     storage_settings:
       storage_plugin_id: chado_storage
       storage_plugin_settings:
         base_table: analysis
         type_table: analysisprop
         type_column: type_id
-    settings:
-      termIdSpace: operation
-      termAccession: '0525'
-      fixed_value: 'operation:0525'
     display:
       view:
         default:
@@ -1687,6 +1687,9 @@ fields:
     description: "Analyses related to this genome assembly. Think of relationship statements as sentences: SUBJECT TYPE OBJECT (e.g. 'Sara (subject) is the mother of (type) Jacob (object)'). By default the current genome assembly is the subject; chose Reverse if the object is the current genome assembly."
     cardinality: -1
     required: false
+    settings:
+      termIdSpace: SBO
+      termAccession: '0000374'
     storage_settings:
       storage_plugin_id: chado_storage
       storage_plugin_settings:
@@ -1695,9 +1698,6 @@ fields:
         linker_table: analysis_relationship
         subject_column: subject_id
         object_column: object_id
-    settings:
-      termIdSpace: SBO
-      termAccession: '0000374'
     display:
       view:
         default:
@@ -1716,15 +1716,15 @@ fields:
     description: 'The IDs where this record may be available in other external online databases.'
     cardinality: -1
     required: false
+    settings:
+      termIdSpace: SBO
+      termAccession: '0000552'
     storage_settings:
       storage_plugin_id: chado_storage
       storage_plugin_settings:
         base_table: analysis
         linker_table: analysis_dbxref
         linker_fkey_column: dbxref_id
-    settings:
-      termIdSpace: SBO
-      termAccession: '0000552'
     display:
       view:
         default:
@@ -1743,15 +1743,15 @@ fields:
     description: 'Associates a publication (e.g. journal article, conference proceedings, book chapter, etc.) with this record.'
     cardinality: -1
     required: false
+    settings:
+      termIdSpace: TPUB
+      termAccession: '0000002'
     storage_settings:
       storage_plugin_id: chado_storage
       storage_plugin_settings:
         base_table: analysis
         linker_table: analysis_pub
         linker_fkey_column: pub_id
-    settings:
-      termIdSpace: TPUB
-      termAccession: '0000002'
     display:
       view:
         default:
@@ -1770,15 +1770,15 @@ fields:
     description: 'The project which this genome assembly is a part of'
     cardinality: -1
     required: false
+    settings:
+      termIdSpace: NCIT
+      termAccession: C47885
     storage_settings:
       storage_plugin_id: chado_storage
       storage_plugin_settings:
         base_table: analysis
         linker_table: project_analysis
         linker_fkey_column: project_id
-    settings:
-      termIdSpace: NCIT
-      termAccession: C47885
     display:
       view:
         default:
@@ -1797,15 +1797,15 @@ fields:
     description: 'The name of the item.'
     cardinality: 1
     required: false
-    storage_settings:
-      storage_plugin_id: chado_storage
-      storage_plugin_settings:
-        base_table: analysis
-        base_column: name
-      max_length: 255
     settings:
       termIdSpace: schema
       termAccession: name
+    storage_settings:
+      storage_plugin_id: chado_storage
+      max_length: 255
+      storage_plugin_settings:
+        base_table: analysis
+        base_column: name
     display:
       view:
         default:
@@ -1824,14 +1824,14 @@ fields:
     description: 'A description of the item.'
     cardinality: 1
     required: false
+    settings:
+      termIdSpace: schema
+      termAccession: description
     storage_settings:
       storage_plugin_id: chado_storage
       storage_plugin_settings:
         base_table: analysis
         base_column: description
-    settings:
-      termIdSpace: schema
-      termAccession: description
     display:
       view:
         default:
@@ -1850,15 +1850,15 @@ fields:
     description: 'The program name (e.g. blastx, blastp, sim4, genscan. If the analysis was not derived from a software package then provide a very brief description of the pipeline, workflow or method.'
     cardinality: 1
     required: true
-    storage_settings:
-      storage_plugin_id: chado_storage
-      storage_plugin_settings:
-        base_table: analysis
-        base_column: program
-      max_length: 255
     settings:
       termIdSpace: SWO
       termAccession: '0000001'
+    storage_settings:
+      storage_plugin_id: chado_storage
+      max_length: 255
+      storage_plugin_settings:
+        base_table: analysis
+        base_column: program
     display:
       view:
         default:
@@ -1877,15 +1877,15 @@ fields:
     description: 'The version of the program, pipeline, workflow or method used to perform this analysis. (e.g. TBLASTX 2.0MP-WashU [09-Nov-2000]. Enter "n/a" if no version is available or applicable.'
     cardinality: 1
     required: true
-    storage_settings:
-      storage_plugin_id: chado_storage
-      storage_plugin_settings:
-        base_table: analysis
-        base_column: programversion
-      max_length: 255
     settings:
       termIdSpace: IAO
       termAccession: '0000129'
+    storage_settings:
+      storage_plugin_id: chado_storage
+      max_length: 255
+      storage_plugin_settings:
+        base_table: analysis
+        base_column: programversion
     display:
       view:
         default:
@@ -1904,15 +1904,15 @@ fields:
     description: 'The name of the source where data was obtained for this analysis.'
     cardinality: 1
     required: false
-    storage_settings:
-      storage_plugin_id: chado_storage
-      storage_plugin_settings:
-        base_table: analysis
-        base_column: sourcename
-      max_length: 255
     settings:
       termIdSpace: NCIT
       termAccession: C16493
+    storage_settings:
+      storage_plugin_id: chado_storage
+      max_length: 255
+      storage_plugin_settings:
+        base_table: analysis
+        base_column: sourcename
     display:
       view:
         default:
@@ -1931,15 +1931,15 @@ fields:
     description: 'The version number of the data source (if applicable).'
     cardinality: 1
     required: false
-    storage_settings:
-      storage_plugin_id: chado_storage
-      storage_plugin_settings:
-        base_table: analysis
-        base_column: sourceversion
-      max_length: 255
     settings:
       termIdSpace: SIO
       termAccession: '001377'
+    storage_settings:
+      storage_plugin_id: chado_storage
+      max_length: 255
+      storage_plugin_settings:
+        base_table: analysis
+        base_column: sourceversion
     display:
       view:
         default:
@@ -1958,14 +1958,14 @@ fields:
     description: 'The URI (e.g. web URL) where the source data can be retrieved.'
     cardinality: 1
     required: false
+    settings:
+      termIdSpace: data
+      termAccession: '1047'
     storage_settings:
       storage_plugin_id: chado_storage
       storage_plugin_settings:
         base_table: analysis
         base_column: sourceuri
-    settings:
-      termIdSpace: data
-      termAccession: '1047'
     display:
       view:
         default:
@@ -1986,16 +1986,16 @@ fields:
     description: 'An additional type for the item, typically used for adding more specific types from external vocabularies in microdata syntax. This is a relationship between something and a class that the thing is in.'
     cardinality: 1
     required: true
+    settings:
+      termIdSpace: operation
+      termAccession: '0362'
+      fixed_value: 'operation:0362'
     storage_settings:
       storage_plugin_id: chado_storage
       storage_plugin_settings:
         base_table: analysis
         type_table: analysisprop
         type_column: type_id
-    settings:
-      termIdSpace: operation
-      termAccession: '0362'
-      fixed_value: 'operation:0362'
     display:
       view:
         default:
@@ -2014,6 +2014,9 @@ fields:
     description: "Analyses related to this genome annotation. Think of relationship statements as sentences: SUBJECT TYPE OBJECT (e.g. 'Sara (subject) is the mother of (type) Jacob (object)'). By default the current genome annotation is the subject; chose Reverse if the object is the current genome annotation."
     cardinality: -1
     required: false
+    settings:
+      termIdSpace: SBO
+      termAccession: '0000374'
     storage_settings:
       storage_plugin_id: chado_storage
       storage_plugin_settings:
@@ -2022,9 +2025,6 @@ fields:
         linker_table: analysis_relationship
         subject_column: subject_id
         object_column: object_id
-    settings:
-      termIdSpace: SBO
-      termAccession: '0000374'
     display:
       view:
         default:
@@ -2043,15 +2043,15 @@ fields:
     description: 'The IDs where this record may be available in other external online databases.'
     cardinality: -1
     required: false
+    settings:
+      termIdSpace: SBO
+      termAccession: '0000552'
     storage_settings:
       storage_plugin_id: chado_storage
       storage_plugin_settings:
         base_table: analysis
         linker_table: analysis_dbxref
         linker_fkey_column: dbxref_id
-    settings:
-      termIdSpace: SBO
-      termAccession: '0000552'
     display:
       view:
         default:
@@ -2070,15 +2070,15 @@ fields:
     description: 'Associates a publication (e.g. journal article, conference proceedings, book chapter, etc.) with this record.'
     cardinality: -1
     required: false
+    settings:
+      termIdSpace: TPUB
+      termAccession: '0000002'
     storage_settings:
       storage_plugin_id: chado_storage
       storage_plugin_settings:
         base_table: analysis
         linker_table: analysis_pub
         linker_fkey_column: pub_id
-    settings:
-      termIdSpace: TPUB
-      termAccession: '0000002'
     display:
       view:
         default:
@@ -2097,15 +2097,15 @@ fields:
     description: 'The project which this genome annotation is a part of'
     cardinality: -1
     required: false
+    settings:
+      termIdSpace: NCIT
+      termAccession: C47885
     storage_settings:
       storage_plugin_id: chado_storage
       storage_plugin_settings:
         base_table: analysis
         linker_table: project_analysis
         linker_fkey_column: project_id
-    settings:
-      termIdSpace: NCIT
-      termAccession: C47885
     display:
       view:
         default:
@@ -2124,15 +2124,15 @@ fields:
     description: 'The name of the item.'
     cardinality: 1
     required: true
-    storage_settings:
-      storage_plugin_id: chado_storage
-      storage_plugin_settings:
-        base_table: project
-        base_column: name
-      max_length: 255
     settings:
       termIdSpace: schema
       termAccession: name
+    storage_settings:
+      storage_plugin_id: chado_storage
+      max_length: 255
+      storage_plugin_settings:
+        base_table: project
+        base_column: name
     display:
       view:
         default:
@@ -2151,14 +2151,14 @@ fields:
     description: 'A description of the item.'
     cardinality: 1
     required: false
+    settings:
+      termIdSpace: schema
+      termAccession: description
     storage_settings:
       storage_plugin_id: chado_storage
       storage_plugin_settings:
         base_table: project
         base_column: description
-    settings:
-      termIdSpace: schema
-      termAccession: description
     display:
       view:
         default:
@@ -2177,16 +2177,16 @@ fields:
     description: 'An additional type for the item, typically used for adding more specific types from external vocabularies in microdata syntax. This is a relationship between something and a class that the thing is in.'
     cardinality: 1
     required: true
+    settings:
+      termIdSpace: local
+      termAccession: 'Genome Project'
+      fixed_value: 'local:Genome Project'
     storage_settings:
       storage_plugin_id: chado_storage
       storage_plugin_settings:
         base_table: project
         type_table: projectprop
         type_column: type_id
-    settings:
-      termIdSpace: local
-      termAccession: 'Genome Project'
-      fixed_value: 'local:Genome Project'
     display:
       view:
         default:
@@ -2205,6 +2205,9 @@ fields:
     description: "Projects related to this genome project. Think of relationship statements as sentences: SUBJECT TYPE OBJECT (e.g. 'Sara (subject) is the mother of (type) Jacob (object)'). By default the current genome project is the subject; chose Reverse if the object is the current genome project."
     cardinality: -1
     required: false
+    settings:
+      termIdSpace: SBO
+      termAccession: '0000374'
     storage_settings:
       storage_plugin_id: chado_storage
       storage_plugin_settings:
@@ -2213,9 +2216,6 @@ fields:
         linker_table: project_relationship
         subject_column: subject_project_id
         object_column: object_project_id
-    settings:
-      termIdSpace: SBO
-      termAccession: '0000374'
     display:
       view:
         default:
@@ -2234,15 +2234,15 @@ fields:
     description: 'The IDs where this record may be available in other external online databases.'
     cardinality: -1
     required: false
+    settings:
+      termIdSpace: SBO
+      termAccession: '0000552'
     storage_settings:
       storage_plugin_id: chado_storage
       storage_plugin_settings:
         base_table: project
         linker_table: project_dbxref
         linker_fkey_column: dbxref_id
-    settings:
-      termIdSpace: SBO
-      termAccession: '0000552'
     display:
       view:
         default:
@@ -2261,15 +2261,15 @@ fields:
     description: 'Associates a publication (e.g. journal article, conference proceedings, book chapter, etc.) with this record.'
     cardinality: -1
     required: false
+    settings:
+      termIdSpace: TPUB
+      termAccession: '0000002'
     storage_settings:
       storage_plugin_id: chado_storage
       storage_plugin_settings:
         base_table: project
         linker_table: project_pub
         linker_fkey_column: pub_id
-    settings:
-      termIdSpace: TPUB
-      termAccession: '0000002'
     display:
       view:
         default:

@@ -1,0 +1,54 @@
+label: Vakthund
+description: 'Siste loggmeldinger'
+display:
+  default:
+    display_title: Standard
+    display_options:
+      title: 'Siste loggmeldinger'
+      fields:
+        nothing:
+          admin_label: Ikon
+        wid:
+          label: WID
+        severity:
+          label: Alvorlighetsgrad
+        type:
+          label: Type
+        timestamp:
+          label: Dato
+        message:
+          label: Melding
+        name:
+          label: Bruker
+          separator: ', '
+        link:
+          label: Handlinger
+      pager:
+        options:
+          tags:
+            next: ››
+            previous: ‹‹
+          expose:
+            items_per_page_label: 'Elementer per side'
+            items_per_page_options_all_label: '- Alle -'
+            offset_label: Forskyving
+      exposed_form:
+        options:
+          submit_button: Filtrer
+          reset_button_label: Nullstill
+          exposed_sorts_label: 'Sortér etter'
+          sort_asc_label: Stigende
+          sort_desc_label: Synkende
+      empty:
+        area:
+          admin_label: 'Ingen loggmeldinger er tilgjengelig.'
+          content: 'Ingen loggmeldinger er tilgjengelig.'
+      filters:
+        type:
+          expose:
+            label: Type
+        severity:
+          expose:
+            label: Alvorlighetsgrad
+  page:
+    display_title: Side

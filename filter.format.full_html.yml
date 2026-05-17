@@ -1,12 +1,12 @@
 uuid: 3a1550c2-270a-4491-91ed-9940954b7d0b
-langcode: en
+langcode: nb
 status: true
 dependencies:
   module:
     - editor
 _core:
   default_config_hash: vpZysv3RHJjhYzq7O_q5q8mVlHdrSzKELmXyiX6RtV0
-name: 'Full HTML'
+name: 'Komplett HTML'
 format: full_html
 weight: 2
 filters:

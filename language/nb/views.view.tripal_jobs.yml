@@ -1,0 +1,46 @@
+display:
+  default:
+    display_title: Master
+    display_options:
+      exposed_form:
+        options:
+          submit_button: Bruk
+          reset_button_label: Nullstill
+          exposed_sorts_label: 'Sortér etter'
+          sort_asc_label: Stigende
+          sort_desc_label: Synkende
+      pager:
+        options:
+          tags:
+            previous: ‹‹
+            next: ››
+            first: '« Første'
+            last: 'Siste »'
+          expose:
+            items_per_page_label: 'Elementer per side'
+            items_per_page_options_all_label: '- Alle -'
+            offset_label: Forskyving
+      fields:
+        job_id:
+          format_plural_string: !!binary MQNAY291bnQ=
+        name:
+          separator: ', '
+        priority:
+          label: Prioritet
+        progress:
+          format_plural_string: !!binary MQNAY291bnQ=
+          suffix: '%'
+        status:
+          label: Status
+        nothing_4:
+          alter:
+            text: Vis
+        nothing_2:
+          alter:
+            text: Avbryt
+        nothing_5:
+          label: Status
+        dropbutton:
+          label: Handlinger
+  page_1:
+    display_title: Side

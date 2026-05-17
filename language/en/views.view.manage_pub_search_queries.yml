@@ -1,0 +1,94 @@
+label: 'Manage Publication Search Queries'
+display:
+  default:
+    display_title: Default
+    display_options:
+      title: 'Manage Publication Search Queries'
+      fields:
+        pub_library_query_id:
+          label: ID
+          format_plural_string: !!binary MQNAY291bnQ=
+        name:
+          label: 'Importer Name'
+        criteria:
+          label: Database
+        criteria_1:
+          label: 'Search String'
+        do_contact:
+          label: 'Create Contact'
+          alter:
+            text: '{% if (do_contact == "No") or (do_contact == "0") %}No{% else %}Yes{% endif %}'
+          format_plural_string: !!binary MQNAY291bnQ=
+        disabled:
+          label: Disabled
+          alter:
+            text: '{% if (disabled == "No") or (do_contact == "0") %}No{% else %}Yes{% endif %}'
+          format_plural_string: !!binary MQNAY291bnQ=
+        nothing_2:
+          label: Run
+          alter:
+            text: Run
+            path: 'admin/tripal/loaders/pub_search_query_loader/{{ pub_library_query_id }}'
+        nothing_1:
+          label: Edit
+          alter:
+            text: Edit
+            path: 'admin/tripal/loaders/publications/edit_publication_search_query/{{ pub_library_query_id }}'
+        nothing:
+          label: Delete
+          alter:
+            text: Delete
+            path: 'admin/tripal/loaders/publications/delete_publication_search_query/{{ pub_library_query_id }}'
+        dropbutton:
+          label: Actions
+      pager:
+        options:
+          tags:
+            next: ››
+            previous: ‹‹
+          expose:
+            items_per_page_label: 'Items per page'
+            items_per_page_options_all_label: '- All -'
+            offset_label: Offset
+      exposed_form:
+        options:
+          submit_button: Apply
+          reset_button_label: Reset
+          exposed_sorts_label: 'Sort by'
+          sort_asc_label: Asc
+          sort_desc_label: Desc
+      empty:
+        area_text_custom:
+          content: '<p>No search queries match the specified filter settings. Click on the "<strong><a href="/admin/tripal/loaders/publications/new_publication_search_query">+Add a new search query</a></strong>" button to create a new search query.</p>'
+      filters:
+        name:
+          expose:
+            label: 'Importer Name'
+        criteria:
+          expose:
+            label: Criteria
+            description: 'This will match either Database or Search String'
+          group_info:
+            label: Criteria
+        do_contact:
+          expose:
+            label: 'Create Contact'
+        disabled:
+          expose:
+            label: Disabled
+      style:
+        options:
+          caption: 'Existing Search Queries'
+      header:
+        area_text_custom:
+          content: "<p>A publication search query is used to specify a set of search criteria that can be used to query a remote database. When this query is performed by selecting the \"Run\" action, publications that match the specified criteria will be returned and then imported into the Chado database. Once created, an importer can be run at regular intervals using the <code>drush trp-import-pubs</code> command (<em>not yet implemented</em>) to add recently released publications. This command can be started by a cron job or other automation method.</p>\r\n\r\n<p>Search Query Filter Settings</p>"
+      footer:
+        area:
+          content:
+            value: "<form method=\"GET\" action=\"/admin/tripal/loaders/publications/new_publication_search_query\">\r\n<input type=\"submit\" class=\"button form-submit\" value=\"+ Add a new search query\">\r\n</form>"
+  pub_search_queries_view:
+    display_title: Page
+    display_options:
+      menu:
+        title: 'External Database Search Queries'
+        description: 'Queries made to external databases to search for publications matching some criteria'

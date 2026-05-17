@@ -1,0 +1,52 @@
+label: Folk
+display:
+  default:
+    display_title: Standard
+    display_options:
+      title: Folk
+      fields:
+        name:
+          label: Brukarnamn
+        status:
+          label: Status
+          settings:
+            format_custom_false: Blokkert
+            format_custom_true: Aktiv
+        roles_target_id:
+          label: Roller
+        created:
+          label: 'Medlem i'
+        operations:
+          label: Operasjonar
+        mail:
+          separator: ', '
+      pager:
+        options:
+          expose:
+            items_per_page_options_all_label: '- Alle -'
+      exposed_form:
+        options:
+          submit_button: Filtrer
+          reset_button_label: 'Sett til standard'
+          exposed_sorts_label: 'Sorter etter'
+      filters:
+        status:
+          group_info:
+            label: Status
+            group_items:
+              1:
+                title: Aktiv
+              2:
+                title: Blokkert
+        roles_target_id:
+          expose:
+            label: Rolle
+      use_more_text: meir
+  page_1:
+    display_title: Nettside
+    display_options:
+      menu:
+        title: Liste
+      tab_options:
+        title: Folk
+        description: 'Handsama brukarkontoar, roller og rettar.'

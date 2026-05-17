@@ -1,0 +1,50 @@
+display:
+  default:
+    display_title: Standard
+    display_options:
+      fields:
+        id:
+          separator: ', '
+        title:
+          label: Tittel
+          separator: ', '
+        type:
+          label: Type
+          separator: ', '
+        uid:
+          label: Forfattar
+          separator: ', '
+        created:
+          label: Laga
+          separator: ', '
+        operations:
+          label: Operasjonar
+      pager:
+        options:
+          expose:
+            items_per_page_options_all_label: '- Alle -'
+      exposed_form:
+        options:
+          submit_button: Bruk
+          reset_button_label: 'Sett til standard'
+          exposed_sorts_label: 'Sorter etter'
+      sorts:
+        created:
+          expose:
+            label: Laga
+        title:
+          expose:
+            label: Tittel
+        type:
+          expose:
+            label: Type
+      filters:
+        title:
+          expose:
+            label: Tittel
+            placeholder: Tittel
+        type:
+          expose:
+            label: Type
+  page_1:
+    display_title: Nettside

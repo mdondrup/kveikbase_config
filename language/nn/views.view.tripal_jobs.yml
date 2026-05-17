@@ -1,0 +1,29 @@
+display:
+  default:
+    display_options:
+      exposed_form:
+        options:
+          submit_button: Bruk
+          reset_button_label: 'Sett til standard'
+          exposed_sorts_label: 'Sorter etter'
+      pager:
+        options:
+          expose:
+            items_per_page_options_all_label: '- Alle -'
+      fields:
+        name:
+          separator: ', '
+        progress:
+          suffix: '%'
+        status:
+          label: Status
+        nothing_4:
+          alter:
+            text: 'Sjå på'
+        nothing_2:
+          alter:
+            text: Avbryt
+        dropbutton:
+          label: Handlingar
+  page_1:
+    display_title: Nettside

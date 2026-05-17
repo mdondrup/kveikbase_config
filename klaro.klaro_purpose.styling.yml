@@ -1,10 +1,10 @@
 uuid: 5f5598fd-6827-4af6-8b35-a923f1b75ec6
-langcode: en
+langcode: nb
 status: true
 dependencies: {  }
 _core:
   default_config_hash: zb5fw3XvVMA3iaOX1CO7qm1YLv0IzThvz3HQvDcsLA8
 id: styling
-label: Styling
+label: Stiling
 description: ''
 weight: 5

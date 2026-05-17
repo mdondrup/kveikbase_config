@@ -1,0 +1,80 @@
+label: Filer
+display:
+  default:
+    display_title: Standard
+    display_options:
+      title: Filer
+      fields:
+        filename:
+          label: Navn
+          separator: ', '
+        filemime:
+          label: MIME-type
+        filesize:
+          label: Størrelse
+        status:
+          label: Status
+          settings:
+            format_custom_false: Midlertidig
+            format_custom_true: Permanent
+        changed:
+          label: 'Endret dato'
+        count:
+          label: 'Brukt i'
+        operations:
+          label: Handlinger
+      pager:
+        options:
+          tags:
+            next: 'Neste ›'
+            previous: '‹ Forrige'
+          expose:
+            items_per_page_label: 'Elementer per side'
+            items_per_page_options_all_label: '- Alle -'
+            offset_label: Forskyving
+      exposed_form:
+        options:
+          submit_button: Filtrer
+          reset_button_label: Nullstill
+          exposed_sorts_label: 'Sortér etter'
+          sort_asc_label: Stigende
+          sort_desc_label: Synkende
+      filters:
+        filename:
+          expose:
+            label: Filnavn
+        filemime:
+          expose:
+            label: MIME-type
+        status:
+          expose:
+            label: Status
+  page_1:
+    display_options:
+      menu:
+        title: Filer
+  page_2:
+    display_title: Filbruk
+    display_options:
+      title: Filbruk
+      fields:
+        entity_label:
+          label: Entitet
+        type:
+          label: Entitetstype
+        count:
+          label: 'Antall ganger brukt'
+          format_plural_string: !!binary MQNAY291bnQ=
+      pager:
+        options:
+          tags:
+            next: 'Neste ›'
+            previous: '‹ Forrige'
+          expose:
+            items_per_page_label: 'Elementer per side'
+            items_per_page_options_all_label: '- Alle -'
+            offset_label: Forskyving
+      arguments:
+        fid:
+          exception:
+            title: Alle

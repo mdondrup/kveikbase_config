@@ -1,5 +1,5 @@
 uuid: 17f4b0ea-db1f-43a1-adb5-fe5b7cef0225
-langcode: en
+langcode: nb
 status: true
 dependencies:
   module:
@@ -16,7 +16,7 @@ provider: null
 plugin: system_powered_by_block
 settings:
   id: system_powered_by_block
-  label: 'Powered by Drupal'
+  label: 'Laget med Drupal'
   label_display: '0'
   provider: system
 visibility: {  }
