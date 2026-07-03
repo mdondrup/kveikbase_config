@@ -1,0 +1,35 @@
+display:
+  default:
+    display_title: Standard
+    display_options:
+      fields:
+        filename:
+          label: Namn
+          separator: ', '
+        status:
+          label: Status
+        operations:
+          label: Operasjonar
+      pager:
+        options:
+          expose:
+            items_per_page_options_all_label: '- Alle -'
+      exposed_form:
+        options:
+          submit_button: Filtrer
+          reset_button_label: 'Sett til standard'
+          exposed_sorts_label: 'Sorter etter'
+      filters:
+        status:
+          expose:
+            label: Status
+  page_2:
+    display_options:
+      pager:
+        options:
+          expose:
+            items_per_page_options_all_label: '- Alle -'
+      arguments:
+        fid:
+          exception:
+            title: Alle

@@ -1,5 +1,5 @@
 uuid: 27206132-8271-42c4-963a-3b69983a6227
-langcode: en
+langcode: nb
 status: true
 dependencies:
   module:
@@ -7,7 +7,7 @@ dependencies:
 _core:
   default_config_hash: N0RDBTqiK4dKoN4p4oW2j0SGWycdHyALUe9M-Ofp89U
 id: node_promote_action
-label: 'Promote content to front page'
+label: 'Forfrem til forsiden'
 type: node
 plugin: node_promote_action
 configuration: {  }

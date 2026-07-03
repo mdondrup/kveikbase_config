@@ -1,0 +1,68 @@
+label: Innhold
+description: 'Finne og behandle innhold.'
+display:
+  default:
+    display_title: Standard
+    display_options:
+      title: Innhold
+      fields:
+        title:
+          label: Tittel
+        type:
+          label: Innholdstype
+          separator: ', '
+        name:
+          label: Forfatter
+        status:
+          label: Status
+          settings:
+            format_custom_false: Upublisert
+            format_custom_true: Publisert
+        changed:
+          label: Oppdatert
+        langcode:
+          label: Språk
+          separator: ', '
+        operations:
+          label: Handlinger
+      pager:
+        options:
+          tags:
+            next: 'Neste ›'
+            previous: '‹ Forrige'
+            first: '« Første'
+            last: 'Siste »'
+      exposed_form:
+        options:
+          submit_button: Filtrer
+          reset_button_label: Nullstill
+          exposed_sorts_label: 'Sortér etter'
+          sort_asc_label: Stigende
+          sort_desc_label: Synkende
+      filters:
+        title:
+          expose:
+            label: Tittel
+        type:
+          expose:
+            label: Innholdstype
+        status:
+          expose:
+            label: Status
+          group_info:
+            label: Publiseringsstatus
+            group_items:
+              1:
+                title: Publisert
+              2:
+                title: Upublisert
+        langcode:
+          expose:
+            label: Språk
+  page_1:
+    display_title: Side
+    display_options:
+      menu:
+        title: Innhold
+      tab_options:
+        title: Innhold

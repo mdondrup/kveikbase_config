@@ -256,8 +256,8 @@ content:
           weight: 0
           settings:
             location_option_id: fixed_value
-            latitude: '0'
-            longitude: '0'
+            latitude: 0.0
+            longitude: 0.0
           map_center_id: location_plugins
         ipstack:
           enable: false
@@ -283,19 +283,14 @@ content:
           map_center_id: fit_shapes
       map_provider_id: leaflet
       map_provider_settings:
-        conditional_initialization: viewport
-        conditional_description: 'Clicking this button will embed a map.'
-        conditional_label: 'Show map'
-        conditional_viewport_threshold: 0.8
         map_features:
           client_location_indicator:
-            enabled: false
             weight: 0
+            enabled: false
           leaflet_disable_user_interaction:
-            enabled: false
             weight: 0
-          geolocation_shapes:
             enabled: false
+          geolocation_shapes:
             weight: 0
             settings:
               remove_markers: false
@@ -308,28 +303,28 @@ content:
               polygon_title: ''
               fillColor: '#FF0000'
               fillOpacity: 0.35
+            enabled: false
           leaflet_gesture_handling:
-            enabled: false
             weight: 0
-          leaflet_rotate:
             enabled: false
+          leaflet_rotate:
             weight: 0
             settings:
               display_control: true
               bearing: 0.0
+            enabled: false
           leaflet_control_attribution:
-            enabled: true
             weight: 0
             settings:
               position: bottomright
               prefix: Leaflet
-          leaflet_control_fullscreen:
             enabled: true
+          leaflet_control_fullscreen:
             weight: 0
             settings:
               position: topright
+            enabled: true
           control_geocoder:
-            enabled: false
             weight: 0
             settings:
               position: topleft
@@ -350,31 +345,31 @@ content:
                   north: ''
                   east: ''
                 region: ''
+            enabled: false
           control_loading_indicator:
-            enabled: true
             weight: 0
             settings:
               position: topleft
               loading_label: Loading
-          control_locate:
-            enabled: false
-            weight: 0
-            settings:
-              position: topleft
-          control_recenter:
             enabled: true
+          control_locate:
             weight: 0
             settings:
               position: topleft
-          leaflet_control_scale:
             enabled: false
+          control_recenter:
+            weight: 0
+            settings:
+              position: topleft
+            enabled: true
+          leaflet_control_scale:
             weight: 0
             settings:
               position: topleft
               metric: true
               imperial: true
-          leaflet_control_layer:
             enabled: false
+          leaflet_control_layer:
             weight: 0
             settings:
               position: topleft
@@ -670,44 +665,44 @@ content:
                   app_code: ''
                 GeoportailFrance:
                   apikey: ''
+            enabled: false
           control_tile_layers:
-            enabled: false
             weight: 0
             settings:
               position: topleft
+            enabled: false
           control_view_fullscreen:
-            enabled: false
             weight: 0
             settings:
               position: topleft
+            enabled: false
           leaflet_control_zoom:
-            enabled: false
             weight: 0
             settings:
               position: topleft
-          leaflet_max_bounds:
             enabled: false
+          leaflet_max_bounds:
             weight: 0
             settings:
               north: null
               south: null
               east: null
               west: null
-          leaflet_custom_tile_layer:
             enabled: false
+          leaflet_custom_tile_layer:
             weight: 0
             settings:
               tile_layer_url: '//{s}.tile.osm.org/{z}/{x}/{y}.png'
               tile_layer_attribution: '&copy; <a href="https://osm.org/copyright">OpenStreetMap</a> contributors'
               tile_layer_subdomains: abc
               tile_layer_zoom: 18
-          leaflet_tile_layer_overlay:
             enabled: false
+          leaflet_tile_layer_overlay:
             weight: 0
             settings:
               tile_layer_overlay: OpenInfraMap.Power
-          leaflet_tile_layer:
             enabled: false
+          leaflet_tile_layer:
             weight: 0
             settings:
               tile_layer_provider: 'OpenStreetMap Mapnik'
@@ -721,8 +716,8 @@ content:
                   app_code: ''
                 GeoportailFrance:
                   apikey: ''
-          leaflet_wms:
             enabled: false
+          leaflet_wms:
             weight: 0
             settings:
               url: ''
@@ -733,6 +728,49 @@ content:
               format: image/jpeg
               transparent: false
               identify: false
+            enabled: false
+        zoom: '10'
+        height: 400px
+        width: 50%
+        minZoom: '0'
+        maxZoom: '20'
+        maxBounds:
+          north_east_bound:
+            lat: null
+            lng: null
+          south_west_bound:
+            lat: null
+            lng: null
+        crs: EPSG3857
+        preferCanvas: false
+        zoomSnap: 1
+        zoomDelta: 1
+        trackResize: true
+        boxZoom: true
+        doubleClickZoom: true
+        dragging: true
+        zoomAnimation: true
+        zoomAnimationThreshold: 4
+        fadeAnimation: true
+        markerZoomAnimation: true
+        inertia: false
+        inertiaDeceleration: 3000
+        easeLinearity: 0.2
+        worldCopyJump: false
+        maxBoundsViscosity: 0.0
+        keyboard: true
+        keyboardPanDelta: 80
+        scrollWheelZoom: true
+        wheelDebounceTime: 40
+        wheelPxPerZoomLevel: 60
+        tap: true
+        tapTolerance: 15
+        touchZoom: true
+        bounceAtZoomLimits: true
+        conditional_initialization: viewport
+        conditional_description: 'Clicking this button will embed a map.'
+        conditional_label: 'Show map'
+        conditional_viewport_threshold: 0.8
         data_layers:
           'geolocation_default_layer:default':
             enabled: true
@@ -811,44 +849,6 @@ content:
                 enabled: 0
               'geolocation_tile_thunderforest:neighbourhood':
                 enabled: 0
-        zoom: '10'
-        height: 400px
-        width: 50%
-        minZoom: '0'
-        maxZoom: '20'
-        maxBounds:
-          north_east_bound:
-            lat: null
-            lng: null
-          south_west_bound:
-            lat: null
-            lng: null
-        crs: EPSG3857
-        preferCanvas: false
-        zoomSnap: 1
-        zoomDelta: 1
-        trackResize: true
-        boxZoom: true
-        doubleClickZoom: true
-        dragging: true
-        zoomAnimation: true
-        zoomAnimationThreshold: 4
-        fadeAnimation: true
-        markerZoomAnimation: true
-        inertia: false
-        inertiaDeceleration: 3000
-        easeLinearity: 0.2
-        worldCopyJump: false
-        maxBoundsViscosity: 0.0
-        keyboard: true
-        keyboardPanDelta: 80
-        scrollWheelZoom: true
-        wheelDebounceTime: 40
-        wheelPxPerZoomLevel: 60
-        tap: true
-        tapTolerance: 15
-        touchZoom: true
-        bounceAtZoomLimits: true
       data_provider_settings: {  }
     third_party_settings: {  }
     weight: 17

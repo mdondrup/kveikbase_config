@@ -1,5 +1,5 @@
 uuid: 104af578-e855-43db-8af8-8e164321d244
-langcode: en
+langcode: nb
 status: true
 dependencies:
   module:
@@ -11,12 +11,12 @@ _core:
 id: business_responsive_theme_branding
 theme: business_responsive_theme
 region: header
-weight: 0
+weight: -6
 provider: null
 plugin: system_branding_block
 settings:
   id: system_branding_block
-  label: 'Site branding'
+  label: 'Nettstedets profilelementer'
   label_display: '0'
   provider: system
   use_site_logo: true

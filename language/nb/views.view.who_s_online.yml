@@ -1,0 +1,15 @@
+display:
+  default:
+    display_title: Standard
+    display_options:
+      exposed_form:
+        options:
+          submit_button: Bruk
+          reset_button_label: Nullstill
+          exposed_sorts_label: 'Sortér etter'
+          sort_asc_label: Stigende
+          sort_desc_label: Synkende
+      filters:
+        access:
+          expose:
+            label: 'Sist tilkoblet'

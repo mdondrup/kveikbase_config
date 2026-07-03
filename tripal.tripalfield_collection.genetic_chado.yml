@@ -1,5 +1,5 @@
 uuid: 6a6cfbb2-d2ee-4931-800f-e39bb997eb1c
-langcode: en
+langcode: nb
 status: true
 dependencies: {  }
 _core:
@@ -16,15 +16,15 @@ fields:
     description: 'The name of the item.'
     cardinality: 1
     required: false
-    storage_settings:
-      storage_plugin_id: chado_storage
-      storage_plugin_settings:
-        base_table: featuremap
-        base_column: name
-      max_length: 255
     settings:
       termIdSpace: schema
       termAccession: name
+    storage_settings:
+      storage_plugin_id: chado_storage
+      max_length: 255
+      storage_plugin_settings:
+        base_table: featuremap
+        base_column: name
     display:
       view:
         default:
@@ -43,14 +43,14 @@ fields:
     description: 'A description of the item.'
     cardinality: 1
     required: false
+    settings:
+      termIdSpace: schema
+      termAccession: description
     storage_settings:
       storage_plugin_id: chado_storage
       storage_plugin_settings:
         base_table: featuremap
         base_column: description
-    settings:
-      termIdSpace: schema
-      termAccession: description
     display:
       view:
         default:
@@ -69,15 +69,15 @@ fields:
     description: 'A unit of measurement is a standardized quantity of a physical quality.'
     cardinality: 1
     required: false
+    settings:
+      termIdSpace: UO
+      termAccession: '0000000'
     storage_settings:
       storage_plugin_id: chado_storage
       storage_plugin_settings:
         base_table: featuremap
         type_table: featuremap
         type_column: unittype_id
-    settings:
-      termIdSpace: UO
-      termAccession: '0000000'
     display:
       view:
         default:
@@ -96,16 +96,16 @@ fields:
     description: 'An additional type for the item, typically used for adding more specific types from external vocabularies in microdata syntax. This is a relationship between something and a class that the thing is in.'
     cardinality: 1
     required: true
+    settings:
+      termIdSpace: data
+      termAccession: '1278'
+      fixed_value: 'data:1278'
     storage_settings:
       storage_plugin_id: chado_storage
       storage_plugin_settings:
         base_table: featuremap
         type_table: featuremapprop
         type_column: type_id
-    settings:
-      termIdSpace: data
-      termAccession: '1278'
-      fixed_value: 'data:1278'
     display:
       view:
         default:
@@ -124,15 +124,15 @@ fields:
     description: 'An individual or organization that serves as a contact for this record.'
     cardinality: -1
     required: false
+    settings:
+      termIdSpace: NCIT
+      termAccession: C47954
     storage_settings:
       storage_plugin_id: chado_storage
       storage_plugin_settings:
         base_table: featuremap
         linker_table: featuremap_contact
         linker_fkey_column: contact_id
-    settings:
-      termIdSpace: NCIT
-      termAccession: C47954
     display:
       view:
         default:
@@ -151,15 +151,15 @@ fields:
     description: 'Associates a publication (e.g. journal article, conference proceedings, book chapter, etc.) with this record.'
     cardinality: -1
     required: false
+    settings:
+      termIdSpace: TPUB
+      termAccession: '0000002'
     storage_settings:
       storage_plugin_id: chado_storage
       storage_plugin_settings:
         base_table: featuremap
         linker_table: featuremap_pub
         linker_fkey_column: pub_id
-    settings:
-      termIdSpace: TPUB
-      termAccession: '0000002'
     display:
       view:
         default:
@@ -178,15 +178,15 @@ fields:
     description: 'The IDs where this record may be available in other external online databases.'
     cardinality: -1
     required: false
+    settings:
+      termIdSpace: SBO
+      termAccession: '0000552'
     storage_settings:
       storage_plugin_id: chado_storage
       storage_plugin_settings:
         base_table: featuremap
         linker_table: featuremap_dbxref
         linker_fkey_column: dbxref_id
-    settings:
-      termIdSpace: SBO
-      termAccession: '0000552'
     display:
       view:
         default:
@@ -205,15 +205,15 @@ fields:
     description: 'The name of the item.'
     cardinality: 1
     required: false
-    storage_settings:
-      storage_plugin_id: chado_storage
-      storage_plugin_settings:
-        base_table: feature
-        base_column: name
-      max_length: 255
     settings:
       termIdSpace: schema
       termAccession: name
+    storage_settings:
+      storage_plugin_id: chado_storage
+      max_length: 255
+      storage_plugin_settings:
+        base_table: feature
+        base_column: name
     display:
       view:
         default:
@@ -232,14 +232,14 @@ fields:
     description: 'A name that uniquely identifies the QTL within the organism.'
     cardinality: 1
     required: true
+    settings:
+      termIdSpace: data
+      termAccession: '0842'
     storage_settings:
       storage_plugin_id: chado_storage
       storage_plugin_settings:
         base_table: feature
         base_column: uniquename
-    settings:
-      termIdSpace: data
-      termAccession: '0842'
     display:
       view:
         default:
@@ -260,14 +260,14 @@ fields:
     description: 'One or more molecular sequences, possibly with associated annotation.'
     cardinality: 1
     required: false
+    settings:
+      termIdSpace: data
+      termAccession: '2044'
     storage_settings:
       storage_plugin_id: chado_storage
       storage_plugin_settings:
         base_table: feature
         base_column: residues
-    settings:
-      termIdSpace: data
-      termAccession: '2044'
     display:
       view:
         default:
@@ -286,14 +286,14 @@ fields:
     description: 'The size (length) of a sequence, subsequence or region in a sequence, or range(s) of lengths.'
     cardinality: 1
     required: false
+    settings:
+      termIdSpace: data
+      termAccession: '1249'
     storage_settings:
       storage_plugin_id: chado_storage
       storage_plugin_settings:
         base_table: feature
         base_column: seqlen
-    settings:
-      termIdSpace: data
-      termAccession: '1249'
     display:
       view:
         default:
@@ -312,14 +312,14 @@ fields:
     description: 'The 32-character checksum of the sequence, calculated using the MD5 algorithm.'
     cardinality: 1
     required: false
+    settings:
+      termIdSpace: data
+      termAccession: '2190'
     storage_settings:
       storage_plugin_id: chado_storage
       storage_plugin_settings:
         base_table: feature
         base_column: md5checksum
-    settings:
-      termIdSpace: data
-      termAccession: '2190'
     display:
       view:
         default:
@@ -338,14 +338,14 @@ fields:
     description: 'A material entity that is an individual living system, such as animal, plant, bacteria or virus, that is capable of replicating or reproducing, growth and maintenance in the right environment. An organism may be unicellular or made up, like humans, of many billions of cells divided into specialized tissues and organs.'
     cardinality: 1
     required: true
+    settings:
+      termIdSpace: OBI
+      termAccession: '0100026'
     storage_settings:
       storage_plugin_id: chado_storage
       storage_plugin_settings:
         base_table: feature
         base_column: organism_id
-    settings:
-      termIdSpace: OBI
-      termAccession: '0100026'
     display:
       view:
         default:
@@ -364,16 +364,16 @@ fields:
     description: 'An additional type for the item, typically used for adding more specific types from external vocabularies in microdata syntax. This is a relationship between something and a class that the thing is in.'
     cardinality: 1
     required: true
+    settings:
+      termIdSpace: SO
+      termAccession: '0000771'
+      fixed_value: 'SO:0000771'
     storage_settings:
       storage_plugin_id: chado_storage
       storage_plugin_settings:
         base_table: feature
         type_table: feature
         type_column: type_id
-    settings:
-      termIdSpace: SO
-      termAccession: '0000771'
-      fixed_value: 'SO:0000771'
     display:
       view:
         default:
@@ -392,6 +392,9 @@ fields:
     description: "Sequence features related to this QTL. Think of relationship statements as sentences: SUBJECT TYPE OBJECT (e.g. 'Sara (subject) is the mother of (type) Jacob (object)'). By default the current QTL is the subject; chose Reverse if the object is the current QTL."
     cardinality: -1
     required: false
+    settings:
+      termIdSpace: SBO
+      termAccession: '0000374'
     storage_settings:
       storage_plugin_id: chado_storage
       storage_plugin_settings:
@@ -400,9 +403,6 @@ fields:
         linker_table: feature_relationship
         subject_column: subject_id
         object_column: object_id
-    settings:
-      termIdSpace: SBO
-      termAccession: '0000374'
     display:
       view:
         default:
@@ -421,15 +421,15 @@ fields:
     description: 'An individual or organization that serves as a contact for this record.'
     cardinality: -1
     required: false
+    settings:
+      termIdSpace: NCIT
+      termAccession: C47954
     storage_settings:
       storage_plugin_id: chado_storage
       storage_plugin_settings:
         base_table: feature
         linker_table: feature_contact
         linker_fkey_column: contact_id
-    settings:
-      termIdSpace: NCIT
-      termAccession: C47954
     display:
       view:
         default:
@@ -448,15 +448,15 @@ fields:
     description: 'Associates a publication (e.g. journal article, conference proceedings, book chapter, etc.) with this record.'
     cardinality: -1
     required: false
+    settings:
+      termIdSpace: TPUB
+      termAccession: '0000002'
     storage_settings:
       storage_plugin_id: chado_storage
       storage_plugin_settings:
         base_table: feature
         linker_table: feature_pub
         linker_fkey_column: pub_id
-    settings:
-      termIdSpace: TPUB
-      termAccession: '0000002'
     display:
       view:
         default:
@@ -475,14 +475,14 @@ fields:
     description: 'Indicates if this feature was predicted computationally using another feature.'
     cardinality: 1
     required: false
+    settings:
+      termIdSpace: local
+      termAccession: is_analysis
     storage_settings:
       storage_plugin_id: chado_storage
       storage_plugin_settings:
         base_table: feature
         base_column: is_analysis
-    settings:
-      termIdSpace: local
-      termAccession: is_analysis
     display:
       view:
         default:
@@ -501,14 +501,14 @@ fields:
     description: 'Indicates if this record is obsolete.'
     cardinality: 1
     required: false
+    settings:
+      termIdSpace: local
+      termAccession: is_obsolete
     storage_settings:
       storage_plugin_id: chado_storage
       storage_plugin_settings:
         base_table: feature
         base_column: is_obsolete
-    settings:
-      termIdSpace: local
-      termAccession: is_obsolete
     display:
       view:
         default:
@@ -527,15 +527,15 @@ fields:
     description: 'Alternate names, aliases or synonyms for this record.'
     cardinality: -1
     required: false
+    settings:
+      termIdSpace: schema
+      termAccession: alternateName
     storage_settings:
       storage_plugin_id: chado_storage
       storage_plugin_settings:
         base_table: feature
         linker_table: feature_synonym
         linker_fkey_column: feature_id
-    settings:
-      termIdSpace: schema
-      termAccession: alternateName
     display:
       view:
         default:
@@ -554,14 +554,14 @@ fields:
     description: 'The ID where this record may be available in an external online database.'
     cardinality: 1
     required: false
+    settings:
+      termIdSpace: SBO
+      termAccession: '0000554'
     storage_settings:
       storage_plugin_id: chado_storage
       storage_plugin_settings:
         base_table: feature
         base_column: dbxref_id
-    settings:
-      termIdSpace: SBO
-      termAccession: '0000554'
     display:
       view:
         default:
@@ -580,15 +580,15 @@ fields:
     description: 'The IDs where this record may be available in other external online databases.'
     cardinality: -1
     required: false
+    settings:
+      termIdSpace: SBO
+      termAccession: '0000552'
     storage_settings:
       storage_plugin_id: chado_storage
       storage_plugin_settings:
         base_table: feature
         linker_table: feature_dbxref
         linker_fkey_column: dbxref_id
-    settings:
-      termIdSpace: SBO
-      termAccession: '0000552'
     display:
       view:
         default:
@@ -607,15 +607,15 @@ fields:
     description: 'The name of the item.'
     cardinality: 1
     required: false
-    storage_settings:
-      storage_plugin_id: chado_storage
-      storage_plugin_settings:
-        base_table: feature
-        base_column: name
-      max_length: 255
     settings:
       termIdSpace: schema
       termAccession: name
+    storage_settings:
+      storage_plugin_id: chado_storage
+      max_length: 255
+      storage_plugin_settings:
+        base_table: feature
+        base_column: name
     display:
       view:
         default:
@@ -634,14 +634,14 @@ fields:
     description: 'A name that uniquely identifies the sequence variant within the organism.'
     cardinality: 1
     required: true
+    settings:
+      termIdSpace: data
+      termAccession: '0842'
     storage_settings:
       storage_plugin_id: chado_storage
       storage_plugin_settings:
         base_table: feature
         base_column: uniquename
-    settings:
-      termIdSpace: data
-      termAccession: '0842'
     display:
       view:
         default:
@@ -662,14 +662,14 @@ fields:
     description: 'One or more molecular sequences, possibly with associated annotation.'
     cardinality: 1
     required: false
+    settings:
+      termIdSpace: data
+      termAccession: '2044'
     storage_settings:
       storage_plugin_id: chado_storage
       storage_plugin_settings:
         base_table: feature
         base_column: residues
-    settings:
-      termIdSpace: data
-      termAccession: '2044'
     display:
       view:
         default:
@@ -688,14 +688,14 @@ fields:
     description: 'The size (length) of a sequence, subsequence or region in a sequence, or range(s) of lengths.'
     cardinality: 1
     required: false
+    settings:
+      termIdSpace: data
+      termAccession: '1249'
     storage_settings:
       storage_plugin_id: chado_storage
       storage_plugin_settings:
         base_table: feature
         base_column: seqlen
-    settings:
-      termIdSpace: data
-      termAccession: '1249'
     display:
       view:
         default:
@@ -714,14 +714,14 @@ fields:
     description: 'The 32-character checksum of the sequence, calculated using the MD5 algorithm.'
     cardinality: 1
     required: false
+    settings:
+      termIdSpace: data
+      termAccession: '2190'
     storage_settings:
       storage_plugin_id: chado_storage
       storage_plugin_settings:
         base_table: feature
         base_column: md5checksum
-    settings:
-      termIdSpace: data
-      termAccession: '2190'
     display:
       view:
         default:
@@ -740,14 +740,14 @@ fields:
     description: 'A material entity that is an individual living system, such as animal, plant, bacteria or virus, that is capable of replicating or reproducing, growth and maintenance in the right environment. An organism may be unicellular or made up, like humans, of many billions of cells divided into specialized tissues and organs.'
     cardinality: 1
     required: true
+    settings:
+      termIdSpace: OBI
+      termAccession: '0100026'
     storage_settings:
       storage_plugin_id: chado_storage
       storage_plugin_settings:
         base_table: feature
         base_column: organism_id
-    settings:
-      termIdSpace: OBI
-      termAccession: '0100026'
     display:
       view:
         default:
@@ -766,16 +766,16 @@ fields:
     description: 'An additional type for the item, typically used for adding more specific types from external vocabularies in microdata syntax. This is a relationship between something and a class that the thing is in.'
     cardinality: 1
     required: true
+    settings:
+      termIdSpace: SO
+      termAccession: '0001060'
+      fixed_value: 'SO:0001060'
     storage_settings:
       storage_plugin_id: chado_storage
       storage_plugin_settings:
         base_table: feature
         type_table: feature
         type_column: type_id
-    settings:
-      termIdSpace: SO
-      termAccession: '0001060'
-      fixed_value: 'SO:0001060'
     display:
       view:
         default:
@@ -794,6 +794,9 @@ fields:
     description: "Sequence features related to this variant. Think of relationship statements as sentences: SUBJECT TYPE OBJECT (e.g. 'Sara (subject) is the mother of (type) Jacob (object)'). By default the current variant is the subject; chose Reverse if the object is the current variant."
     cardinality: -1
     required: false
+    settings:
+      termIdSpace: SBO
+      termAccession: '0000374'
     storage_settings:
       storage_plugin_id: chado_storage
       storage_plugin_settings:
@@ -802,9 +805,6 @@ fields:
         linker_table: feature_relationship
         subject_column: subject_id
         object_column: object_id
-    settings:
-      termIdSpace: SBO
-      termAccession: '0000374'
     display:
       view:
         default:
@@ -823,15 +823,15 @@ fields:
     description: 'An individual or organization that serves as a contact for this record.'
     cardinality: -1
     required: false
+    settings:
+      termIdSpace: NCIT
+      termAccession: C47954
     storage_settings:
       storage_plugin_id: chado_storage
       storage_plugin_settings:
         base_table: feature
         linker_table: feature_contact
         linker_fkey_column: contact_id
-    settings:
-      termIdSpace: NCIT
-      termAccession: C47954
     display:
       view:
         default:
@@ -850,15 +850,15 @@ fields:
     description: 'Associates a publication (e.g. journal article, conference proceedings, book chapter, etc.) with this record.'
     cardinality: -1
     required: false
+    settings:
+      termIdSpace: TPUB
+      termAccession: '0000002'
     storage_settings:
       storage_plugin_id: chado_storage
       storage_plugin_settings:
         base_table: feature
         linker_table: feature_pub
         linker_fkey_column: pub_id
-    settings:
-      termIdSpace: TPUB
-      termAccession: '0000002'
     display:
       view:
         default:
@@ -877,14 +877,14 @@ fields:
     description: 'Indicates if this feature was predicted computationally using another feature.'
     cardinality: 1
     required: false
+    settings:
+      termIdSpace: local
+      termAccession: is_analysis
     storage_settings:
       storage_plugin_id: chado_storage
       storage_plugin_settings:
         base_table: feature
         base_column: is_analysis
-    settings:
-      termIdSpace: local
-      termAccession: is_analysis
     display:
       view:
         default:
@@ -903,14 +903,14 @@ fields:
     description: 'Indicates if this record is obsolete.'
     cardinality: 1
     required: false
+    settings:
+      termIdSpace: local
+      termAccession: is_obsolete
     storage_settings:
       storage_plugin_id: chado_storage
       storage_plugin_settings:
         base_table: feature
         base_column: is_obsolete
-    settings:
-      termIdSpace: local
-      termAccession: is_obsolete
     display:
       view:
         default:
@@ -929,15 +929,15 @@ fields:
     description: 'Alternate names, aliases or synonyms for this record.'
     cardinality: -1
     required: false
+    settings:
+      termIdSpace: schema
+      termAccession: alternateName
     storage_settings:
       storage_plugin_id: chado_storage
       storage_plugin_settings:
         base_table: feature
         linker_table: feature_synonym
         linker_fkey_column: feature_id
-    settings:
-      termIdSpace: schema
-      termAccession: alternateName
     display:
       view:
         default:
@@ -956,14 +956,14 @@ fields:
     description: 'The ID where this record may be available in an external online database.'
     cardinality: 1
     required: false
+    settings:
+      termIdSpace: SBO
+      termAccession: '0000554'
     storage_settings:
       storage_plugin_id: chado_storage
       storage_plugin_settings:
         base_table: feature
         base_column: dbxref_id
-    settings:
-      termIdSpace: SBO
-      termAccession: '0000554'
     display:
       view:
         default:
@@ -982,15 +982,15 @@ fields:
     description: 'The IDs where this record may be available in other external online databases.'
     cardinality: -1
     required: false
+    settings:
+      termIdSpace: SBO
+      termAccession: '0000552'
     storage_settings:
       storage_plugin_id: chado_storage
       storage_plugin_settings:
         base_table: feature
         linker_table: feature_dbxref
         linker_fkey_column: dbxref_id
-    settings:
-      termIdSpace: SBO
-      termAccession: '0000552'
     display:
       view:
         default:
@@ -1009,15 +1009,15 @@ fields:
     description: 'The name of the item.'
     cardinality: 1
     required: false
-    storage_settings:
-      storage_plugin_id: chado_storage
-      storage_plugin_settings:
-        base_table: feature
-        base_column: name
-      max_length: 255
     settings:
       termIdSpace: schema
       termAccession: name
+    storage_settings:
+      storage_plugin_id: chado_storage
+      max_length: 255
+      storage_plugin_settings:
+        base_table: feature
+        base_column: name
     display:
       view:
         default:
@@ -1036,14 +1036,14 @@ fields:
     description: 'A name that uniquely identifies the genetic marker within the organism.'
     cardinality: 1
     required: true
+    settings:
+      termIdSpace: data
+      termAccession: '0842'
     storage_settings:
       storage_plugin_id: chado_storage
       storage_plugin_settings:
         base_table: feature
         base_column: uniquename
-    settings:
-      termIdSpace: data
-      termAccession: '0842'
     display:
       view:
         default:
@@ -1064,14 +1064,14 @@ fields:
     description: 'One or more molecular sequences, possibly with associated annotation.'
     cardinality: 1
     required: false
+    settings:
+      termIdSpace: data
+      termAccession: '2044'
     storage_settings:
       storage_plugin_id: chado_storage
       storage_plugin_settings:
         base_table: feature
         base_column: residues
-    settings:
-      termIdSpace: data
-      termAccession: '2044'
     display:
       view:
         default:
@@ -1090,14 +1090,14 @@ fields:
     description: 'The size (length) of a sequence, subsequence or region in a sequence,or range(s) of lengths.'
     cardinality: 1
     required: false
+    settings:
+      termIdSpace: data
+      termAccession: '1249'
     storage_settings:
       storage_plugin_id: chado_storage
       storage_plugin_settings:
         base_table: feature
         base_column: seqlen
-    settings:
-      termIdSpace: data
-      termAccession: '1249'
     display:
       view:
         default:
@@ -1116,14 +1116,14 @@ fields:
     description: 'The 32-character checksum of the sequence, calculated using the MD5 algorithm.'
     cardinality: 1
     required: false
+    settings:
+      termIdSpace: data
+      termAccession: '2190'
     storage_settings:
       storage_plugin_id: chado_storage
       storage_plugin_settings:
         base_table: feature
         base_column: md5checksum
-    settings:
-      termIdSpace: data
-      termAccession: '2190'
     display:
       view:
         default:
@@ -1142,14 +1142,14 @@ fields:
     description: 'A material entity that is an individual living system, such as animal, plant, bacteria or virus, that is capable of replicating or reproducing, growth and maintenance in the right environment. An organism may be unicellular or made up, like humans, of many billions of cells divided into specialized tissues and organs.'
     cardinality: 1
     required: true
+    settings:
+      termIdSpace: OBI
+      termAccession: '0100026'
     storage_settings:
       storage_plugin_id: chado_storage
       storage_plugin_settings:
         base_table: feature
         base_column: organism_id
-    settings:
-      termIdSpace: OBI
-      termAccession: '0100026'
     display:
       view:
         default:
@@ -1168,16 +1168,16 @@ fields:
     description: 'An additional type for the item, typically used for adding more specific types from external vocabularies in microdata syntax. This is a relationship between something and a class that the thing is in.'
     cardinality: 1
     required: true
+    settings:
+      termIdSpace: SO
+      termAccession: '0001645'
+      fixed_value: 'SO:0001645'
     storage_settings:
       storage_plugin_id: chado_storage
       storage_plugin_settings:
         base_table: feature
         type_table: feature
         type_column: type_id
-    settings:
-      termIdSpace: SO
-      termAccession: '0001645'
-      fixed_value: 'SO:0001645'
     display:
       view:
         default:
@@ -1196,6 +1196,9 @@ fields:
     description: "Sequence features related to this genetic marker. Think of relationship statements as sentences: SUBJECT TYPE OBJECT (e.g. 'Sara (subject) is the mother of (type) Jacob (object)'). By default the current genetic marker is the subject; chose Reverse if the object is the current genetic marker."
     cardinality: -1
     required: false
+    settings:
+      termIdSpace: SBO
+      termAccession: '0000374'
     storage_settings:
       storage_plugin_id: chado_storage
       storage_plugin_settings:
@@ -1204,9 +1207,6 @@ fields:
         linker_table: feature_relationship
         subject_column: subject_id
         object_column: object_id
-    settings:
-      termIdSpace: SBO
-      termAccession: '0000374'
     display:
       view:
         default:
@@ -1225,15 +1225,15 @@ fields:
     description: 'An individual or organization that serves as a contact for this record.'
     cardinality: -1
     required: false
+    settings:
+      termIdSpace: NCIT
+      termAccession: C47954
     storage_settings:
       storage_plugin_id: chado_storage
       storage_plugin_settings:
         base_table: feature
         linker_table: feature_contact
         linker_fkey_column: contact_id
-    settings:
-      termIdSpace: NCIT
-      termAccession: C47954
     display:
       view:
         default:
@@ -1252,15 +1252,15 @@ fields:
     description: 'Associates a publication (e.g. journal article, conference proceedings, book chapter, etc.) with this record.'
     cardinality: -1
     required: false
+    settings:
+      termIdSpace: TPUB
+      termAccession: '0000002'
     storage_settings:
       storage_plugin_id: chado_storage
       storage_plugin_settings:
         base_table: feature
         linker_table: feature_pub
         linker_fkey_column: pub_id
-    settings:
-      termIdSpace: TPUB
-      termAccession: '0000002'
     display:
       view:
         default:
@@ -1279,14 +1279,14 @@ fields:
     description: 'Indicates if this feature was predicted computationally using another feature.'
     cardinality: 1
     required: false
+    settings:
+      termIdSpace: local
+      termAccession: is_analysis
     storage_settings:
       storage_plugin_id: chado_storage
       storage_plugin_settings:
         base_table: feature
         base_column: is_analysis
-    settings:
-      termIdSpace: local
-      termAccession: is_analysis
     display:
       view:
         default:
@@ -1305,14 +1305,14 @@ fields:
     description: 'Indicates if this record is obsolete.'
     cardinality: 1
     required: false
+    settings:
+      termIdSpace: local
+      termAccession: is_obsolete
     storage_settings:
       storage_plugin_id: chado_storage
       storage_plugin_settings:
         base_table: feature
         base_column: is_obsolete
-    settings:
-      termIdSpace: local
-      termAccession: is_obsolete
     display:
       view:
         default:
@@ -1331,15 +1331,15 @@ fields:
     description: 'Alternate names, aliases or synonyms for this record.'
     cardinality: -1
     required: false
+    settings:
+      termIdSpace: schema
+      termAccession: alternateName
     storage_settings:
       storage_plugin_id: chado_storage
       storage_plugin_settings:
         base_table: feature
         linker_table: feature_synonym
         linker_fkey_column: feature_id
-    settings:
-      termIdSpace: schema
-      termAccession: alternateName
     display:
       view:
         default:
@@ -1358,14 +1358,14 @@ fields:
     description: 'The ID where this record may be available in an external online database.'
     cardinality: 1
     required: false
+    settings:
+      termIdSpace: SBO
+      termAccession: '0000554'
     storage_settings:
       storage_plugin_id: chado_storage
       storage_plugin_settings:
         base_table: feature
         base_column: dbxref_id
-    settings:
-      termIdSpace: SBO
-      termAccession: '0000554'
     display:
       view:
         default:
@@ -1384,15 +1384,15 @@ fields:
     description: 'The IDs where this record may be available in other external online databases.'
     cardinality: -1
     required: false
+    settings:
+      termIdSpace: SBO
+      termAccession: '0000552'
     storage_settings:
       storage_plugin_id: chado_storage
       storage_plugin_settings:
         base_table: feature
         linker_table: feature_dbxref
         linker_fkey_column: dbxref_id
-    settings:
-      termIdSpace: SBO
-      termAccession: '0000552'
     display:
       view:
         default:
@@ -1411,15 +1411,15 @@ fields:
     description: 'The name of the item.'
     cardinality: 1
     required: false
-    storage_settings:
-      storage_plugin_id: chado_storage
-      storage_plugin_settings:
-        base_table: feature
-        base_column: name
-      max_length: 255
     settings:
       termIdSpace: schema
       termAccession: name
+    storage_settings:
+      storage_plugin_id: chado_storage
+      max_length: 255
+      storage_plugin_settings:
+        base_table: feature
+        base_column: name
     display:
       view:
         default:
@@ -1438,14 +1438,14 @@ fields:
     description: 'A name that uniquely identifies the heritable phenotypic marker within the organism.'
     cardinality: 1
     required: true
+    settings:
+      termIdSpace: data
+      termAccession: '0842'
     storage_settings:
       storage_plugin_id: chado_storage
       storage_plugin_settings:
         base_table: feature
         base_column: uniquename
-    settings:
-      termIdSpace: data
-      termAccession: '0842'
     display:
       view:
         default:
@@ -1466,14 +1466,14 @@ fields:
     description: 'One or more molecular sequences, possibly with associated annotation.'
     cardinality: 1
     required: false
+    settings:
+      termIdSpace: data
+      termAccession: '2044'
     storage_settings:
       storage_plugin_id: chado_storage
       storage_plugin_settings:
         base_table: feature
         base_column: residues
-    settings:
-      termIdSpace: data
-      termAccession: '2044'
     display:
       view:
         default:
@@ -1492,14 +1492,14 @@ fields:
     description: 'The size (length) of a sequence, subsequence or region in a sequence, or range(s) of lengths.'
     cardinality: 1
     required: false
+    settings:
+      termIdSpace: data
+      termAccession: '1249'
     storage_settings:
       storage_plugin_id: chado_storage
       storage_plugin_settings:
         base_table: feature
         base_column: seqlen
-    settings:
-      termIdSpace: data
-      termAccession: '1249'
     display:
       view:
         default:
@@ -1518,14 +1518,14 @@ fields:
     description: 'The 32-character checksum of the sequence, calculated using the MD5 algorithm.'
     cardinality: 1
     required: false
+    settings:
+      termIdSpace: data
+      termAccession: '2190'
     storage_settings:
       storage_plugin_id: chado_storage
       storage_plugin_settings:
         base_table: feature
         base_column: md5checksum
-    settings:
-      termIdSpace: data
-      termAccession: '2190'
     display:
       view:
         default:
@@ -1544,14 +1544,14 @@ fields:
     description: 'A material entity that is an individual living system, such as animal, plant, bacteria or virus, that is capable of replicating or reproducing, growth and maintenance in the right environment. An organism may be unicellular or made up, like humans, of many billions of cells divided into specialized tissues and organs.'
     cardinality: 1
     required: true
+    settings:
+      termIdSpace: OBI
+      termAccession: '0100026'
     storage_settings:
       storage_plugin_id: chado_storage
       storage_plugin_settings:
         base_table: feature
         base_column: organism_id
-    settings:
-      termIdSpace: OBI
-      termAccession: '0100026'
     display:
       view:
         default:
@@ -1570,16 +1570,16 @@ fields:
     description: 'An additional type for the item, typically used for adding more specific types from external vocabularies in microdata syntax. This is a relationship between something and a class that the thing is in.'
     cardinality: 1
     required: true
+    settings:
+      termIdSpace: SO
+      termAccession: '0001500'
+      fixed_value: 'SO:0001500'
     storage_settings:
       storage_plugin_id: chado_storage
       storage_plugin_settings:
         base_table: feature
         type_table: feature
         type_column: type_id
-    settings:
-      termIdSpace: SO
-      termAccession: '0001500'
-      fixed_value: 'SO:0001500'
     display:
       view:
         default:
@@ -1598,6 +1598,9 @@ fields:
     description: "Sequence features related to this heritable phenotypic marker. Think of relationship statements as sentences: SUBJECT TYPE OBJECT (e.g. 'Sara (subject) is the mother of (type) Jacob (object)'). By default the current heritable phenotypic marker is the subject; chose Reverse if the object is the current heritable phenotypic marker."
     cardinality: -1
     required: false
+    settings:
+      termIdSpace: SBO
+      termAccession: '0000374'
     storage_settings:
       storage_plugin_id: chado_storage
       storage_plugin_settings:
@@ -1606,9 +1609,6 @@ fields:
         linker_table: feature_relationship
         subject_column: subject_id
         object_column: object_id
-    settings:
-      termIdSpace: SBO
-      termAccession: '0000374'
     display:
       view:
         default:
@@ -1627,15 +1627,15 @@ fields:
     description: 'An individual or organization that serves as a contact for this record.'
     cardinality: -1
     required: false
+    settings:
+      termIdSpace: NCIT
+      termAccession: C47954
     storage_settings:
       storage_plugin_id: chado_storage
       storage_plugin_settings:
         base_table: feature
         linker_table: feature_contact
         linker_fkey_column: contact_id
-    settings:
-      termIdSpace: NCIT
-      termAccession: C47954
     display:
       view:
         default:
@@ -1654,15 +1654,15 @@ fields:
     description: 'Associates a publication (e.g. journal article, conference proceedings, book chapter, etc.) with this record.'
     cardinality: -1
     required: false
+    settings:
+      termIdSpace: TPUB
+      termAccession: '0000002'
     storage_settings:
       storage_plugin_id: chado_storage
       storage_plugin_settings:
         base_table: feature
         linker_table: feature_pub
         linker_fkey_column: pub_id
-    settings:
-      termIdSpace: TPUB
-      termAccession: '0000002'
     display:
       view:
         default:
@@ -1681,14 +1681,14 @@ fields:
     description: 'Indicates if this feature was predicted computationally using another feature.'
     cardinality: 1
     required: false
+    settings:
+      termIdSpace: local
+      termAccession: is_analysis
     storage_settings:
       storage_plugin_id: chado_storage
       storage_plugin_settings:
         base_table: feature
         base_column: is_analysis
-    settings:
-      termIdSpace: local
-      termAccession: is_analysis
     display:
       view:
         default:
@@ -1707,14 +1707,14 @@ fields:
     description: 'Indicates if this record is obsolete.'
     cardinality: 1
     required: false
+    settings:
+      termIdSpace: local
+      termAccession: is_obsolete
     storage_settings:
       storage_plugin_id: chado_storage
       storage_plugin_settings:
         base_table: feature
         base_column: is_obsolete
-    settings:
-      termIdSpace: local
-      termAccession: is_obsolete
     display:
       view:
         default:
@@ -1733,15 +1733,15 @@ fields:
     description: 'Alternate names, aliases or synonyms for this record.'
     cardinality: -1
     required: false
+    settings:
+      termIdSpace: schema
+      termAccession: alternateName
     storage_settings:
       storage_plugin_id: chado_storage
       storage_plugin_settings:
         base_table: feature
         linker_table: feature_synonym
         linker_fkey_column: feature_id
-    settings:
-      termIdSpace: schema
-      termAccession: alternateName
     display:
       view:
         default:
@@ -1760,14 +1760,14 @@ fields:
     description: 'The ID where this record may be available in an external online database.'
     cardinality: 1
     required: false
+    settings:
+      termIdSpace: SBO
+      termAccession: '0000554'
     storage_settings:
       storage_plugin_id: chado_storage
       storage_plugin_settings:
         base_table: feature
         base_column: dbxref_id
-    settings:
-      termIdSpace: SBO
-      termAccession: '0000554'
     display:
       view:
         default:
@@ -1786,15 +1786,15 @@ fields:
     description: 'The IDs where this record may be available in other external online databases.'
     cardinality: -1
     required: false
+    settings:
+      termIdSpace: SBO
+      termAccession: '0000552'
     storage_settings:
       storage_plugin_id: chado_storage
       storage_plugin_settings:
         base_table: feature
         linker_table: feature_dbxref
         linker_fkey_column: dbxref_id
-    settings:
-      termIdSpace: SBO
-      termAccession: '0000552'
     display:
       view:
         default:
@@ -1813,15 +1813,15 @@ fields:
     description: 'One or more genetic or physical maps mentioned in this publication'
     cardinality: -1
     required: false
+    settings:
+      termIdSpace: data
+      termAccession: '1274'
     storage_settings:
       storage_plugin_id: chado_storage
       storage_plugin_settings:
         base_table: pub
         linker_table: featuremap_pub
         linker_fkey_column: featuremap_id
-    settings:
-      termIdSpace: data
-      termAccession: '1274'
     display:
       view:
         default:

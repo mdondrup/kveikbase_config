@@ -1,0 +1,22 @@
+uuid: bd4b5d55-d34a-4a07-956b-771377a57d35
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.basic_location
+id: node.basic_location.status
+field_name: status
+entity_type: node
+bundle: basic_location
+label: Published
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

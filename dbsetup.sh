@@ -44,7 +44,7 @@ $DRUSH_PATH config:import -y
 echo "--- 7. Resetting broken theme config ---"
 # we need to switch the theme to default
 $DRUSH_PATH config:set system.theme default olivero -y
-$DRUSH_PATH drush theme:uninstall tara -y
+$DRUSH_PATH theme:uninstall tara -y
 $DRUSH_PATH theme:install tara -y
 $DRUSH_PATH config:set system.theme default tara -y
 $DRUSH_PATH cr

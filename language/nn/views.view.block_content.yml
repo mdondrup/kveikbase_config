@@ -1,0 +1,32 @@
+display:
+  default:
+    display_title: Standard
+    display_options:
+      fields:
+        info:
+          label: 'Beskriving av blokken'
+          separator: ', '
+        type:
+          separator: ', '
+        changed:
+          label: Oppdatert
+        operations:
+          label: Operasjonar
+      pager:
+        options:
+          expose:
+            items_per_page_options_all_label: '- Alle -'
+      exposed_form:
+        options:
+          submit_button: Bruk
+          reset_button_label: 'Sett til standard'
+          exposed_sorts_label: 'Sorter etter'
+      filters:
+        info:
+          expose:
+            label: 'Beskriving av blokken'
+  page_1:
+    display_title: Nettside
+    display_options:
+      menu:
+        title: Blokkar

@@ -13,4 +13,4 @@ features:
 logo:
   path: 'public://ChatGPT Image Sep 29, 2025, 02_37_22 PM.png'
   url: null
-  use_default: false
+  use_default: true

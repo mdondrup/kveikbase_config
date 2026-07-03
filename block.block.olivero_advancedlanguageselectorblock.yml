@@ -1,0 +1,160 @@
+uuid: d3704219-7caa-40f8-a3ba-38a05bf98bdc
+langcode: en
+status: true
+dependencies:
+  module:
+    - advanced_language_selector
+  theme:
+    - olivero
+id: olivero_advancedlanguageselectorblock
+theme: olivero
+region: primary_menu
+weight: -5
+provider: null
+plugin: advanced_language_selector_block
+settings:
+  id: advanced_language_selector_block
+  label: 'Advanced language selector block'
+  label_display: '0'
+  provider: advanced_language_selector
+  look_and_feel:
+    theme: bootstrap_dropdown
+  bootstrap_dropdown:
+    general:
+      id: language_select
+      css: btn-small
+      text_transformation: default
+      load_external_bootstrap: 1
+      external_bootstrap_library: advanced_language_selector/bootstrap
+    display:
+      selected_item:
+        css: btn-secondary
+        show:
+          icons: icons
+          lang_code: 0
+          lang_name: 0
+        icon_height: '25'
+        icon_alignment: right
+      items:
+        show:
+          icons: icons
+          lang_code: 0
+          lang_name: 0
+        icon_height: '25'
+        icon_alignment: left
+  plain_html:
+    general:
+      css: ''
+      uppercase: 1
+    display:
+      icons: 1
+      show:
+        lang_code: lang_code
+        lang_name: 0
+      icon_height: '25'
+      icon_alignment: right
+  plain_html_list:
+    general:
+      css: ''
+      text_transformation: default
+    display:
+      items:
+        show:
+          icons: icons
+          lang_code: lang_code
+          lang_name: 0
+        icon_height: '25'
+        icon_alignment: left
+  bootstrap_navigation:
+    general:
+      orientation: horizontal
+      style: nav-pills
+      css: ''
+      text_transformation: default
+      load_external_bootstrap: 0
+      external_bootstrap_library: advanced_language_selector/bootstrap
+    display:
+      items:
+        show:
+          icons: icons
+          lang_code: lang_code
+          lang_name: 0
+        icon_height: '25'
+        icon_alignment: left
+  bootstrap_offcanvas:
+    general:
+      id: ''
+      position: offcanvas-start
+      css: ''
+      text_transformation: default
+      load_external_bootstrap: 0
+      external_bootstrap_library: advanced_language_selector/bootstrap
+    display:
+      selected_item:
+        css: btn-primary
+        show:
+          icons: icons
+          lang_code: lang_code
+          lang_name: 0
+        icon_height: '25'
+        icon_alignment: right
+      items:
+        show:
+          icons: icons
+          lang_code: lang_code
+          lang_name: 0
+        icon_height: '25'
+        icon_alignment: left
+  bootstrap_modal:
+    general:
+      id: ''
+      css: ''
+      text_transformation: default
+      load_external_bootstrap: 0
+      external_bootstrap_library: advanced_language_selector/bootstrap
+    display:
+      selected_item:
+        css: btn-primary
+        show:
+          icons: icons
+          lang_code: lang_code
+          lang_name: 0
+        icon_height: '25'
+        icon_alignment: right
+      items:
+        show:
+          icons: icons
+          lang_code: lang_code
+          lang_name: 0
+        icon_height: '25'
+        icon_alignment: left
+  bootstrap_button_group:
+    general:
+      css: ''
+      text_transformation: default
+      load_external_bootstrap: 0
+      external_bootstrap_library: advanced_language_selector/bootstrap
+    display:
+      items:
+        css: btn-primary
+        show:
+          icons: icons
+          lang_code: lang_code
+          lang_name: 0
+        icon_height: '25'
+        icon_alignment: left
+  bootstrap_list_group:
+    general:
+      css: ''
+      text_transformation: default
+      load_external_bootstrap: 0
+      external_bootstrap_library: advanced_language_selector/bootstrap
+    display:
+      items:
+        show:
+          icons: icons
+          lang_code: lang_code
+          lang_name: 0
+        icon_height: '25'
+        icon_alignment: left
+visibility: {  }

@@ -1,5 +1,5 @@
 uuid: c99e6739-ccab-4512-9a1c-de5d208686c4
-langcode: en
+langcode: nb
 status: true
 dependencies:
   module:
@@ -17,7 +17,7 @@ base_field: id
 display:
   default:
     id: default
-    display_title: Default
+    display_title: Standard
     display_plugin: default
     position: 0
     display_options:
@@ -99,7 +99,7 @@ display:
           entity_type: tripal_entity
           entity_field: title
           plugin_id: field
-          label: Title
+          label: Tittel
           exclude: false
           alter:
             alter_text: true
@@ -229,7 +229,7 @@ display:
           entity_type: tripal_entity
           entity_field: uid
           plugin_id: field
-          label: Author
+          label: Forfatter
           exclude: false
           alter:
             alter_text: false
@@ -294,7 +294,7 @@ display:
           entity_type: tripal_entity
           entity_field: created
           plugin_id: field
-          label: Created
+          label: Opprettet
           exclude: false
           alter:
             alter_text: false
@@ -370,7 +370,7 @@ display:
           entity_type: null
           entity_field: null
           plugin_id: entity_operations
-          label: Operations
+          label: Handlinger
           exclude: false
           alter:
             alter_text: false
@@ -423,27 +423,27 @@ display:
           tags:
             next: ››
             previous: ‹‹
-            first: '« First'
-            last: 'Last »'
+            first: '« Første'
+            last: 'Siste »'
           expose:
             items_per_page: false
-            items_per_page_label: 'Items per page'
+            items_per_page_label: 'Elementer per side'
             items_per_page_options: '5, 10, 25, 50'
             items_per_page_options_all: false
-            items_per_page_options_all_label: '- All -'
+            items_per_page_options_all_label: '- Alle -'
             offset: false
-            offset_label: Offset
+            offset_label: Forskyving
           quantity: 9
       exposed_form:
         type: basic
         options:
-          submit_button: Apply
+          submit_button: Bruk
           reset_button: false
-          reset_button_label: Reset
-          exposed_sorts_label: 'Sort by'
+          reset_button_label: Nullstill
+          exposed_sorts_label: 'Sortér etter'
           expose_sort_order: true
-          sort_asc_label: Asc
-          sort_desc_label: Desc
+          sort_asc_label: Stigende
+          sort_desc_label: Synkende
       access:
         type: none
         options: {  }
@@ -475,7 +475,7 @@ display:
           plugin_id: date
           order: DESC
           expose:
-            label: Created
+            label: Opprettet
             field_identifier: created
           exposed: true
           granularity: second
@@ -491,7 +491,7 @@ display:
           plugin_id: standard
           order: ASC
           expose:
-            label: Title
+            label: Tittel
             field_identifier: title
           exposed: true
         type:
@@ -542,7 +542,7 @@ display:
           exposed: true
           expose:
             operator_id: title_op
-            label: Title
+            label: Tittel
             description: ''
             use_operator: false
             operator: title_op
@@ -554,7 +554,7 @@ display:
             multiple: false
             remember_roles:
               authenticated: authenticated
-            placeholder: Title
+            placeholder: Tittel
           is_grouped: false
           group_info:
             label: ''
@@ -671,7 +671,7 @@ display:
       tags: {  }
   page_1:
     id: page_1
-    display_title: Page
+    display_title: Side
     display_plugin: page
     position: 1
     display_options:

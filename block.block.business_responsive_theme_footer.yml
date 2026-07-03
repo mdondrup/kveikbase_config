@@ -1,5 +1,5 @@
 uuid: 9785f105-db64-42c1-aca4-3133645170f1
-langcode: en
+langcode: nb
 status: true
 dependencies:
   config:
@@ -18,7 +18,7 @@ provider: null
 plugin: 'system_menu_block:footer'
 settings:
   id: 'system_menu_block:footer'
-  label: 'Footer menu'
+  label: Bunntekst-meny
   label_display: '0'
   provider: system
   level: 1

@@ -1,5 +1,5 @@
 uuid: ad421bd4-2107-49e0-9348-f67235263c75
-langcode: en
+langcode: nb
 status: true
 dependencies:
   module:
@@ -11,12 +11,12 @@ _core:
 id: gin_breadcrumbs
 theme: gin
 region: breadcrumb
-weight: 0
+weight: -4
 provider: null
 plugin: system_breadcrumb_block
 settings:
   id: system_breadcrumb_block
-  label: Breadcrumbs
+  label: Navigasjonssti
   label_display: '0'
   provider: system
 visibility: {  }

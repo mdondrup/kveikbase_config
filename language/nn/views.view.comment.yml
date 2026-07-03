@@ -1,0 +1,78 @@
+label: Kommentarar
+display:
+  default:
+    display_title: Standard
+    display_options:
+      title: Kommentarar
+      fields:
+        subject:
+          label: Emne
+          separator: ', '
+        uid:
+          separator: ', '
+        name:
+          label: Forfattar
+          separator: ', '
+        entity_id:
+          label: 'Skreve i'
+          separator: ', '
+        changed:
+          label: Oppdatert
+          separator: ', '
+        operations:
+          label: Operasjonar
+        name_1:
+          separator: ', '
+      pager:
+        options:
+          expose:
+            items_per_page_options_all_label: '- Alle -'
+      exposed_form:
+        options:
+          submit_button: Filtrer
+          reset_button_label: 'Sett til standard'
+          exposed_sorts_label: 'Sorter etter'
+      empty:
+        area_text_custom:
+          content: 'Ingen kommentarar er tilgjengelege'
+      filters:
+        subject:
+          expose:
+            label: Emne
+        langcode:
+          expose:
+            label: Språk
+      use_more_text: meir
+  page_published:
+    display_title: 'Publiserte kommentarar'
+    display_options:
+      menu:
+        title: Kommentarar
+  page_unapproved:
+    display_options:
+      fields:
+        subject:
+          label: Emne
+          separator: ', '
+        uid:
+          separator: ', '
+        name:
+          label: Forfattar
+          separator: ', '
+        entity_id:
+          label: 'Skreve i'
+          separator: ', '
+        changed:
+          label: Oppdatert
+          separator: ', '
+        operations:
+          label: Operasjonar
+        name_1:
+          separator: ', '
+      filters:
+        subject:
+          expose:
+            label: Emne
+        langcode:
+          expose:
+            label: Språk

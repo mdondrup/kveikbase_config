@@ -1,0 +1,91 @@
+label: 'Tripal Jobs'
+display:
+  default:
+    display_title: Master
+    display_options:
+      exposed_form:
+        options:
+          submit_button: Apply
+          reset_button_label: Reset
+          exposed_sorts_label: 'Sort by'
+          sort_asc_label: Asc
+          sort_desc_label: Desc
+      pager:
+        options:
+          tags:
+            previous: ‹‹
+            next: ››
+            first: '« First'
+            last: 'Last »'
+          expose:
+            items_per_page_label: 'Items per page'
+            items_per_page_options_all_label: '- All -'
+            offset_label: Offset
+      fields:
+        job_id:
+          label: 'Job ID'
+          format_plural_string: !!binary MQNAY291bnQ=
+        name:
+          label: Submitter
+          separator: ', '
+        job_name:
+          label: 'Job Name'
+        submit_date:
+          label: 'Submit Date'
+        start_time:
+          label: 'Start Time'
+        end_time:
+          label: 'End Time'
+        priority:
+          label: Priority
+        nothing:
+          label: 'Submission Info'
+          alter:
+            text: "Name: {{ job_name }}<br />\r\nPriority: {{ priority }}<br />\r\nSubmitter: {{ name }}<br />\r\nJob ID: {{ job_id }} "
+        progress:
+          label: Progress
+          format_plural_string: !!binary MQNAY291bnQ=
+          suffix: '%'
+        status:
+          label: Status
+        nothing_4:
+          label: 'View Link'
+          alter:
+            text: View
+            path: 'admin/tripal/tripal_jobs/view/{{ job_id }}'
+        nothing_1:
+          label: 'Re-run Link'
+          alter:
+            text: Re-run
+            path: 'admin/tripal/tripal_jobs/rerun/{{ job_id }}'
+        nothing_2:
+          label: 'Cancel link'
+          alter:
+            text: Cancel
+            path: 'admin/tripal/tripal_jobs/cancel/{{ job_id }}'
+        nothing_5:
+          label: State
+          alter:
+            text: "Submitted: {{ submit_date }}<br />\r\nStarted: {{ start_time }}<br />\r\nEnded: {{ end_time }}<br />\r\nStatus: {{ status }}<br />\r\nProgress: {{ progress }}<br />"
+        dropbutton:
+          label: Actions
+      filters:
+        job_name:
+          expose:
+            label: 'Job Name Contains'
+        modulename:
+          expose:
+            label: 'Submitting Module'
+        status:
+          expose:
+            label: 'Job Status'
+        uid:
+          expose:
+            label: Submitter
+      title: 'Tripal Jobs'
+      header:
+        area:
+          content:
+            value: '<p>Waiting jobs are executed first by priority level (the lower the number the higher the priority) and second by the order they were entered.</p>'
+  page_1:
+    display_title: Page

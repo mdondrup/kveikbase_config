@@ -1,10 +1,10 @@
 uuid: 260f483c-817c-431c-8e53-61c09c6c7a1c
-langcode: en
+langcode: nb
 status: true
 dependencies: {  }
 _core:
   default_config_hash: QiKqQS_YGAT3Qr4vaAgZICJknm-MGCzt_xBAMqg-tRM
-name: 'Restricted HTML'
+name: 'Begrenset HTML'
 format: restricted_html
 weight: 1
 filters:

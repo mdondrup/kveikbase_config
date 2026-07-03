@@ -32,7 +32,7 @@ display:
     display_plugin: default
     position: 0
     display_options:
-      title: 'Strain resources'
+      title: 'Kveik cultures'
       fields:
         id:
           id: id
@@ -259,14 +259,14 @@ display:
             suffix: ''
             target: ''
             nl2br: false
-            max_length: 0
+            max_length: 50
             word_boundary: true
             ellipsis: true
             more_link: false
             more_link_text: ''
             more_link_path: ''
             strip_tags: false
-            trim: false
+            trim: true
             preserve_tags: ''
             html: false
           element_type: ''
@@ -561,7 +561,7 @@ display:
           entity_type: tripal_entity
           plugin_id: geolocation_field
           label: ''
-          exclude: false
+          exclude: true
           alter:
             alter_text: false
             text: ''
@@ -624,7 +624,7 @@ display:
           entity_type: null
           entity_field: null
           plugin_id: entity_operations
-          label: ''
+          label: Link
           exclude: false
           alter:
             alter_text: false
@@ -1006,9 +1006,10 @@ display:
       path: germplasm-view
       menu:
         type: normal
-        title: Strains
+        title: Kulturer
         description: ''
-        weight: 0
+        weight: -50
+        enabled: true
         expanded: false
         menu_name: main
         parent: ''

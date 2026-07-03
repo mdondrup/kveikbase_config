@@ -1,5 +1,5 @@
-uuid: 15d59921-7882-499d-8edf-9b896175e2ad
-langcode: en
+uuid: 6dbcb88c-5f0c-40de-a867-7bd604a8f7d1
+langcode: nb
 status: true
 dependencies:
   theme:
@@ -9,12 +9,12 @@ _core:
 id: tara_page_title
 theme: tara
 region: content
-weight: -10
+weight: -6
 provider: null
 plugin: page_title_block
 settings:
   id: page_title_block
-  label: 'Page title'
+  label: Sidetittel
   label_display: '0'
   provider: core
 visibility: {  }

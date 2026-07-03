@@ -1,5 +1,5 @@
-uuid: e7ea7c9c-8448-4949-ab6a-5e9bca67608e
-langcode: en
+uuid: d6825e9e-4684-4ecf-8417-5d731a8a5e9a
+langcode: nb
 status: true
 dependencies:
   module:
@@ -11,12 +11,12 @@ _core:
 id: tara_help
 theme: tara
 region: content
-weight: -9
+weight: -5
 provider: null
 plugin: help_block
 settings:
   id: help_block
-  label: Help
+  label: Hjelp
   label_display: '0'
   provider: help
 visibility: {  }

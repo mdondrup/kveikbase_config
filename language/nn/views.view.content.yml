@@ -1,0 +1,54 @@
+label: Innhald
+description: 'Finn og behandle innhald.'
+display:
+  default:
+    display_title: Standard
+    display_options:
+      title: Innhald
+      fields:
+        title:
+          label: Tittel
+        type:
+          separator: ', '
+        name:
+          label: Forfattar
+        status:
+          label: Status
+          settings:
+            format_custom_false: Upublisert
+            format_custom_true: Publisert
+        changed:
+          label: Oppdatert
+        langcode:
+          label: Språk
+          separator: ', '
+        operations:
+          label: Operasjonar
+      exposed_form:
+        options:
+          submit_button: Filtrer
+          reset_button_label: 'Sett til standard'
+          exposed_sorts_label: 'Sorter etter'
+      filters:
+        title:
+          expose:
+            label: Tittel
+        status:
+          expose:
+            label: Status
+          group_info:
+            group_items:
+              1:
+                title: Publisert
+              2:
+                title: Upublisert
+        langcode:
+          expose:
+            label: Språk
+  page_1:
+    display_title: Nettside
+    display_options:
+      menu:
+        title: Innhald
+      tab_options:
+        title: Innhald

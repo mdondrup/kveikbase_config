@@ -1,5 +1,5 @@
 uuid: 3636a278-66e9-4af1-9e09-7aaeb72f30ff
-langcode: en
+langcode: nb
 status: true
 dependencies:
   module:
@@ -8,7 +8,7 @@ dependencies:
 _core:
   default_config_hash: HfvTcWhiVuvxchoh4DjIkXhKkj9ow2TGgHkLHSvRLq8
 id: block_content
-label: 'Content blocks'
+label: Innholdsblokker
 module: views
 description: 'Find and manage content blocks.'
 tag: default
@@ -17,11 +17,11 @@ base_field: id
 display:
   default:
     id: default
-    display_title: Default
+    display_title: Standard
     display_plugin: default
     position: 0
     display_options:
-      title: 'Content blocks'
+      title: Innholdsblokker
       fields:
         info:
           id: info
@@ -33,7 +33,7 @@ display:
           entity_type: null
           entity_field: info
           plugin_id: field
-          label: 'Block description'
+          label: 'Blokkas beskrivelse'
           exclude: false
           alter:
             alter_text: false
@@ -98,7 +98,7 @@ display:
           entity_type: block_content
           entity_field: type
           plugin_id: field
-          label: 'Block type'
+          label: Blokktype
           exclude: false
           alter:
             alter_text: false
@@ -163,7 +163,7 @@ display:
           entity_type: block_content
           entity_field: changed
           plugin_id: field
-          label: Updated
+          label: Oppdatert
           exclude: false
           alter:
             alter_text: false
@@ -227,7 +227,7 @@ display:
           admin_label: ''
           entity_type: block_content
           plugin_id: entity_operations
-          label: Operations
+          label: Handlinger
           exclude: false
           alter:
             alter_text: false
@@ -278,26 +278,26 @@ display:
           total_pages: null
           id: 0
           tags:
-            next: 'Next ›'
-            previous: '‹ Previous'
+            next: 'Neste ›'
+            previous: '‹ Forrige'
           expose:
             items_per_page: false
-            items_per_page_label: 'Items per page'
+            items_per_page_label: 'Elementer per side'
             items_per_page_options: '5, 10, 25, 50'
             items_per_page_options_all: false
-            items_per_page_options_all_label: '- All -'
+            items_per_page_options_all_label: '- Alle -'
             offset: false
-            offset_label: Offset
+            offset_label: Forskyving
       exposed_form:
         type: basic
         options:
-          submit_button: Apply
+          submit_button: Bruk
           reset_button: true
-          reset_button_label: Reset
-          exposed_sorts_label: 'Sort by'
+          reset_button_label: Nullstill
+          exposed_sorts_label: 'Sortér etter'
           expose_sort_order: true
-          sort_asc_label: Asc
-          sort_desc_label: Desc
+          sort_asc_label: Stigende
+          sort_desc_label: Synkende
       access:
         type: perm
         options:
@@ -336,7 +336,7 @@ display:
           exposed: true
           expose:
             operator_id: info_op
-            label: 'Block description'
+            label: 'Blokkas beskrivelse'
             description: ''
             use_operator: false
             operator: info_op
@@ -376,7 +376,7 @@ display:
           exposed: true
           expose:
             operator_id: type_op
-            label: 'Block type'
+            label: Blokktype
             description: ''
             use_operator: false
             operator: type_op
@@ -514,7 +514,7 @@ display:
       tags: {  }
   page_1:
     id: page_1
-    display_title: Page
+    display_title: Side
     display_plugin: page
     position: 1
     display_options:
@@ -522,7 +522,7 @@ display:
       path: admin/content/block
       menu:
         type: tab
-        title: Blocks
+        title: Blokker
         description: 'Create and edit content blocks.'
         weight: 0
         menu_name: admin

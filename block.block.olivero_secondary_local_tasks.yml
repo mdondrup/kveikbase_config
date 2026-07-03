@@ -1,5 +1,5 @@
 uuid: cad712d2-59ac-424e-85e0-4ca811375b5c
-langcode: en
+langcode: nb
 status: true
 dependencies:
   theme:
@@ -14,7 +14,7 @@ provider: null
 plugin: local_tasks_block
 settings:
   id: local_tasks_block
-  label: 'Secondary tabs'
+  label: Sekundærfaner
   label_display: '0'
   provider: core
   primary: false

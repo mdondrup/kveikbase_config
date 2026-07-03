@@ -1,0 +1,19 @@
+display:
+  default:
+    display_title: Standard
+    display_options:
+      pager:
+        options:
+          expose:
+            items_per_page_options_all_label: '- Alle -'
+      exposed_form:
+        options:
+          submit_button: Bruk
+          reset_button_label: 'Sett til standard'
+          exposed_sorts_label: 'Sorter etter'
+      arguments:
+        tid:
+          exception:
+            title: Alle
+  page_1:
+    display_title: Nettside

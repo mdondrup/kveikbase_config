@@ -1,5 +1,5 @@
 uuid: 3d3448a9-5aec-4b25-84bc-6600dbbd5aed
-langcode: en
+langcode: nb
 status: true
 dependencies:
   config:
@@ -38,7 +38,7 @@ settings:
     ckeditor5_codeBlock:
       languages:
         -
-          label: 'Plain text'
+          label: 'Ren tekst'
           language: plaintext
         -
           label: C
@@ -53,7 +53,7 @@ settings:
           label: CSS
           language: css
         -
-          label: Diff
+          label: Forskjell
           language: diff
         -
           label: HTML

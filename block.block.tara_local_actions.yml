@@ -1,5 +1,5 @@
-uuid: d3b9d52f-1bab-42ca-963a-0470d19bf79a
-langcode: en
+uuid: 6dc92459-8e70-410c-a628-3908e0da5dd6
+langcode: nb
 status: true
 dependencies:
   theme:
@@ -9,12 +9,12 @@ _core:
 id: tara_local_actions
 theme: tara
 region: content
-weight: -7
+weight: -3
 provider: null
 plugin: local_actions_block
 settings:
   id: local_actions_block
-  label: 'Primary admin actions'
+  label: 'Primære administratorhandlinger'
   label_display: '0'
   provider: core
 visibility: {  }

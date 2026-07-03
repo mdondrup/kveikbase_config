@@ -1,0 +1,71 @@
+label: 'Tripal Content Listing'
+display:
+  default:
+    display_title: Default
+    display_options:
+      title: 'Tripal Content Listing'
+      fields:
+        id:
+          label: ID
+          separator: ', '
+        title:
+          label: Title
+          alter:
+            text: '{{ title__value | raw }}'
+            path: '/bio_data/{{ id }}'
+          separator: ', '
+        type:
+          label: Type
+          separator: ', '
+        uid:
+          label: Author
+          separator: ', '
+        created:
+          label: Created
+          separator: ', '
+        operations:
+          label: Operations
+      pager:
+        options:
+          tags:
+            next: ››
+            previous: ‹‹
+            first: '« First'
+            last: 'Last »'
+          expose:
+            items_per_page_label: 'Items per page'
+            items_per_page_options_all_label: '- All -'
+            offset_label: Offset
+      exposed_form:
+        options:
+          submit_button: Apply
+          reset_button_label: Reset
+          exposed_sorts_label: 'Sort by'
+          sort_asc_label: Asc
+          sort_desc_label: Desc
+      empty:
+        area_text_custom:
+          content: '<p>No Tripal content available.</p>'
+      sorts:
+        created:
+          expose:
+            label: Created
+        title:
+          expose:
+            label: Title
+        type:
+          expose:
+            label: Type
+        uid:
+          expose:
+            label: Authors
+      filters:
+        title:
+          expose:
+            label: Title
+            placeholder: Title
+        type:
+          expose:
+            label: Type
+  page_1:
+    display_title: Page

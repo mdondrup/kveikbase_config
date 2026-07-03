@@ -1,0 +1,32 @@
+display:
+  default:
+    display_title: Standard
+    display_options:
+      fields:
+        disabled:
+          label: 'Ikkje aktivert'
+        nothing_1:
+          label: Rediger
+          alter:
+            text: Rediger
+        nothing:
+          label: Slett
+          alter:
+            text: Slett
+        dropbutton:
+          label: Handlingar
+      pager:
+        options:
+          expose:
+            items_per_page_options_all_label: '- Alle -'
+      exposed_form:
+        options:
+          submit_button: Bruk
+          reset_button_label: 'Sett til standard'
+          exposed_sorts_label: 'Sorter etter'
+      filters:
+        disabled:
+          expose:
+            label: 'Ikkje aktivert'
+  pub_search_queries_view:
+    display_title: Nettside

@@ -1,5 +1,5 @@
-uuid: 5aa406f7-7bc7-4680-ad6b-f3d0654c7157
-langcode: en
+uuid: 459bab00-7587-4497-9add-d2f7aba6c452
+langcode: nb
 status: true
 dependencies:
   module:
@@ -11,12 +11,12 @@ _core:
 id: tara_content
 theme: tara
 region: content
-weight: -6
+weight: -1
 provider: null
 plugin: system_main_block
 settings:
   id: system_main_block
-  label: 'Main page content'
+  label: Hovedsideinnhold
   label_display: '0'
   provider: system
 visibility: {  }

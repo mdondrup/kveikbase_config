@@ -1,0 +1,11 @@
+display:
+  default:
+    display_title: Standard
+    display_options:
+      empty:
+        area_text_custom:
+          content: 'Ingen kommentarer tilgjengelige.'
+  block_1:
+    display_title: Blokk
+    display_options:
+      block_category: 'Lister (Visninger)'

@@ -1,5 +1,5 @@
-uuid: c36aa50d-0e5c-45a2-8cdf-483e0166b940
-langcode: en
+uuid: e4c3c936-77db-4225-a00c-6b4dac678531
+langcode: nb
 status: true
 dependencies:
   module:
@@ -16,10 +16,10 @@ provider: null
 plugin: system_branding_block
 settings:
   id: system_branding_block
-  label: 'Site branding'
+  label: 'Nettstedets profilelementer'
   label_display: '0'
   provider: system
   use_site_logo: true
   use_site_name: false
-  use_site_slogan: true
+  use_site_slogan: false
 visibility: {  }

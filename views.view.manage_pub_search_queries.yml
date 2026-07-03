@@ -1,5 +1,5 @@
 uuid: 5d06b3e7-c7d0-4eda-a312-cf2dc8be0936
-langcode: en
+langcode: nb
 status: true
 dependencies:
   config:
@@ -19,7 +19,7 @@ base_field: pub_library_query_id
 display:
   default:
     id: default
-    display_title: Default
+    display_title: Standard
     display_plugin: default
     position: 0
     display_options:
@@ -296,7 +296,7 @@ display:
           group_type: group
           admin_label: ''
           plugin_id: numeric
-          label: Disabled
+          label: Deaktivert
           exclude: false
           alter:
             alter_text: true
@@ -402,11 +402,11 @@ display:
           group_type: group
           admin_label: ''
           plugin_id: custom
-          label: Edit
+          label: Rediger
           exclude: true
           alter:
             alter_text: true
-            text: Edit
+            text: Rediger
             make_link: true
             path: 'admin/tripal/loaders/publications/edit_publication_search_query/{{ pub_library_query_id }}'
             absolute: false
@@ -451,11 +451,11 @@ display:
           group_type: group
           admin_label: ''
           plugin_id: custom
-          label: Delete
+          label: Slett
           exclude: true
           alter:
             alter_text: true
-            text: Delete
+            text: Slett
             make_link: true
             path: 'admin/tripal/loaders/publications/delete_publication_search_query/{{ pub_library_query_id }}'
             absolute: false
@@ -500,7 +500,7 @@ display:
           group_type: group
           admin_label: ''
           plugin_id: dropbutton
-          label: Actions
+          label: Handlinger
           exclude: false
           alter:
             alter_text: false
@@ -565,22 +565,22 @@ display:
             previous: ‹‹
           expose:
             items_per_page: false
-            items_per_page_label: 'Items per page'
+            items_per_page_label: 'Elementer per side'
             items_per_page_options: '5, 10, 25, 50'
             items_per_page_options_all: false
-            items_per_page_options_all_label: '- All -'
+            items_per_page_options_all_label: '- Alle -'
             offset: false
-            offset_label: Offset
+            offset_label: Forskyving
       exposed_form:
         type: basic
         options:
-          submit_button: Apply
+          submit_button: Bruk
           reset_button: true
-          reset_button_label: Reset
-          exposed_sorts_label: 'Sort by'
+          reset_button_label: Nullstill
+          exposed_sorts_label: 'Sortér etter'
           expose_sort_order: true
-          sort_asc_label: Asc
-          sort_desc_label: Desc
+          sort_asc_label: Stigende
+          sort_desc_label: Synkende
       access:
         type: perm
         options:
@@ -742,7 +742,7 @@ display:
           exposed: true
           expose:
             operator_id: ''
-            label: Disabled
+            label: Deaktivert
             description: ''
             use_operator: false
             operator: disabled_op
@@ -910,7 +910,7 @@ display:
       tags: {  }
   pub_search_queries_view:
     id: pub_search_queries_view
-    display_title: Page
+    display_title: Side
     display_plugin: page
     position: 1
     display_options:

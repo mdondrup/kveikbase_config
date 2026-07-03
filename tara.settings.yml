@@ -1,5 +1,5 @@
 _core:
-  default_config_hash: duPnr-OK4UcdNf7x52OcphEBB9paQphGpkz249ediLY
+  default_config_hash: 75Jlt8g2DiRAAw0PaFSzt2aN-PXO8500AHLmLVVgpvQ
 favicon:
   use_default: true
 features:
@@ -8,11 +8,11 @@ features:
   favicon: true
   node_user_picture: false
 logo:
-  path: 'public://ChatGPT Image Sep 29, 2025, 02_37_22 PM.png'
+  path: 'public://kveikbaselogo_1_0_0.jpg'
   use_default: false
-all_icons_show: 1
-facebook_url: 'https://www.facebook.com/kveik'
-twitter_url: 'https://twitter.com/kveik'
+all_icons_show: 0
+facebook_url: 'https://www.facebook.com/idewdot'
+twitter_url: 'https://twitter.com/dewdots'
 instagram_url: 'https://www.instagram.com/google'
 linkedin_url: 'https://in.linkedin.com/company/google'
 youtube_url: 'https://www.youtube.com/user/Google'
@@ -22,20 +22,26 @@ github_url: ''
 telegram_url: ''
 vimeo_url: ''
 slider_show: 0
-slider_image:
-  - '4'
+slider_image: {  }
 slider_time: '5000'
 slider_dots: 'true'
+slider_arrow: 'true'
 slider_code: ''
 front_sidebar: 0
-google_font: googlecdn
+google_font: local
 node_author_pic: 0
 node_tags: 0
-copyright_text: 0
+copyright_text: 1
 scrolltotop_on: 1
-css_extra: 1
+css_extra: 0
 css_code: ''
-fontawesome_four: 1
+fontawesome_four: 0
 fontawesome_five: 0
-fontawesome_six: 1
-bootstrapicons: 1
+fontawesome_six: 0
+bootstrapicons: 0
+mastodon_url: ''
+tiktok_url: ''
+twitch_url: ''
+bluesky_url: ''
+discord_url: ''
+social_new_icon_code: ''
